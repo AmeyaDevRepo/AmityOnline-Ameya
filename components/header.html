@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="../CommonCss/style.css">
+<script src="../CommonJS/modals.js"></script>
+
+<header class="site-navbar">
+
+  <div class="container">
+    <div class="header-block">
+      <!-- Logo Wrapper -->
+      <div class="logo-wrapper">
+        <a href="index.html">
+          <img src="images/amity_logo_5ee70d67b4_f4e929fb4a.svg" alt="">
+        </a>
+      </div>
+
+      <div class="header-content">
+        <div class="header-menu">
+          <!-- Navigation Menu -->
+          <nav class="site-navigation position-relative text-right">
+            <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+              <li class="has-children">
+                <a href="#" class="menu-link" id="programsLink"><span>PROGRAMS</span></a>
+              </li>
+              <li><a href="#" class="menu-link"><span>CAREER SERVICE</span></a></li>
+              <li><a href="#" class="menu-link"><span>ADVANTAGES</span></a></li>
+            </ul>
+          </nav>
+          <!-- End of Navigation Menu -->
+
+          <div id="programs-modal-container"></div>
+          <!-- Start: Header Menu Toggle -->
+
+          <div class="header-menu-toggle d-inline-block d-xl-none ml-md-0 mr-auto"
+            style="position: relative; top: 3px;">
+            <button id="menuToggleButton" aria-label="Hamburger Menu"
+              style="background: none; border: none; cursor: pointer;">
+              <!-- Mobile Menu Container -->
+              <div id="mobile-menu-container"></div>
+              <!-- end -->
+              <!-- Hamburger Image -->
+              <img id="hamburgerImage" src="images/menu.svg" alt="Hamburger Menu"
+                style="display: block; width:30px; margin-top: 5px;">
+              <!-- Cross Icon SVG (Hidden by default) -->
+              <svg id="closeIcon" width="24" height="20" viewBox="0 0 19 18" fill="none"
+                xmlns="http://www.w3.org/2000/svg" style="display: none; margin-top: 5px">
+                <path
+                  d="M16.2648 17.9813L9.62109 11.3376L2.9774 17.9813L0.762835 15.7667L7.40653 9.12305L0.762835 2.47935L2.9774 0.264788L9.62109 6.90848L16.2648 0.264788L18.4794 2.47935L11.8357 9.12305L18.4794 15.7667L16.2648 17.9813Z"
+                  fill="white"></path>
+              </svg>
+            </button>
+          </div>
+          <!-- End: Header Menu Toggle -->
+          
+          
+        </div>
+
+        <div class="header-search">
+          <div class="header-search-icon">
+            <i class="las la-search"></i>
+          </div>
+          <input type="text" id="search-input">
+          
+        </div>
+        <div class="header-btn">
+          <a href="#" class="cus-btn border-light header-login" id="login-button">
+            <i class="las la-user"></i> Login
+          </a>
+          <!-- The Login Modal -->
+          <div id="login-modal"></div>
+          <!-- The Login Modal END -->
+
+          <a href="#" class="cus-btn btn-yellow header-apply" id="apply-now-btn">Apply Now <i
+              class="las la-arrow-right"></i></a>
+          <!-- The Apply Modal -->
+          <div id="apply-modal-container"></div>
+          <!-- The Apply Modal END-->
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</header>
+
