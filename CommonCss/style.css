@@ -2,6 +2,8 @@
 
 /* Nav-Style */
 
+
+
 body:before {
     content: "";
     position: absolute;
@@ -4326,6 +4328,18 @@ div#Carousel .swiper-button-next:after,div#Carousel .swiper-button-prev:after {
     width: var(--swiper-centered-offset-after)
 }
 
+.swiper-css-mode.swiper-horizontal>.swiper-wrapper-2 {
+    scroll-snap-type: x mandatory
+}
+.swiper-css-mode.swiper-centered.swiper-horizontal>.swiper-wrapper-2>.swiper-slide:first-child {
+    margin-inline-start:var(--swiper-centered-offset-before)}
+
+.swiper-css-mode.swiper-centered.swiper-horizontal>.swiper-wrapper-2:before {
+    height:100%;
+    min-height: 1px;
+    width: var(--swiper-centered-offset-after)
+}
+
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
     margin: 0 var(--swiper-pagination-bullet-horizontal-gap,4px)
 }
@@ -4544,6 +4558,14 @@ button.swiper-pagination-bullet {
     flex-wrap: wrap;
     flex-direction: column
 }
+.swiper-grid>.swiper-wrapper-2 {
+    flex-wrap: wrap
+}
+
+.swiper-grid-column>.swiper-wrapper-2 {
+    flex-wrap: wrap;
+    flex-direction: column
+}
 
 @font-face {
     font-family: swiper-icons;
@@ -4594,6 +4616,24 @@ button.swiper-pagination-bullet {
 .swiper-android .swiper-slide,.swiper-ios .swiper-slide,.swiper-wrapper {
     transform: translateZ(0)
 }
+.swiper-vertical>.swiper-wrapper-2 {
+    flex-direction: column
+}
+
+.swiper-wrapper-2 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    display: flex;
+    transition-property: transform;
+    transition-timing-function: var(--swiper-wrapper-transition-timing-function,initial);
+    box-sizing: content-box
+}
+
+.swiper-android .swiper-slide,.swiper-ios .swiper-slide,.swiper-wrapper-2 {
+    transform: translateZ(0)
+}
 
 .swiper-horizontal {
     touch-action: pan-y
@@ -4624,6 +4664,10 @@ button.swiper-pagination-bullet {
     align-items: flex-start;
     transition-property: transform,height
 }
+.swiper-autoheight .swiper-wrapper-2 {
+    align-items: flex-start;
+    transition-property: transform,height
+}
 
 .swiper-backface-hidden .swiper-slide {
     transform: translateZ(0);
@@ -4635,6 +4679,13 @@ button.swiper-pagination-bullet {
 }
 
 .swiper-3d .swiper-wrapper {
+    transform-style: preserve-3d
+}
+.swiper-3d.swiper-css-mode .swiper-wrapper-2 {
+    perspective: 1200px
+}
+
+.swiper-3d .swiper-wrapper-2 {
     transform-style: preserve-3d
 }
 
@@ -4704,6 +4755,66 @@ button.swiper-pagination-bullet {
     height: var(--swiper-centered-offset-after)
 }
 
+.swiper-css-mode > .swiper-wrapper-2 {
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.swiper-css-mode > .swiper-wrapper-2::-webkit-scrollbar {
+    display: none;
+}
+
+.swiper-css-mode > .swiper-wrapper-2 > .swiper-slide {
+    scroll-snap-align: start start;
+}
+
+.swiper-css-mode.swiper-horizontal > .swiper-wrapper-2 {
+    scroll-snap-type: x mandatory;
+}
+
+.swiper-css-mode.swiper-vertical > .swiper-wrapper-2 {
+    scroll-snap-type: y mandatory;
+}
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper-2 {
+    scroll-snap-type: none;
+}
+
+.swiper-css-mode.swiper-free-mode > .swiper-wrapper-2 > .swiper-slide {
+    scroll-snap-align: none;
+}
+
+.swiper-css-mode.swiper-centered > .swiper-wrapper-2:before {
+    content: "";
+    flex-shrink: 0;
+    order: 9999;
+}
+
+.swiper-css-mode.swiper-centered > .swiper-wrapper-2 > .swiper-slide {
+    scroll-snap-align: center center;
+    scroll-snap-stop: always;
+}
+
+.swiper-css-mode.swiper-centered.swiper-horizontal > .swiper-wrapper-2 > .swiper-slide:first-child {
+    margin-inline-start: var(--swiper-centered-offset-before);
+}
+
+.swiper-css-mode.swiper-centered.swiper-horizontal > .swiper-wrapper-2:before {
+    height: 100%;
+    min-height: 1px;
+    width: var(--swiper-centered-offset-after);
+}
+
+.swiper-css-mode.swiper-centered.swiper-vertical > .swiper-wrapper-2 > .swiper-slide:first-child {
+    margin-block-start: var(--swiper-centered-offset-before);
+}
+
+.swiper-css-mode.swiper-centered.swiper-vertical > .swiper-wrapper-2:before {
+    width: 100%;
+    min-width: 1px;
+    height: var(--swiper-centered-offset-after);
+}
 .swiper-3d .swiper-slide-shadow,.swiper-3d .swiper-slide-shadow-bottom,.swiper-3d .swiper-slide-shadow-left,.swiper-3d .swiper-slide-shadow-right,.swiper-3d .swiper-slide-shadow-top {
     position: absolute;
     left: 0;
@@ -7894,7 +8005,7 @@ img,video {
 }
 
 .gap-\[17px\] {
-    gap: 17px
+    gap: 20px
 }
 
 .gap-\[48\.4px\] {
@@ -9437,60 +9548,22 @@ img,video {
     background-size: 53px
 }
 
-.StudentsCarousel_testimonialBox__hp3K9 {
-    padding-bottom: 1.25rem
-}
+
 
 .StudentsCarousel_carousel__XLxe_ {
     width: 100%
 }
 
-.StudentsCarousel_cardImage__gmfV6 {
-    width: 100%;
-    height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover
-}
 
-.StudentsCarousel_cardContent__8xZ_A {
-    padding: 1.6875rem
-}
 
-.StudentsCarousel_cardImageContainer__utpKq {
-    border-right: .09375rem solid var(--P-Blue, #1a325d);
-    border-color: var(--primary-blue)
-}
 
-.StudentsCarousel_shortDesc__uFLAJ {
-    color: var(--P-Blue, #1a325d);
-    font-family: var(--font-raleway);
-    font-size: 1.25rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 138.9%;
-    letter-spacing: .4px
-}
 
-.StudentsCarousel_name__CbzkO {
-    color: var(--P-Blue, #1a325d);
-    font-family: var(--font-baskervville);
-    font-size: 2.1875rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 43.621px;
-    letter-spacing: -.698px;
-    margin-top: .625rem
-}
 
-.StudentsCarousel_desg__5N20_ {
-    color: var(--P-Blue, #1a325d);
-    font-family: var(--font-raleway);
-    font-size: 1.0625rem;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 119.9%;
-    letter-spacing: 1.047px
-}
+
+
+
+
+
 
 .StudentsCarousel_videoImg__wjfQA {
     max-height: 22.375rem;
@@ -9529,27 +9602,13 @@ img,video {
         max-height: 14.9166666667rem
     }
 
-    .StudentsCarousel_testimonialBox__hp3K9 {
-        padding-bottom: 1.0416666667rem
-    }
+   
 
-    .StudentsCarousel_cardContent__8xZ_A {
-        padding: 1.125rem 1.25rem
-    }
+    
 
-    .StudentsCarousel_shortDesc__uFLAJ {
-        font-size: .8333333333rem
-    }
+    
 
-    .StudentsCarousel_name__CbzkO {
-        display: block;
-        margin-top: .625rem;
-        font-size: 1.4583333333rem
-    }
-
-    .StudentsCarousel_desg__5N20_ {
-        font-size: .7083333333rem
-    }
+    
 }
 
 .styles_root__Yu_Om {
@@ -9838,7 +9897,8 @@ img,video {
 .AdvantageCard_AdvantageCard__container__bvEfL {
     border-radius: 1rem;
     border: .09375rem solid var(--P-Blue, #1a325d);
-    margin: auto
+    margin: auto;
+    width:180px
 }
 
 .AdvantageCard_AdvantageCard__image__K5DFL {
@@ -10651,11 +10711,12 @@ img,video {
 .Modal_root__5nZXA {
     position: fixed;
     inset: 0;
-    z-index: 10000;
+    z-index: 10000; /* Make sure it stays on top */
     display: grid;
     place-items: center;
-    overflow-y: auto
+    overflow-y: visible; /* If overflow is causing issues */
 }
+
 .ConnectModal_root__lWB_7 {
     gap: .8125rem;
     flex-direction: column
@@ -10844,7 +10905,7 @@ img,video {
     margin-left: .5rem
 }
 .ConnectModalForm_commonMargins__efaYq {
-    margin-bottom: 1.5rem
+    margin-bottom: 1.5rem;
 }
 .ConnectModalForm_emailContainer__tCa_n {
     flex-direction: column
@@ -10867,7 +10928,7 @@ img,video {
     font-weight: 500;
     line-height: 1.25rem;
     letter-spacing: .0175rem;
-    margin-left: -18px;
+    margin-left: 1px;
 }
 
 .Input_btn___g__n {
@@ -11382,7 +11443,7 @@ img,video {
         margin-left: .3333333333rem
     }
     .Input_SelectContainer__csa2O {
-        width: 100%;
+        /* width: 100%; */
         padding: 0
     }
     .ConnectModalForm_error___wYoL {
@@ -11900,7 +11961,7 @@ img,video {
     color: #1a325d;
     height: calc(100% - 20px);
     padding: .25rem;
-    overflow-y: auto
+    overflow-y: auto;
 }
 
 .header_menuItem__2qruK {
@@ -12023,7 +12084,7 @@ img,video {
     width: 100%;
     left: 0;
     right: 0;
-    top: 100px;
+    top: 120px;
     z-index: 110;
     overflow-y: auto;
     background-color: #fff;
