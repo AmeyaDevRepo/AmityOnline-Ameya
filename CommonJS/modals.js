@@ -419,13 +419,9 @@ function initializeApplyModal() {
 }
 
 function initializeProgramsModal() {
-    // const programsDiv = document.getElementById("programsDiv");
-    // const closeButton = document.getElementById("closeButton");
-    const programsButton = document.getElementById("programsLink"); // Add ID to your programs button
-
+    const programsDiv = document.getElementById("programsDiv");
+    const closeButton = document.getElementById("closeButton");
     const programsLink = document.getElementById('programsLink');
-    const programsDiv = document.getElementById('programsDiv');
-    const closeButton = document.getElementById('closeButton');
 
     // Show the programsDiv when 'PROGRAMS' link is clicked
     programsLink.addEventListener('click', function (e) {
@@ -433,6 +429,7 @@ function initializeProgramsModal() {
         programsDiv.style.display = 'block';  // Show the div
         document.body.style.overflow = 'hidden';  // Hide the scrollbar
     });
+
     // Select all menu items
     const menuItems = document.querySelectorAll(".ProgramsMenu_item__mfuSn");
 
@@ -440,23 +437,30 @@ function initializeProgramsModal() {
     menuItems.forEach((item) => {
         item.addEventListener("click", function () {
             // Remove the active class from all items
-            menuItems.forEach((el) =>
-                el.classList.remove("ProgramsMenu_active__4g64w")
-            );
+            menuItems.forEach((el) => el.classList.remove("ProgramsMenu_active__4g64w"));
 
             // Add the active class to the clicked item
             item.classList.add("ProgramsMenu_active__4g64w");
+
+            // Get the category of the clicked item
+            const category = item.getAttribute('data-category');
+
+            // Filter and display programs
+            const programs = document.querySelectorAll('.ProgramsMenu_tab__0j8Nn');
+            programs.forEach(program => {
+                if (category === 'All' || program.classList.contains(category)) {
+                    program.style.display = 'block';
+                } else {
+                    program.style.display = 'none';
+                }
+            });
         });
     });
+
     // Close the programsDiv when close icon is clicked
     closeButton.addEventListener('click', function () {
         programsDiv.style.display = 'none';  // Hide the div
         document.body.style.overflow = 'auto';  // Restore the scrollbar
-    });
-
-    // Desktop Close
-    closeButton?.addEventListener('click', () => {
-        programsDiv.style.display = 'none';
     });
 
     // Click outside close
@@ -467,18 +471,9 @@ function initializeProgramsModal() {
     });
 
     // Programs button click handler
-    programsButton?.addEventListener('click', (e) => {
+    programsLink.addEventListener('click', (e) => {
         e.preventDefault();
         programsDiv.style.display = 'block';
-    });
-
-    // Add mobile menu handlers if needed
-    const mobileContainer = document.getElementById("mobileContainer");
-    const mobileMenuButton = document.getElementById("menuToggleButton"); // Add ID to mobile menu button
-
-    mobileMenuButton?.addEventListener('click', (e) => {
-        e.preventDefault();
-        // mobileContainer.style.display = 'block';
     });
 }
 
