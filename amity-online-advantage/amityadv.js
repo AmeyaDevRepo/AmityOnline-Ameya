@@ -23,6 +23,30 @@
             prevEl: '.swiper-button-prev'
         }
     });
+    const swiper66 = new Swiper('.StudentsCarousel_carousel__XLxe_66', {
+        // Optional parameters
+        slidesPerView: 4,
+        spaceBetween: 16,
+        loop: true,
+        
+        // Pagination
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true
+        },
+        
+        // Auto play if needed
+        autoplay: {
+            delay: 5000,
+            disableOnInteraction: false
+        },
+        
+        // Optional Navigation arrows
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev'
+        }
+    });
 
     // Handle video play buttons
     document.querySelectorAll('[aria-label="play"]').forEach(button => {
