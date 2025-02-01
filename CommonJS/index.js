@@ -12,7 +12,6 @@ class IsoCarousel {
 	constructor(container) {
 		this.container = container;
 		this.wrapper = container.querySelector('.iso-swiper-wrapper');
-		this.wrapper = container.querySelector('.iso-swiper-wrapper-2');
 		this.slides = Array.from(container.querySelectorAll('.iso-swiper-slide'));
 		this.pagination = container.querySelector('.iso-swiper-pagination');
 
@@ -3772,10 +3771,6 @@ const initializeSwiper = () => {
 		display: flex;
 		align-items: center;
 	  }
-	  #Carousel .swiper-wrapper-2 {
-		display: flex;
-		align-items: center;
-	  }
   
 	  #Carousel .swiper-slide {
 		visibility: visible !important;
@@ -3813,9 +3808,6 @@ const initializeSwiper = () => {
   
 	  @media (max-width: 767px) {
 		#Carousel .swiper-wrapper {
-		  justify-content: flex-start;
-		}
-		#Carousel .swiper-wrapper-2 {
 		  justify-content: flex-start;
 		}
 		
@@ -5383,3 +5375,6 @@ otherMenuItems.forEach(item => {
     programsMenu.style.display = 'none';
   });
 });
+
+
+
