@@ -591,77 +591,130 @@ function initializeMobileMenu() {
 // }
 
 
+// function initializeMobileProgramMenu() {
+//     // Mobile programs menu toggle
+//     const mobileProgramsLink = document.querySelector('.header_menuItem__2qruK a[href="#"]');
+//     const mobileProgramsMenu = document.querySelector('.ProgramsMenu_mobile__K4seG');
+
+//     if (mobileProgramsLink && mobileProgramsMenu) {
+//         console.log('Mobile programs link and menu found');
+//         mobileProgramsLink.addEventListener('click', (e) => {
+//             e.preventDefault();
+//             console.log('Mobile programs link clicked');
+//             mobileProgramsMenu.style.display = 'block';
+//             document.querySelector('.ProgramsMenu_sidemenu__frHFk').style.display = 'block';
+//             document.querySelectorAll('.ProgramsMenu_contentBox__UHi_e').forEach(el => el.style.display = 'none');
+//         });
+//     } else {
+//         console.log('Mobile programs link or menu not found');
+//     }
+
+//     // Mobile menu item handling
+//     const mobileMenuItems = document.querySelectorAll('.ProgramsMenu_mobile__K4seG .ProgramsMenu_item__mfuSn');
+    
+//     mobileMenuItems.forEach(item => {
+//         item.addEventListener('click', function(e) {
+//             e.preventDefault();
+//             const category = this.dataset.category;
+//             console.log(`Menu item clicked: ${category}`);
+            
+//             // Toggle active state
+//             mobileMenuItems.forEach(el => el.classList.remove('ProgramsMenu_active__4g64w'));
+//             this.classList.add('ProgramsMenu_active__4g64w');
+    
+//             // Hide the side menu
+//             const sidemenu = this.closest('.ProgramsMenu_sidemenu__frHFk');
+//             if (sidemenu) {
+//                 sidemenu.style.display = 'none';
+//             }
+    
+//             // Show corresponding content
+//             const contentBox = document.querySelector(`.ProgramsMenu_contentBox__UHi_e[data-category="${category}"]`);
+//             if (contentBox) {
+//                 document.querySelectorAll('.ProgramsMenu_contentBox__UHi_e').forEach(el => el.style.display = 'none');
+//                 contentBox.style.display = 'block';
+//             }
+//         });
+//     });
+
+//     // Mobile back button
+//     const mobileBackButton = document.querySelector('.ProgramsMenu_submenuArrow__gnbLw');
+//     if (mobileBackButton) {
+//         mobileBackButton.addEventListener('click', () => {
+//             console.log('Back button clicked');
+//             // Show the side menu
+//             const sidemenu = document.querySelector('.ProgramsMenu_sidemenu__frHFk');
+//             if (sidemenu) {
+//                 sidemenu.style.display = 'block';
+//             }
+
+//             // Hide all content boxes
+//             document.querySelectorAll('.ProgramsMenu_contentBox__UHi_e').forEach(el => el.style.display = 'none');
+//         });
+//     }
+
+//     // Close mobile programs menu
+//     const closeButton = document.querySelector('.ProgramsMenu_closeButton__3QVlI');
+//     if (closeButton) {
+//         closeButton.addEventListener('click', () => {
+//             console.log('Close button clicked');
+//             mobileProgramsMenu.style.display = 'none';
+//         });
+//     }
+// }
+
 function initializeMobileProgramMenu() {
-    // Mobile programs menu toggle
+    // Get references to elements
     const mobileProgramsLink = document.querySelector('.header_menuItem__2qruK a[href="#"]');
     const mobileProgramsMenu = document.querySelector('.ProgramsMenu_mobile__K4seG');
+    const mobileMenuItems = document.querySelectorAll('.ProgramsMenu_mobile__K4seG .ProgramsMenu_item__mfuSn');
+    const contentBoxes = document.querySelectorAll('.ProgramsMenu_contentBox__UHi_e');
 
     if (mobileProgramsLink && mobileProgramsMenu) {
-        console.log('Mobile programs link and menu found');
         mobileProgramsLink.addEventListener('click', (e) => {
             e.preventDefault();
-            console.log('Mobile programs link clicked');
             mobileProgramsMenu.style.display = 'block';
-            document.querySelector('.ProgramsMenu_sidemenu__frHFk').style.display = 'block';
-            document.querySelectorAll('.ProgramsMenu_contentBox__UHi_e').forEach(el => el.style.display = 'none');
+            // Hide all content boxes initially
+            contentBoxes.forEach(box => box.style.display = 'none');
+        });
+
+        // Add click event listener to each menu item
+        mobileMenuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                // Remove active class from all menu items
+                mobileMenuItems.forEach(el => el.classList.remove('ProgramsMenu_active__4g64w'));
+                // Add active class to the clicked item
+                item.classList.add('ProgramsMenu_active__4g64w');
+
+                // Get the data-category attribute of the clicked item
+                const category = item.dataset.category;
+
+                // Hide all content boxes
+                contentBoxes.forEach(box => box.style.display = 'none');
+
+                // Show the content box that matches the category
+                const contentBox = document.querySelector(`.ProgramsMenu_contentBox__UHi_e[data-category="${category}"]`);
+                if (contentBox) {
+                    contentBox.style.display = 'block';
+                }
+            });
         });
     } else {
         console.log('Mobile programs link or menu not found');
     }
 
-    // Mobile menu item handling
-    const mobileMenuItems = document.querySelectorAll('.ProgramsMenu_mobile__K4seG .ProgramsMenu_item__mfuSn');
-    
-    mobileMenuItems.forEach(item => {
-        item.addEventListener('click', function(e) {
-            e.preventDefault();
-            const category = this.dataset.category;
-            console.log(`Menu item clicked: ${category}`);
-            
-            // Toggle active state
-            mobileMenuItems.forEach(el => el.classList.remove('ProgramsMenu_active__4g64w'));
-            this.classList.add('ProgramsMenu_active__4g64w');
-    
-            // Hide the side menu
-            const sidemenu = this.closest('.ProgramsMenu_sidemenu__frHFk');
-            if (sidemenu) {
-                sidemenu.style.display = 'none';
-            }
-    
-            // Show corresponding content
-            const contentBox = document.querySelector(`.ProgramsMenu_contentBox__UHi_e[data-category="${category}"]`);
-            if (contentBox) {
-                document.querySelectorAll('.ProgramsMenu_contentBox__UHi_e').forEach(el => el.style.display = 'none');
-                contentBox.style.display = 'block';
-            }
-        });
-    });
-
-    // Mobile back button
-    const mobileBackButton = document.querySelector('.ProgramsMenu_submenuArrow__gnbLw');
-    if (mobileBackButton) {
-        mobileBackButton.addEventListener('click', () => {
-            console.log('Back button clicked');
-            // Show the side menu
-            const sidemenu = document.querySelector('.ProgramsMenu_sidemenu__frHFk');
-            if (sidemenu) {
-                sidemenu.style.display = 'block';
-            }
-
-            // Hide all content boxes
-            document.querySelectorAll('.ProgramsMenu_contentBox__UHi_e').forEach(el => el.style.display = 'none');
-        });
-    }
-
-    // Close mobile programs menu
+    // Add event listener to the close button if it exists
     const closeButton = document.querySelector('.ProgramsMenu_closeButton__3QVlI');
     if (closeButton) {
         closeButton.addEventListener('click', () => {
-            console.log('Close button clicked');
             mobileProgramsMenu.style.display = 'none';
         });
     }
 }
+
+// Initialize the mobile program menu
+initializeMobileProgramMenu();
+
 // Modified component loader
 async function includeComponent(filepath, targetId) {
     try {
