@@ -2804,74 +2804,74 @@
   </div>
   <!-- faq end -->
   <!-- footer start  -->
-  <div id="footer-container"></div>
-  <!-- footer end -->
+ <div id="footer-container"></div>
+ <!-- footer end -->
 
-  <div class="sticky-apply">
-    <div class="sticky-apply-btn">APPLY NOW</div>
-  </div>
+ <div class="sticky-apply">
+   <div class="sticky-apply-btn">APPLY NOW</div>
+ </div>
 
-  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
-    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-  <script src="CommonJS/index.js"></script>
-  <script src="CommonJS/footer.js"></script>
-  <script src="CommonJS/modals.js"></script>
-  <!-- <script src="CommonJS/program.js"></script> -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
-    integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+   integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+ <script src="CommonJS/index.js"></script>
+ <script src="CommonJS/footer.js"></script>
+ <script src="CommonJS/modals.js"></script>
+ <!-- <script src="CommonJS/program.js"></script> -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+   integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
-  <script src="js/constant.js"></script>
-  <script src="js/applyNowForm.js"></script>
+ <script src="js/constant.js"></script>
+ <script src="js/applyNowForm.js"></script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', async function () {
-      // Load components in order
-      // await includeComponent('../components/header.html', 'header-container');
-      await includeComponent('../components/brochureModal.html', 'modal-container');
-      await includeComponent('../components/loginModal.html', 'login-modal');
-      await includeComponent('../components/applyModal.html', 'apply-modal-container');
-      await includeComponent('../components/programsModal.html', 'programs-modal-container');
-      await includeComponent('../components/mobileMenu.html', 'mobile-menu-container');
+ <script>
+   document.addEventListener('DOMContentLoaded', async function () {
+     // Load components in order
+     // await includeComponent('../components/header.html', 'header-container');
+     await includeComponent('../components/brochureModal.html', 'modal-container');
+     await includeComponent('../components/loginModal.html', 'login-modal');
+     await includeComponent('../components/applyModal.html', 'apply-modal-container');
+     await includeComponent('../components/programsModal.html', 'programs-modal-container');
+     await includeComponent('../components/mobileMenu.html', 'mobile-menu-container');
 
-      // Additional initializations that depend on header
-      initializeProgramsModal();
-      // initializeMobileMenu();
+     // Additional initializations that depend on header
+     initializeProgramsModal();
+     // initializeMobileMenu();
 
-      const applyNowFormScript = document.createElement("script");
-      applyNowFormScript.src = "js/applyNowForm.js";
-      applyNowFormScript.async = true;
-      document.body.appendChild(applyNowFormScript);
+     const applyNowFormScript = document.createElement("script");
+     applyNowFormScript.src = "js/applyNowForm.js";
+     applyNowFormScript.async = true;
+     document.body.appendChild(applyNowFormScript);
 
-      const commonJsIndexScript = document.createElement("script");
-      commonJsIndexScript.src = "CommonJS/index.js";
-      commonJsIndexScript.async = true;
-      document.body.appendChild(commonJsIndexScript);
+     const commonJsIndexScript = document.createElement("script");
+     commonJsIndexScript.src = "CommonJS/index.js";
+     commonJsIndexScript.async = true;
+     document.body.appendChild(commonJsIndexScript);
 
-      const commonJsFooterScript = document.createElement("script");
-      commonJsFooterScript.src = "CommonJS/footer.js";
-      commonJsFooterScript.async = true;
-      document.body.appendChild(commonJsFooterScript);
+     const commonJsFooterScript = document.createElement("script");
+     commonJsFooterScript.src = "CommonJS/footer.js";
+     commonJsFooterScript.async = true;
+     document.body.appendChild(commonJsFooterScript);
 
-      const commonJsModalScript = document.createElement("script");
-      commonJsModalScript.src = "CommonJS/modals.js";
-      commonJsModalScript.async = true;
-      document.body.appendChild(commonJsModalScript);
+     const commonJsModalScript = document.createElement("script");
+     commonJsModalScript.src = "CommonJS/modals.js";
+     commonJsModalScript.async = true;
+     document.body.appendChild(commonJsModalScript);
 
-      const commonJsProgramScript = document.createElement("script");
-      commonJsProgramScript.src = "CommonJS/program.js";
-      commonJsProgramScript.async = true;
-      document.body.appendChild(commonJsProgramScript);
-    });
+     const commonJsProgramScript = document.createElement("script");
+     commonJsProgramScript.src = "CommonJS/program.js";
+     commonJsProgramScript.async = true;
+     document.body.appendChild(commonJsProgramScript);
+   });
 
-    document.addEventListener('DOMContentLoaded', function () {
+   document.addEventListener('DOMContentLoaded', function () {
 
-      includeFooterComponent('../components/footer.html', 'footer-container');
-      // includeHeaderComponent('../components/header.html', 'header-container');
-    });
+     includeFooterComponent('../components/footer.html', 'footer-container');
+     // includeHeaderComponent('../components/header.html', 'header-container');
+   });
 
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ </script>
+ <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 
 </html>
