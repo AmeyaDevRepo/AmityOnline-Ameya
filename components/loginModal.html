@@ -1,0 +1,196 @@
+<div id="_modal" style="display: none;">
+    <div class="Modal_root__5nZXA">
+      <div class="bg-white Modal_dialog__e3Pgf">
+        <svg class="Modal_close__C0ggP" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+          viewBox="0 0 24 24" fill="none" id="close-modal2">
+          <g clip-path="url(#clip0_380_520)">
+            <path
+              d="M18.2648 20.9813L11.6211 14.3376L4.9774 20.9813L2.76284 18.7667L9.40653 12.123L2.76284 5.47935L4.9774 3.26479L11.6211 9.90848L18.2648 3.26479L20.4794 5.47935L13.8357 12.123L20.4794 18.7667L18.2648 20.9813Z"
+              fill="#1A325D"></path>
+          </g>
+          <defs>
+            <clipPath id="clip0_380_520_1">
+              <rect width="24" height="24" fill="white"></rect>
+            </clipPath>
+          </defs>
+        </svg>
+
+        <div class="LoginModal_root__Ye6fO">
+
+          <img src="https://amityonline.com/_s/student_login_new_72d202970e_b8ac0d3833.webp"
+            style="object-fit: fill;" alt="Anity Online">
+
+
+          <form id="loginForm" class="LoginModal_content__MLPx4 py-8 grid flex-col justify-start ">
+            <div class="banner-form-title2">
+              Login</div>
+            <div class="text-sec mb-4 lg:mb-4 LoginModal_text__TFhkz">Enter your details here to login to your
+              account</div>
+            <div class="RadioTabs_radioTabs__8HPmh">
+              <button id="studentlogin" type="button"
+                class="button_root__RRK9v RadioTabs_emailLogin__0BBNb button_b__2Obj5">
+                <span class="uppercase font-raleway">Student Login</span>
+              </button>
+              <button id="applicantlogin" type="button"
+                class="button_root__RRK9v RadioTabs_emailLogin__0BBNb RadioTabs_emailLoginUnChecked__7OJ_o button_b__2Obj5">
+                <span class="uppercase font-raleway">Applicant Login</span>
+              </button>
+            </div>
+            <div class="flex mb-6">
+              <div class="LoginModal_flexBox__T_RZJ">
+                <input type="radio" name="loginmethod" id="loginwithemail" checked>
+                <div>Login With Email</div>
+              </div>
+              <div class="LoginModal_flexBox__T_RZJ">
+                <input type="radio" name="loginmethod" id="loginwithotp">
+                <div>Login With OTP</div>
+              </div>
+            </div>
+            <div id="emailinputfield">
+              <div class="Form_group__rP395">
+                <label class="text-blu" id="email-label" for="email-input">Email Id *</label>
+                <div class="Form_control__eYGP8">
+                  <input id="email-input" placeholder="Enter Email Id" class="TextInput_root__De36R undefined"
+                    value="" name="email">
+                </div>
+              </div>
+              <div class="Form_group__rP395">
+                <label class="text-blu" id="password-label" for="password-input">Password *</label>
+                <div class="Form_control__eYGP8">
+                  <input id="password-input" placeholder="Enter Password"
+                    class="TextInput_root__De36R undefined" type="password" value="" name="password">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                    fill="none" class="cursor-pointer">
+                    <g opacity="0.4">
+                      <path
+                        d="M17.8807 19.2968C16.1794 20.3755 14.1618 21.0002 11.9983 21.0002C6.60617 21.0002 2.1202 17.1204 1.17969 12.0002C1.61637 9.62283 2.81737 7.5129 4.51852 5.93457L1.39171 2.80777L2.80593 1.39355L22.6049 21.1925L21.1907 22.6068L17.8807 19.2968ZM5.93365 7.3497C4.60478 8.56015 3.63585 10.1672 3.22083 12.0002C4.13827 16.0521 7.76265 19.0002 11.9983 19.0002C13.5977 19.0002 15.11 18.5798 16.4223 17.8384L14.394 15.8101C13.7003 16.2472 12.8788 16.5002 11.9983 16.5002C9.51303 16.5002 7.49831 14.4854 7.49831 12.0002C7.49831 11.1196 7.75122 10.2981 8.18836 9.60442L5.93365 7.3497ZM12.9119 14.328L9.67051 11.0866C9.55935 11.3696 9.49831 11.6777 9.49831 12.0002C9.49831 13.3809 10.6176 14.5002 11.9983 14.5002C12.3207 14.5002 12.6289 14.4391 12.9119 14.328ZM20.8048 16.5925L19.374 15.1617C20.0299 14.2268 20.5134 13.1586 20.7757 12.0002C19.8583 7.94818 16.2339 5.00016 11.9983 5.00016C11.1524 5.00016 10.3309 5.11773 9.55054 5.33818L7.97251 3.76015C9.21932 3.26959 10.5773 3.00016 11.9983 3.00016C17.3904 3.00016 21.8764 6.87993 22.8169 12.0002C22.5047 13.6998 21.8018 15.2628 20.8048 16.5925ZM11.7209 7.50857C11.8126 7.503 11.9051 7.50016 11.9983 7.50016C14.4835 7.50016 16.4983 9.51488 16.4983 12.0002C16.4983 12.0933 16.4954 12.1858 16.4899 12.2775L11.7209 7.50857Z"
+                        fill="black"></path>
+                    </g>
+                  </svg>
+                </div>
+
+                <div class="Form_helper__JRTKk">
+                  <button id="forgotPasswordBtn" class="cursor-pointer mb-2">Forgot Password?</button>
+                </div>
+                <!-- <button type="submit" disabled="" class="button_root__RRK9v mt-auto button_b__2Obj5"
+              style="width:100%"> -->
+              <!-- <span class="uppercase font-raleway">SUBMIT</span> -->
+            </button>
+                <div>
+                  <label for="a"></label>
+                  <input type="text" id="a" disabled>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="mb-4" id="phoneinputfield" style="display: none;">
+              <div class="Form_group__rP395">
+                <label class="text-blu" id="emailphones-label" for="email-input">Email Id/ Phone No * </label>
+                <div class="Form_control__eYGP8">
+                  <input id="phone-input" placeholder="Enter Email Id/Phone No"
+                    class="TextInput_root__De36R undefined" value="" name="phone">
+                </div>
+              </div>
+              <div>
+                <label for="b"></label>
+                <input type="text" id="b" disabled>
+              </div>
+              <div>
+                <label for="c"></label>
+                <input type="text" id="c" disabled>
+              </div>
+              <div>
+                <label for="d"></label>
+                <input type="text" id="d" disabled>
+              </div>
+              <div>
+                <label for="e"></label>
+                <input type="text" id="e" disabled>
+              </div>
+
+
+            </div>
+            <div class="mb-4" id="phoneinputfieldapplicant" style="display: none;">
+              <div class="Form_group__rP395">
+                <label class="text-blu" id="phone-label" for="phone-input">Phone No * </label>
+                <div class="Form_control__eYGP8">
+                  <input id="phone-input-2" placeholder="Enter Phone No"
+                    class="TextInput_root__De36R undefined" value="" name="phone">
+                </div>
+              </div>
+
+              <div>
+                <label for="f"></label>
+                <input type="text" id="f" disabled>
+              </div>
+              <div>
+                <label for="g"></label>
+                <input type="text" id="g" disabled>
+              </div>
+              <div>
+                <label for="h"></label>
+                <input type="text" id="h" disabled>
+              </div>
+              <div>
+                <label for="i"></label>
+                <input type="text" id="i" disabled>
+              </div>
+            </div>
+
+            <button type="submit"class="button_root__RRK9v mt-auto button_b__2Obj5"
+              style="width:100%">
+              <span class="uppercase font-raleway">SUBMIT</span>
+            </button>
+          </form>
+
+          <form id="forgotPasswordForm" class="LoginModal_content__MLPx4 py-4 flex flex-col "
+            style="display: none;">
+            <div
+              class="text-blu font-baskervville font-normal capitalize mb-3 lg:mb-4 LoginModal_header__Nk7pU">
+              Reset Your Password</div>
+            <div class="text-sec font-railway font-medium mb-7 lg:mb-9 LoginModal_text__TFhkz">Enter your
+              registered email ID to receive your password.</div>
+            <div class="font-railway Form_group__rP395 ">
+              <label class="text-blu" id="email-input-2" for="null-control">Email Id *</label>
+              <div class="Form_control__eYGP8"><input placeholder="Enter Email ID"
+                  class="TextInput_root__De36R undefined" value="" id="null-control" name="email"></div>
+              <div class="Form_helper__JRTKk">
+                <button id="backToLoginBtn" class="LoginModal_backToLogin__NsbIA ">Back to
+                  login?</button>
+                  <div style="margin-bottom: 200px;"></div>
+                  <button type="submit" disabled="" class="button_root__RRK9v mt-auto button_b__2Obj5 "
+              style="width: 100%; "><span class="uppercase font-raleway">RESET</span>
+            </button>
+              </div>
+            </div>
+            <button type="submit" disabled="" class="button_root__RRK9v mt-auto button_b__2Obj5 "
+              style="width: 100%; display: none; "><span class="uppercase font-raleway">RESET</span>
+            </button>
+          </form>
+          
+          <form id="forgotPasswordForm" class="LoginModal_content__MLPx4 py-4 flex flex-col "
+          style="display: none;">
+          <div
+            class="text-blu font-baskervville font-normal capitalize mb-3 lg:mb-4 LoginModal_header__Nk7pU">
+            Reset Your Password</div>
+          <div class="text-sec font-railway font-medium mb-7 lg:mb-9 LoginModal_text__TFhkz">Enter your
+            registered email ID to receive your password.</div>
+          <div class="font-railway Form_group__rP395 ">
+            <label class="text-blu" id="email-input-2" for="null-control">Email Id *</label>
+            <div class="Form_control__eYGP8"><input placeholder="Enter Email ID"
+                class="TextInput_root__De36R undefined" value="" id="null-control" name="email"></div>
+            <div class="Form_helper__JRTKk">
+              <button id="backToLoginBtn" class="LoginModal_backToLogin__NsbIA ">Back to
+                login?</button>
+            </div>
+          </div>
+          <!-- <div style="margin-bottom: 200px;"></div> -->
+          <button type="submit" disabled="" class="button_root__RRK9v mt-auto button_b__2Obj5 "
+            style="width: 100%; "><span class="uppercase font-raleway">RESET</span>
+          </button>
+        </form>
+        </div>
+      </div>
+    </div>
+  </div>

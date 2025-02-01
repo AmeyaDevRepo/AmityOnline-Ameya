@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="./../CommonCss/style.css">
+
+<div id="Apply_modal" class="modal">
+  <div class="Modal_root__5nZXA">
+    <div class="bg-white Modal_dialog__e3Pgf">
+      <svg class="Modal_close__C0ggP" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+        <g clip-path="url(#clip0_380_520)">
+          <path d="M18.2648 20.9813L11.6211 14.3376L4.9774 20.9813L2.76284 18.7667L9.40653 12.123L2.76284 5.47935L4.9774 3.26479L11.6211 9.90848L18.2648 3.26479L20.4794 5.47935L13.8357 12.123L20.4794 18.7667L18.2648 20.9813Z" fill="#1A325D"></path>
+        </g>
+        <defs>
+          <clipPath id="clip0_380_520">
+            <rect width="24" height="24" fill="white"></rect>
+          </clipPath>
+        </defs>
+      </svg>
+      <div class="ConnectModal_root__lWB_7 relative flex w-full outline-none focus:outline-none ">
+        <div class="basis-2/5 shrink-0">
+          <img src="https://amityonline.com/_s/english_teacher_doing_her_lessons_online_1_634dad1575.png" alt="Amity Online" title="Amity Online" class="ConnectModal_img__JT432">
+        </div>
+        <div class="ConnectModal_formSection__jd27F">
+          <div class="mx-auto xl:pl-0 w-full">
+            <h2 class="ConnectModal_Modal__RightContainerTitle__WO56D">Connect with our counsellor</h2>
+            <p class="ConnectModal_Modal__RightContainerDescription__pcu30 w-full">"Please provide the information below, and our counsellor will get in touch with you."</p>
+            <div>
+              <div class="NationalInternational_container__v9in7">
+                <button id="nationalcodeselect" class="NationalInternational_national__FBIVx">Indian</button>
+                <button id="internationcodeselect" class="NationalInternational_interNational__RKrPp NationalInternational_notSelectedButton__lh0q7">International</button>
+              </div>
+              <form class="ConnectModalForm_root__zYe2H">
+                <div class="ConnectModalForm_inputWrapper__Nn1l3 flex gap-4">
+                  <div class="basis-1/2">
+                    <label for="full_name">Full Name *</label>
+                    <input id="full_name" placeholder="Enter your full name" class="text-stone-500 border border-neutral-200 outline-none focus:border-primary-blue w-full xl:w-full Input_Input__FieldFont__Grq3d" type="text" value="">
+                    <p class="ConnectModalForm_error___wYoL"></p>
+                  </div>
+                  <div class="basis-1/2">
+                    <label for="phone_number">Phone Number *</label>
+                    <div class="flex gap-[6px]">
+                      <div class="Input_SelectContainer__csa2O border border-neutral-200">
+                        <select id="regioninputselectcode" aria-label="phone select" class="appearance-none text-stone-500 bg-white text-lg leading-loose tracking-tight outline-none Input_selectDropdown__rRnfH">
+                          <option id="defalutoption" value="+91">+91</option>
+                        </select>
+                      </div>
+                      <div class="w-full">
+                        <input id="phone_number" placeholder="Enter your no." class="text-stone-500 border border-neutral-200 outline-none focus:border-primary-blue w-full xl:w-full Input_Input__FieldFont__Grq3d" type="text" value="">
+                      </div>
+                    </div>
+                    <p class="ConnectModalForm_error___wYoL"></p>
+                  </div>
+                </div>
+                <div class="ConnectModalForm_commonMargins__efaYq ConnectModalForm_emailContainer__tCa_n flex gap-4">
+                  <div class="basis-1/2">
+                    <label for="email">Email ID *</label>
+                    <input id="email" placeholder="abc@xyz.com" class="text-stone-500 border border-neutral-200 outline-none focus:border-primary-blue w-full xl:w-full Input_Input__FieldFont__Grq3d" type="email" value="">
+                    <p class="ConnectModalForm_error___wYoL"></p>
+                  </div>
+                  <div class="basis-1/2"></div>
+                </div>
+                
+                <div class="ConnectModalForm_commonMargins__efaYq flex items-start gap-[17px]">
+                  <div class="shrink-0">
+                    <input id="consent_checkbox" aria-label="checkbox" class="outline-none rounded-[50%] align-middle border-[1px] border-stone-500 appearance-none cursor-pointer checked:bg-primary-blue checked:border-transparent checked:ring-2 checked:ring-primary-blue checked:ring-offset-2 checked:ring-offset-white" type="checkbox" name="consent">
+                  </div>
+                  <p class="ConnectModalForm_authorization__FbK_y">
+                    I authorise Amity University Online and its associates to contact me with updates &amp; notifications via Email, SMS, WhatsApp, and Voice call as per the Privacy Policy. This consent will override any registration for DNC / NDNC.
+                  </p>
+                </div>
+                <button type="submit" id="submit_button" class="font-semibold font-raleway uppercase w-full border Input_btn___g__n bg-[#E7E7E7] border-stone-500 text-stone-500" disabled>Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+ 

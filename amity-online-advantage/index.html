@@ -1,0 +1,1543 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Metadata -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/fav.png">
+
+  <!-- Fonts Preconnect for Optimization -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+
+  <!-- Font Awesome (Icons) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+    integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Line Awesome (Icons) -->
+  <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+    integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./../CommonCss/style.css">
+  <link rel="stylesheet" href="./amityOnline.css">
+  <style>
+    /* Hide desktop carousel on mobile */
+    @media (max-width: 1199px) {
+      .desktop-carousel {
+        display: none;
+      }
+      .mobile-carousels {
+        display: block;
+      }
+    }
+  
+    /* Hide mobile carousels on desktop */
+    @media (min-width: 1200px) {
+      .mobile-carousels {
+        display: none;
+      }
+    }
+  
+    /* Mobile carousel styling */
+    .mobile-carousels .swiper {
+      padding-bottom: 40px;
+    }
+    .testimonial-card {
+      border: 1px solid #1a325d;
+      border-radius: 16px;
+      margin: 16px;
+      padding: 16px;
+    }
+    .video-card {
+      height: 250px;
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      margin: 16px;
+    }
+  </style>
+  <style>
+    .mobile-testimonial-card {
+      border: 1px solid #1a325d;
+      border-radius: 16px;
+      margin: 16px;
+      overflow: hidden;
+    }
+    
+    .mobile-testimonial-image {
+      width: 100%;
+      height: 300px;
+      position: relative;
+    }
+    
+    .mobile-testimonial-image img {
+      width: 100%;
+      height: 100%;
+      object-fit:fill;
+    }
+    
+    .mobile-testimonial-content {
+      padding: 16px;
+      text-align: center;
+    }
+    
+    .mobile-testimonial-name {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #1a325d;
+      margin-bottom: 8px;
+    }
+    
+    .mobile-testimonial-course {
+      color: #686868;
+      font-size: 0.875rem;
+      margin-bottom: 12px;
+    }
+    
+    .mobile-testimonial-text {
+      color: #1a325d;
+      font-size: 0.9375rem;
+      line-height: 1.4;
+    }
+    /* Add this to your CSS */
+.ContactUsBanner_imgContainer__RNgkF {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Adjust ratio as needed */
+  overflow: hidden;
+}
+
+.ContactUsBanner_imgContainer__RNgkF img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevent stretching */
+  object-position: center; /* Center the image */
+}
+.w-full.h-full.rounded-2xl.lg\:hidden {
+  aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+  object-fit: cover; /* Added to ensure proper scaling */
+}
+  </style>
+</head>
+
+<body>
+  <header class="site-navbar">
+    <div class="container">
+      <div class="header-block">
+        <!-- Logo Wrapper -->
+        <div class="logo-wrapper">
+          <a href="index.html">
+            <img src="images/amity_logo_5ee70d67b4_f4e929fb4a.svg" alt="">
+          </a>
+        </div>
+
+        <div class="header-content">
+          <div class="header-menu">
+            <!-- Navigation Menu -->
+            <nav class="site-navigation position-relative text-right">
+              <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                <li class="has-children">
+                  <a href="#" class="menu-link" id="programsLink"><span>PROGRAMS</span></a>
+                </li>
+                <li><a href="../carrer.html" class="menu-link"><span>CAREER SERVICE</span></a></li>
+                <li><a href="index.html" class="menu-link"><span>ADVANTAGES</span></a></li>
+              </ul>
+            </nav>
+            <!-- End of Navigation Menu -->
+
+            <div id="programs-modal-container"></div>
+            <!-- Start: Header Menu Toggle -->
+
+            <div class="header-menu-toggle d-inline-block d-xl-none ml-md-0 mr-auto"
+              style="position: relative; top: 3px;">
+              <button id="menuToggleButton" aria-label="Hamburger Menu"
+                style="background: none; border: none; cursor: pointer;">
+                <!-- Mobile Menu Container -->
+                <div id="mobile-menu-container"></div>
+                <!-- end -->
+                <!-- Hamburger Image -->
+                <img id="hamburgerImage" src="images/menu.svg" alt="Hamburger Menu"
+                  style="display: block; width:30px; margin-top: 5px;">
+                <!-- Cross Icon SVG (Hidden by default) -->
+                <svg id="closeIcon" width="24" height="20" viewBox="0 0 19 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg" style="display: none; margin-top: 5px">
+                  <path
+                    d="M16.2648 17.9813L9.62109 11.3376L2.9774 17.9813L0.762835 15.7667L7.40653 9.12305L0.762835 2.47935L2.9774 0.264788L9.62109 6.90848L16.2648 0.264788L18.4794 2.47935L11.8357 9.12305L18.4794 15.7667L16.2648 17.9813Z"
+                    fill="white"></path>
+                </svg>
+              </button>
+            </div>
+            <!-- End: Header Menu Toggle -->
+
+
+          </div>
+
+          <div class="header-search">
+            <div class="header-search-icon">
+              <i class="las la-search"></i>
+            </div>
+            <input type="text" id="search-input">
+
+          </div>
+          <div class="header-btn">
+            <a href="#" class="cus-btn border-light header-login" id="login-button">
+              <i class="las la-user"></i> Login
+            </a>
+            <!-- The Login Modal -->
+            <div id="login-modal"></div>
+            <!-- The Login Modal END -->
+
+            <a href="#" class="cus-btn btn-yellow header-apply" id="apply-now-btn">Apply Now <i
+                class="las la-arrow-right"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </header>
+
+  <!-- The Apply Modal -->
+  <div id="apply-modal-container"></div>
+  <!-- The Apply Modal END-->
+
+  <main class="relative" >
+    <div class="contactarti container">
+      <div class="relative rounded-2xl ContactUsBanner_bannerWrapperHeight__c_RPx ContactUsBanner_bigHeight__usGJb">
+        <div class="h-full ContactUsBanner_gradient__8_aSi ContactUsBanner_blueGradient__bhiqI">
+          <div class="ContactUsBanner_imgContainer__RNgkF">
+            <!-- Desktop image -->
+            <img title="Contact Us"
+                 class="ContactUsBanner_aspected__V7yZA"
+                 src="https://amityonline.com/_sb/Rectangle_20050_70a182869e.webp"
+                 loading="lazy"
+                 alt="&quot;Contact Us&quot;">
+    
+            <!-- Mobile image -->
+            <img class="w-full h-full rounded-2xl lg:hidden"
+                 src="https://amityonline.com/_sb/Rectangle_20050_70a182869e.webp"
+                 loading="lazy"
+                 alt="">
+          </div>
+          <div>
+            <h1 class="font-baskervville font-normal capitalize absolute bottom-0 left-0 z-20 ContactUsBanner_title__TVsDY ContactUsBanner_smallTitle__fm3Fv !text-white">
+              Power your career dreams with a Top-ranked University
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container styles_container__vgMpz pt-7">
+      <div class="flex items-center"><img src="https://amityonline.com/_sb/qs_logo_3_3c0d563131.webp" alt="QS"
+          title="QS" class="styles_img__ege1i">
+        <div>
+          <div class="styles_title__8eov0">Online MBA Rankings 2024
+          </div>
+          <div class="styles_subtitle__X9sHN">global top 50 | asia pacific top 10
+          </div>
+        </div>
+      </div>
+      <div class="styles_subContainer__WBtbW">
+        <div class="styles_heading__ah9oO">India's only Online MBA to be ranked by QS globally
+        </div>
+        <div class="styles_desc__7pRa1">This Online MBA excels in affordability without compromising quality, offering
+          top-tier education at exceptional value. Learners can expect a high return on investment, fueling unmatched
+          professional growth.
+        </div>
+      </div>
+    </div>
+    <div id="Overview" class="OverviewSection_Overview__container__EJZPG">
+      <div class="container BuildNation_root__fSfXz">
+        <div class="lg:flex justify-between BuildNation_wrapper__maAXu">
+          <div class="BuildNation_content__d4UtI">
+            <div class="flex flex-col w-full">
+              <div class="flex items-start justify-between w-full">
+                <h2 class="BuildNation_heading__1uDil BuildNation_smallFont__ycvgy">India’s most trusted private
+                  education brand
+                </h2>
+              </div>
+              <p class="BuildNation_desc__atjY1">Amity Online, with over 30 years of academic excellence, proudly
+                secures a distinguished position globally for employability, acknowledged by Times Higher Education.
+                This achievement sets it apart as one of the select seven institutes in India renowned for producing
+                highly employable graduates.
+              </p>
+            </div>
+          </div>
+          <div class="BuildNation_image_wrapper__3kqch">
+            <div><img class="object-cover rounded-2xl BuildNation_image__4Cim1"
+                src="https://static.amityonline.com/_s/Group_48100902_e29468a81b_e953850c7e.webp" alt="/image-redirect"
+                title="Amity Online"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section class="undefined">
+      <div class="container">
+        <div class="SectionCard_root__vJRVT">
+          <div class="flex justify-between lining-nums lg:items-center flex-col lg:flex-row lg:align-center">
+            <h2 class="SectionCard_title__DSA2A">Top-Notch Online Learner Experience
+            </h2>
+            <!-- <p class="SectionCard_subtitle__vVqmD hidden lg:block">Discover the pinnacle of online educatio  -->
+              <!-- <br>where excellence knows no boundaries</p> -->
+            <p class="SectionCard_subtitle__vVqmD block lg:hidden">Discover the pinnacle of online education <br/>
+              excellence knows no boundaries
+            </p>
+          </div>
+          <div class="SectionCard_hr__sFh5X"></div>
+          <div class="pt-7 lg:pt-7">
+            <div>
+              <div class="styles_root__FAlA2">
+                <div class="styles_container__kGLbs">
+                  <div class="styles_imgContainer__iQOIm"><img
+                      src="https://amityonline.com/_s/image_10127_2_8aebbdbaa0_9b13e5f0b9.webp" alt="Expereince"
+                      title="Expereince" class="styles_img__fRB_o"></div>
+                  <div class="styles_subContainer___hjjj">
+                    <div class="styles_title__UpVwp">Top International<br>
+                      Faculty
+                    </div>
+                    <p class="styles_subtitle__bMRnS">Lectures delivered by top international faculty offer captivating
+                      insights with a global perspective</p>
+                  </div>
+                </div>
+                <div class="styles_container__kGLbs">
+                  <div class="styles_imgContainer__iQOIm"><img
+                      src="https://amityonline.com/_s/image_10161_c1fb57deb1_ea80f73576.webp" alt="Expereince"
+                      title="Expereince" class="styles_img__fRB_o"></div>
+                  <div class="styles_subContainer___hjjj">
+                    <div class="styles_title__UpVwp">AI-Professor<br>
+                      AMI
+                    </div>
+                    <p class="styles_subtitle__bMRnS">AI-PROF. AMI, Powered by Chat-GPT 4 &amp;
+                      Open AI Tech for 24/7 Doubt
+                      Clearing &amp; Support</p>
+                  </div>
+                </div>
+                <div class="styles_container__kGLbs">
+                  <div class="styles_imgContainer__iQOIm"><img
+                      src="https://amityonline.com/_s/Diverse_learning_mediums_3ccfbb2dab_5baef33c0a.webp"
+                      alt="Expereince" title="Expereince" class="styles_img__fRB_o"></div>
+                  <div class="styles_subContainer___hjjj">
+                    <div class="styles_title__UpVwp">Diverse learning<br>
+                      mediums
+                    </div>
+                    <p class="styles_subtitle__bMRnS">Diverse Learning options through recorded lectures, audio books,
+                      physical books,
+                      e-books &amp; more</p>
+                  </div>
+                </div>
+                <div class="styles_container__kGLbs">
+                  <div class="styles_imgContainer__iQOIm"><img
+                      src="https://amityonline.com/_s/Untitled_design_e2d035bc0c_3456878f5f.webp" alt="Expereince"
+                      title="Expereince" class="styles_img__fRB_o"></div>
+                  <div class="styles_subContainer___hjjj">
+                    <div class="styles_title__UpVwp">Industry-Aligned<br>
+                      Curriculums
+                    </div>
+                    <p class="styles_subtitle__bMRnS">HCL Tech and TCS ion aligned program curriculums with industry
+                      needs for better employability</p>
+                  </div>
+                </div>
+                <div class="styles_container__kGLbs">
+                  <div class="styles_imgContainer__iQOIm"><img
+                      src="https://amityonline.com/_s/image_10161_1_d1276942d6_ff59f3e3f1.webp" alt="Expereince"
+                      title="Expereince" class="styles_img__fRB_o"></div>
+                  <div class="styles_subContainer___hjjj">
+                    <div class="styles_title__UpVwp">Interactive faculty<br>
+                      sessions
+                    </div>
+                    <p class="styles_subtitle__bMRnS">Engage in a dynamic learning environment with our continuous
+                      faculty interaction and dedicated doubt-clearing sessions</p>
+                  </div>
+                </div>
+                <div class="styles_container__kGLbs">
+                  <div class="styles_imgContainer__iQOIm"><img
+                      src="https://amityonline.com/_s/career_services_0bf6c3de8b_81f619e433.webp" alt="Expereince"
+                      title="Expereince" class="styles_img__fRB_o"></div>
+                  <div class="styles_subContainer___hjjj">
+                    <div class="styles_title__UpVwp">Career services &amp;<br>
+                      placement assistance
+                    </div>
+                    <p class="styles_subtitle__bMRnS">Career services &amp; placement assistance
+                      with 500+ hiring partners ensuring opportunities for professional growth</p>
+                  </div>
+                </div>
+                <div class="styles_container__kGLbs">
+                  <div class="styles_imgContainer__iQOIm"><img
+                      src="https://amityonline.com/_s/image_10127_d23022e6d9_4aa2b4ab79.webp" alt="Expereince"
+                      title="Expereince" class="styles_img__fRB_o"></div>
+                  <div class="styles_subContainer___hjjj">
+                    <div class="styles_title__UpVwp">Remote proctored<br>
+                      exams
+                    </div>
+                    <p class="styles_subtitle__bMRnS">Experience hassle-free assessments with integrity and convenience,
+                      take tests from the comfort of own space</p>
+                  </div>
+                </div>
+                <div class="styles_container__kGLbs">
+                  <div class="styles_imgContainer__iQOIm"><img
+                      src="https://amityonline.com/_s/11_Industry_Mentorship_65e6dca1de_8e09060081.webp"
+                      alt="Expereince" title="Expereince" class="styles_img__fRB_o"></div>
+                  <div class="styles_subContainer___hjjj">
+                    <div class="styles_title__UpVwp">Dedicated Academic<br>
+                      Advisor
+                    </div>
+                    <p class="styles_subtitle__bMRnS">Access expert guidance from professionals who support from
+                      academic journey to the beginning of career</p>
+                  </div>
+                </div>
+                <div class="styles_container__kGLbs">
+                  <div class="styles_imgContainer__iQOIm"><img
+                      src="https://amityonline.com/_s/Untitled_design_3_b8dc8e836a_42d218e5c8.webp" alt="Expereince"
+                      title="Expereince" class="styles_img__fRB_o"></div>
+                  <div class="styles_subContainer___hjjj">
+                    <div class="styles_title__UpVwp">1:1 industry<br>
+                      mentorship
+                    </div>
+                    <p class="styles_subtitle__bMRnS">Elevate your skills and career prospects with tailored insights,
+                      cultivating a pathway to professional success</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="undefined">
+      <div class="container">
+        <div class="SectionCard_root__vJRVT SectionCard_card__76a8h">
+          <div class="flex justify-between lining-nums lg:items-center flex-col lg:flex-row lg:align-center">
+            <h2 class="SectionCard_title__DSA2A">live campus experience at all our Campuses
+            </h2>
+            <p class="SectionCard_subtitle__vVqmD hidden lg:block">Immerse yourself in the energy<!-- --> <br>of a
+              lively campus atmosphere</p>
+            <p class="SectionCard_subtitle__vVqmD block lg:hidden">Immerse yourself in the energy of a lively campus
+              atmosphere
+            </p>
+          </div>
+          <div class="SectionCard_hr__sFh5X"></div>
+          <div class="pt-7 lg:pt-7">
+            <div>
+              <div class="styles_root__HX84n"><img src="https://amityonline.com/_s/adv_6fa796a6e9.webp"
+                  alt="Campus Section" title="Campus Section">
+                <div class="flex-1">
+                  <div class="styles_info__WDvCu">Campus orientation for<br>
+                    new learners
+                  </div>
+                  <div class="styles_info__WDvCu">Weekend classes
+                  </div>
+                  <div class="styles_info__WDvCu">Last-minute revision sessions
+                  </div>
+                  <div class="styles_info__WDvCu">Guest lecture series
+                  </div>
+                  <div class="styles_info__WDvCu">Access to libraries and<br>
+                    programming labs
+                  </div>
+                  <div class="styles_info__WDvCu">Exam preparation classes
+                  </div>
+                  <div class="styles_info__WDvCu">Access to campus events
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="undefined">
+      <div class="container">
+        <div class="SectionCard_root__vJRVT">
+          <div class="flex justify-between lining-nums lg:items-center flex-col lg:flex-row lg:align-center">
+            <h2 class="SectionCard_title__DSA2A">Campus Activity highlights
+            </h2>
+          </div>
+          <div class="SectionCard_hr__sFh5X"></div>
+          <div class="pt-7 lg:pt-7">
+            <div>
+              <div class="styles_masonry__yOrW2">
+                <div class="styles_item__8riHo">
+                  <div class="styles_root__MkMsT"><img
+                      src="https://amityonline.com/_s/bd7d8379_4237_4d9e_9f25_9a75ee91f60b_11ebcaf48a_5964ac5f73.webp"
+                      alt="Campus Activity" class="styles_img__1PLwh" title="Campus Activity"></div>
+                </div>
+                <div class="styles_item__8riHo">
+                  <div class="styles_root__MkMsT"><img
+                      src="https://amityonline.com/_s/22dd6adf_d8b2_42c5_bc5e_a3cb48b1ebb9_94b58277f3_0d0536ec30.webp"
+                      alt="Campus Activity" class="styles_img__1PLwh" title="Campus Activity"></div>
+                </div>
+                <div class="styles_item__8riHo">
+                  <div class="styles_root__MkMsT"><img
+                      src="https://amityonline.com/_s/ac48f06b_3bad_408f_8b27_979f480bb2e5_e8f93d1764_0af90a0532.webp"
+                      alt="Campus Activity" class="styles_img__1PLwh" title="Campus Activity"></div>
+                </div>
+                <div class="styles_item__8riHo">
+                  <div class="styles_root__MkMsT"><img
+                      src="https://amityonline.com/_s/11aced25_2c42_42d3_b720_a2d41d5d9797_cd69b0dd5a_511df47b30.webp"
+                      alt="Campus Activity" class="styles_img__1PLwh" title="Campus Activity"></div>
+                </div>
+                <div class="styles_item__8riHo">
+                  <div class="styles_root__MkMsT"><img
+                      src="https://amityonline.com/_s/3eaa48a5_de28_46cd_8377_429561c69626_e96d3ed24c_c2e6fae5fe.webp"
+                      alt="Campus Activity" class="styles_img__1PLwh" title="Campus Activity"></div>
+                </div>
+                <div class="styles_item__8riHo">
+                  <div class="styles_root__MkMsT"><img src="https://amityonline.com/_s/0_G4_A996_c706178885.webp"
+                      alt="Campus Activity" class="styles_img__1PLwh" title="Campus Activity"></div>
+                </div>
+                <div class="styles_item__8riHo">
+                  <div class="styles_root__MkMsT"><img
+                      src="https://amityonline.com/_s/d19d1f72_d0cd_4a48_aa65_4087409f2e39_956ba156d1_e2e1e05f8b.webp"
+                      alt="Campus Activity" class="styles_img__1PLwh" title="Campus Activity"></div>
+                </div>
+                <div class="styles_item__8riHo">
+                  <div class="styles_root__MkMsT"><img
+                      src="https://amityonline.com/_s/8c544f59_c2fc_4054_93f5_ed744ed627e8_9c42321d5a_3430bc95f5.webp"
+                      alt="Campus Activity" class="styles_img__1PLwh" title="Campus Activity"></div>
+                </div>
+                <div class="styles_item__8riHo">
+                  <div class="styles_root__MkMsT"><img
+                      src="https://amityonline.com/_s/541258b5_369b_48fa_a321_1a14e40a3a93_922b39dfd6_f567568921.webp"
+                      alt="Campus Activity" class="styles_img__1PLwh" title="Campus Activity"></div>
+                </div>
+                <div class="styles_item__8riHo">
+                  <div class="styles_root__MkMsT"><img
+                      src="https://amityonline.com/_s/b1c1b87c_da10_4771_a75c_3ba223235bb8_03db991a98_5b41453805.webp"
+                      alt="Campus Activity" class="styles_img__1PLwh" title="Campus Activity"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="overflow-x-hidden">
+      <div class="container">
+        <div class="SectionCard_root__vJRVT SectionCard_card__76a8h">
+          <div class="flex justify-between lining-nums lg:items-center flex-col lg:flex-row lg:align-center">
+            <h2 class="SectionCard_title__DSA2A">Top recruiters
+            </h2>
+            <p class="SectionCard_subtitle__vVqmD hidden lg:block">These are our trusted recruitment<!-- -->
+              <br>collaborators for hiring students</p>
+            <p class="SectionCard_subtitle__vVqmD block lg:hidden">These are our trusted recruitment collaborators for
+              hiring students
+            </p>
+          </div>
+          <div class="SectionCard_hr__sFh5X"></div>
+          <div class="pt-7 lg:pt-7">
+            <div>
+              <div class="Carousel ">
+                <div
+                  class="swiper swiper-initialized swiper-horizontal Carousel__blueBullet Carousel__newsletter Carousel__flex swiper-backface-hidden">
+                  <div class="swiper-wrapper" style="transition-duration: 0ms; transform: translate3d(-428px, 0px, 0px); transition-delay: 0ms;">
+                    <div class="swiper-slide " style="">
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/download_1_89a84250e2_4b405390f1.webp"
+                          src="./images/download_1_89a84250e2_4b405390f1.webp">
+                          </div>
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/Frame_1171278251_b34cf6b608.webp"
+                          src="./images/Frame_1171278251_b34cf6b608.webp">
+                         </div>
+                         </div>
+                    <div class="swiper-slide " >
+                         <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/Frame_1171278252_3a60463e81.webp"
+                          src="./images/Frame_1171278252_3a60463e81.webp">
+                           </div>
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/Frame_1171278254_cbacd77ccb.webp"
+                          src="./images/Frame_1171278254_cbacd77ccb.webp">
+                         </div>
+                    </div> 
+                    <div class="swiper-slide" >
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/Frame_1171278259_27dbfa67fa.webp"
+                          src="./images/Frame_1171278259_27dbfa67fa.webp">
+                        </div>
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/Frame_1171278258_70bee71ff5.webp"
+                          src="./images/Frame_1171278258_70bee71ff5.webp">
+                         </div>
+                    </div>
+                    <div class="swiper-slide" >
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/Frame_1171278257_577b24e6c6.webp"
+                          src="./images/Frame_1171278257_577b24e6c6.webp">
+                         </div>
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/Frame_1171278250_02eaa8cf5d.webp"
+                          src="./images/Frame_1171278250_02eaa8cf5d.webp">
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-prev" >
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/Frame_1171278255_b060356ba0.webp"
+                          src="./images/Frame_1171278255_b060356ba0.webp">
+                         </div>
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/Frame_1171278256_cffdba0535.webp"
+                          src="./images/Frame_1171278256_cffdba0535.webp">
+                        </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-active" >
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/Frame_1171278253_944094581b.webp"
+                          src="./images/Frame_1171278253_944094581b.webp">
+                        </div>
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/Frame_1171278248_a45997b4a7.webp"
+                          src="./images/Frame_1171278248_a45997b4a7.webp">
+                         </div>
+                    </div>
+                    <div class="swiper-slide swiper-slide-next" >
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/tcs_36389f49b8.webp"
+                          src="./images/tcs_36389f49b8.webp">
+                         </div>
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/Frame_1171278245_7aabd1576e.webp"
+                          src="./images/Frame_1171278245_7aabd1576e.webp">
+                        </div>
+                    </div>
+                    <div class="swiper-slide" >
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/american_express_727870ccfd.webp"
+                          src="./images/american_express_727870ccfd.webp">
+                         </div>
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/apollo_8e9edd93d8.webp"
+                          src="./images/apollo_8e9edd93d8.webp">
+                         </div>
+                    </div>
+                    <div class="swiper-slide" >
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/genpact_00bfd2769b.webp"
+                          src="./images/genpact_00bfd2769b.webp">
+                          </div>
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/google_48aa9da7e0.webp"
+                          src="./images/google_48aa9da7e0.webp">
+                          </div>
+                    </div>
+                    <div class="swiper-slide" >
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/hdfc_c666fbb983.webp"
+                          src="./images/hdfc_c666fbb983.webp">
+                          </div>
+                      <div class="HiringPartenersCard"><img alt="Hiring Partner" title="Hiring Partner" loading="lazy"
+                          width="143" height="98" decoding="async" data-nimg="1"
+                          class="" style="color:transparent"
+                          srcset="./images/ibm_89d83aa08b.webp"
+                          src="./images/ibm_89d83aa08b.webp">
+                         </div>
+                    </div>
+                  </div>
+                   <div class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                    <span class="swiper-pagination-bullet"></span><span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span></div>
+                </div> 
+                <div class="swiper-pagination"></div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- <section class="overflow-x-hidden">
+      <div class="container">
+          <div class="SectionCard_root__vJRVT SectionCard_card__76a8h">
+              <div class="flex justify-between lining-nums lg:items-center flex-col lg:flex-row lg:align-center">
+                  <h2 class="SectionCard_title__DSA2A">Top recruiters</h2>
+                  <p class="SectionCard_subtitle__vVqmD hidden lg:block">These are our trusted recruitment
+                      <br>collaborators for hiring students</p>
+                  <p class="SectionCard_subtitle__vVqmD block lg:hidden">These are our trusted recruitment collaborators for
+                      hiring students</p>
+              </div>
+              <div class="SectionCard_hr__sFh5X"></div>
+              <div class="pt-7 lg:pt-7">
+                  <div class="Carousel">
+                      <div class="swiper">
+                          <div class="swiper-wrapper">
+
+                              <div class="swiper-slide">
+                                  <div class="HiringPartenersCard">
+                                      <img alt="Hiring Partner" title="Hiring Partner" loading="lazy" width="143" height="98"
+                                          class="h-[54px] lg:h-[98px] lg:w-full object-contain"
+                                          src="https://example.com/image1.webp">
+                                  </div>
+                              </div>
+
+
+                              <div class="swiper-slide">
+                                  <div class="HiringPartenersCard">
+                                      <img alt="Hiring Partner" title="Hiring Partner" loading="lazy" width="143" height="98"
+                                          class="h-[54px] lg:h-[98px] lg:w-full object-contain"
+                                          src="https://example.com/image2.webp">
+                                  </div>
+                              </div>
+                      
+                              
+                          </div>
+                          <div class="swiper-pagination"></div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section> -->
+
+  <section class="overflow-x-hidden">
+    <div class="container">
+      <!-- Desktop Carousel (original) -->
+      <div class="SectionCard_root__vJRVT">
+        <div class="flex justify-between lining-nums lg:items-center flex-col lg:flex-row lg:align-center">
+            <h2 class="SectionCard_title__DSA2A">Hear what our students have to say
+            </h2>
+            <p class="SectionCard_subtitle__vVqmD hidden lg:block">Discover student learning experiences<!-- -->
+                <br>and journeys at Amity Online</p>
+            <p class="SectionCard_subtitle__vVqmD block lg:hidden">Discover student learning experiences and
+                journeys at Amity Online
+            </p>
+        </div>
+        <div class="SectionCard_hr__sFh5X"></div>
+      <div class="desktop-carousel">
+        <!-- Original carousel content here -->
+        
+            <div class="pt-7 lg:pt-7">
+                <h2>
+                    <div>
+                        <div
+                            class="swiper swiper-initialized swiper-horizontal Carousel__blueBullet StudentsCarousel_carousel__XLxe_ swiper-backface-hidden">
+                            <div class="swiper-wrapper"
+                                style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px); transition-delay: 0ms;">
+                                <div class="swiper-slide swiper-slide-active"
+                                    style="width: 1039px; margin-right: 16px;">
+                                    <div class="flex flex-col">
+                                        <div class="flex justify-between StudentsCarousel_testimonialBox__hp3K9">
+                                            <div class="basis-[65%]">
+                                                <div
+                                                    class="border border-primary-blue rounded-2xl text-primary-blue flex h-full overflow-hidden">
+                                                    <div
+                                                        class="mx-auto overflow-hidden lg:border-r-0 lg:border-l basis-[35%] StudentsCarousel_cardImageContainer__utpKq">
+                                                        <img alt="Akanksha" title="Students Image" loading="lazy"
+                                                            width="270" height="300" decoding="async" data-nimg="1"
+                                                            class="object-cover w-full h-full StudentsCarousel_cardImage__gmfV6"
+                                                            srcset="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2Fpic_1_98296a61fc.webp&w=640&q=75"
+                                                            src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2Fpic_1_98296a61fc.webp&w=640&q=75"
+                                                            style="color: transparent;"></div>
+                                                    <div
+                                                        class="lg:flex lg:flex-col lg:justify-between h-full basis-[65%] StudentsCarousel_cardContent__8xZ_A">
+                                                        <p
+                                                            class="lg:text-xl font-medium font-raleway StudentsCarousel_shortDesc__uFLAJ">
+                                                            "Hey, I'm Akanksha, a BCom graduate from Amity Online. I'm
+                                                            thrilled to be a gold medalist. Amity Online offered an
+                                                            incredible learning experience, allowing me to study from
+                                                            the comfort of my home with unmatched flexibility."</p>
+                                                        <div>
+                                                            <h2 class="font-baskervville StudentsCarousel_name__CbzkO">
+                                                                Akanksha</h2>
+                                                            <p
+                                                                class="font-raleway opacity-80 StudentsCarousel_desg__5N20_">
+                                                                B.Com, Student</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="basis-[33.5%]">
+                                                <div
+                                                    class="border border-primary-blue rounded-2xl bg-blue-linear-gradient h-full  xl:overflow-hidden">
+                                                    <figure class="relative h-full"><img alt="Faiz Ahmed Khan"
+                                                            loading="lazy" decoding="async" data-nimg="fill"
+                                                            class="object-cover w-full h-full rounded-2xl mix-blend-multiply StudentsCarousel_videoImg__wjfQA"
+                                                            sizes="100vw"
+                                                            srcset="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FMask_group_3_59d238d03c.webp&w=1920&q=75"
+                                                            src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FMask_group_3_59d238d03c.webp&w=1920&q=75"
+                                                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                                                        <figcaption class="absolute bottom-0 left-0 w-full">
+                                                            <div
+                                                                class="flex items-end justify-between StudentsCarousel_details__5z_U4">
+                                                                <div>
+                                                                    <h2
+                                                                        class="[text-shadow: 0px 4.362116813659668px 4.362116813659668px rgba(0, 0, 0, 0.25)] StudentsCarousel_name__CbzkO">
+                                                                        Faiz Ahmed Khan</h2>
+                                                                    <p class="StudentsCarousel_desg__5N20_">BBA, Student
+                                                                    </p>
+                                                                </div><button aria-label="play"><img
+                                                                        src="https://amityonline.com/_s/play_icon1_27947fe221.webp"
+                                                                        alt="play"
+                                                                        class="h-[61px] w-[60px] hidden lg:inline-block cursor-pointer homeSprite"
+                                                                        loading="lazy"><img
+                                                                        src="https://amityonline.com/_s/video_play_mobile_b081738065.svg"
+                                                                        alt="Play"
+                                                                        class="h-9 w-9 max-w-none inline-block lg:hidden cursor-pointer"></button>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex justify-between flex-row-reverse StudentsCarousel_testimonialBox__hp3K9">
+                                            <div class="basis-[65%]">
+                                                <div
+                                                    class="flex-row-reverse border border-primary-blue rounded-2xl text-primary-blue flex h-full overflow-hidden">
+                                                    <div
+                                                        class="mx-auto overflow-hidden lg:border-r-0 lg:border-l basis-[35%] StudentsCarousel_cardImageContainer__utpKq">
+                                                        <img alt="Students Image" title="Students Image" loading="lazy"
+                                                            width="270" height="300" decoding="async" data-nimg="1"
+                                                            class="object-cover w-full h-full StudentsCarousel_cardImage__gmfV6"
+                                                            srcset="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FGroup_48100630_1_4709c18a73_839eb2d67f.webp&w=640&q=75"
+                                                            src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FGroup_48100630_1_4709c18a73_839eb2d67f.webp&w=640&q=75"
+                                                            style="color: transparent;"></div>
+                                                    <div
+                                                        class="flex flex-col lg:justify-between h-full basis-[65%] StudentsCarousel_cardContent__8xZ_A">
+                                                        <p
+                                                            class="lg:text-xl font-medium font-raleway StudentsCarousel_shortDesc__uFLAJ">
+                                                            "I am pursuing my BBA from Amity Online. My experience has
+                                                            been incredible till now. Faculty is very helpful and
+                                                            understanding in every aspect, whether it is related to
+                                                            studies or any other queries. I will be happy to recommend
+                                                            Amity Online to my peers."</p>
+                                                        <div>
+                                                            <h2 class="font-baskervville StudentsCarousel_name__CbzkO">
+                                                                Jia Bhatia</h2>
+                                                            <p
+                                                                class="font-raleway opacity-80 StudentsCarousel_desg__5N20_">
+                                                                BBA , Student</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="basis-[33.5%]">
+                                                <div
+                                                    class="border border-primary-blue rounded-2xl bg-blue-linear-gradient h-full  xl:overflow-hidden">
+                                                    <figure class="relative h-full"><img alt="Himanshu Chhabra"
+                                                            loading="lazy" decoding="async" data-nimg="fill"
+                                                            class="object-cover w-full h-full rounded-2xl mix-blend-multiply StudentsCarousel_videoImg__wjfQA"
+                                                            sizes="100vw"
+                                                            srcset="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2Fvideo_3_a7bef87db5.webp&w=1920&q=75"
+                                                            src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2Fvideo_3_a7bef87db5.webp&w=1920&q=75"
+                                                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                                                        <figcaption class="absolute bottom-0 left-0 w-full">
+                                                            <div
+                                                                class="flex items-end justify-between StudentsCarousel_details__5z_U4">
+                                                                <div>
+                                                                    <h2
+                                                                        class="[text-shadow: 0px 4.362116813659668px 4.362116813659668px rgba(0, 0, 0, 0.25)] StudentsCarousel_name__CbzkO">
+                                                                        Himanshu Chhabra</h2>
+                                                                    <p class="StudentsCarousel_desg__5N20_">BBA, Student
+                                                                    </p>
+                                                                </div><button aria-label="play"><img
+                                                                        src="https://amityonline.com/_s/play_icon1_27947fe221.webp"
+                                                                        alt="show more"
+                                                                        class="h-[61px] w-[60px] hidden lg:inline-block cursor-pointer homeSprite"
+                                                                        loading="lazy"><img
+                                                                        src="https://amityonline.com/_s/video_play_mobile_b081738065.svg"
+                                                                        alt="Play"
+                                                                        class="h-9 w-9 max-w-none inline-block lg:hidden cursor-pointer"></button>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide swiper-slide-next" style="width: 1039px; margin-right: 16px;">
+                                    <div class="flex flex-col">
+                                        <div class="flex justify-between StudentsCarousel_testimonialBox__hp3K9">
+                                            <div class="basis-[65%]">
+                                                <div
+                                                    class="border border-primary-blue rounded-2xl text-primary-blue flex h-full overflow-hidden">
+                                                    <div
+                                                        class="mx-auto overflow-hidden lg:border-r-0 lg:border-l basis-[35%] StudentsCarousel_cardImageContainer__utpKq">
+                                                        <img alt="Harshit Khanna" title="Students Image" loading="lazy"
+                                                            width="270" height="300" decoding="async" data-nimg="1"
+                                                            class="object-cover w-full h-full StudentsCarousel_cardImage__gmfV6"
+                                                            srcset="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FGroup_48100559_b0edbbe374.webp&w=640&q=75"
+                                                            src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FGroup_48100559_b0edbbe374.webp&w=640&q=75"
+                                                            style="color: transparent;"></div>
+                                                    <div
+                                                        class="lg:flex lg:flex-col lg:justify-between h-full basis-[65%] StudentsCarousel_cardContent__8xZ_A">
+                                                        <p
+                                                            class="lg:text-xl font-medium font-raleway StudentsCarousel_shortDesc__uFLAJ">
+                                                            "I'm Harshit Khanna, a recent joiner at Amity Online,
+                                                            pursuing MBA in Finance and Accounting. It's been an
+                                                            enriching experience; the course portal is comprehensive,
+                                                            and the support has been excellent."</p>
+                                                        <div>
+                                                            <h2 class="font-baskervville StudentsCarousel_name__CbzkO">
+                                                                Harshit Khanna</h2>
+                                                            <p
+                                                                class="font-raleway opacity-80 StudentsCarousel_desg__5N20_">
+                                                                MBA, </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="basis-[33.5%]">
+                                                <div
+                                                    class="border border-primary-blue rounded-2xl bg-blue-linear-gradient h-full  xl:overflow-hidden">
+                                                    <figure class="relative h-full"><img alt="Kareena" loading="lazy"
+                                                            decoding="async" data-nimg="fill"
+                                                            class="object-cover w-full h-full rounded-2xl mix-blend-multiply StudentsCarousel_videoImg__wjfQA"
+                                                            sizes="100vw"
+                                                            srcset="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2Fvideo_1_4e3dcc5783.webp&w=1920&q=75"
+                                                            src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2Fvideo_1_4e3dcc5783.webp&w=1920&q=75"
+                                                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                                                        <figcaption class="absolute bottom-0 left-0 w-full">
+                                                            <div
+                                                                class="flex items-end justify-between StudentsCarousel_details__5z_U4">
+                                                                <div>
+                                                                    <h2
+                                                                        class="[text-shadow: 0px 4.362116813659668px 4.362116813659668px rgba(0, 0, 0, 0.25)] StudentsCarousel_name__CbzkO">
+                                                                        Kareena</h2>
+                                                                    <p class="StudentsCarousel_desg__5N20_">BCA, Student
+                                                                    </p>
+                                                                </div><button aria-label="play"><img
+                                                                        src="https://amityonline.com/_s/play_icon1_27947fe221.webp"
+                                                                        alt="show more"
+                                                                        class="h-[61px] w-[60px] hidden lg:inline-block cursor-pointer homeSprite"
+                                                                        loading="lazy"><img
+                                                                        src="https://amityonline.com/_s/video_play_mobile_b081738065.svg"
+                                                                        alt="play"
+                                                                        class="h-9 w-9 max-w-none inline-block lg:hidden cursor-pointer"></button>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div
+                                            class="flex justify-between flex-row-reverse StudentsCarousel_testimonialBox__hp3K9">
+                                            <div class="basis-[65%]">
+                                                <div
+                                                    class="flex-row-reverse border border-primary-blue rounded-2xl text-primary-blue flex h-full overflow-hidden">
+                                                    <div
+                                                        class="mx-auto overflow-hidden lg:border-r-0 lg:border-l basis-[35%] StudentsCarousel_cardImageContainer__utpKq">
+                                                        <img alt="Divisha Chowdhary" title="Students Image"
+                                                            loading="lazy" width="270" height="300" decoding="async"
+                                                            data-nimg="1"
+                                                            class="object-cover w-full h-full StudentsCarousel_cardImage__gmfV6"
+                                                            srcset="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FGroup_48100558_ee852669a6.webp&w=640&q=75"
+                                                            src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FGroup_48100558_ee852669a6.webp&w=640&q=75"
+                                                            style="color: transparent;"></div>
+                                                    <div
+                                                        class="lg:flex lg:flex-col lg:justify-between h-full basis-[65%] StudentsCarousel_cardContent__8xZ_A">
+                                                        <p
+                                                            class="lg:text-xl font-medium font-raleway StudentsCarousel_shortDesc__uFLAJ">
+                                                            "I'm Divisha, a graduate from Amity Online. Discovered
+                                                            through 5 Star Academy as I work over there, the program
+                                                            provided excellent faculty support. I highly recommend it to
+                                                            my friends."</p>
+                                                        <div>
+                                                            <h2 class="font-baskervville StudentsCarousel_name__CbzkO">
+                                                                Divisha Chowdhary</h2>
+                                                            <p
+                                                                class="font-raleway opacity-80 StudentsCarousel_desg__5N20_">
+                                                                MCA, Student</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="basis-[33.5%]">
+                                                <div
+                                                    class="border border-primary-blue rounded-2xl bg-blue-linear-gradient h-full  xl:overflow-hidden">
+                                                    <figure class="relative h-full"><img alt="Mandeep Singh Saini"
+                                                            loading="lazy" decoding="async" data-nimg="fill"
+                                                            class="object-cover w-full h-full rounded-2xl mix-blend-multiply StudentsCarousel_videoImg__wjfQA"
+                                                            sizes="100vw"
+                                                            srcset="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FMask_group_1_1fdcd48681.webp&w=1920&q=75"
+                                                            src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FMask_group_1_1fdcd48681.webp&w=1920&q=75"
+                                                            style="position: absolute; height: 100%; width: 100%; inset: 0px; color: transparent;">
+                                                        <figcaption class="absolute bottom-0 left-0 w-full">
+                                                            <div
+                                                                class="flex items-end justify-between StudentsCarousel_details__5z_U4">
+                                                                <div>
+                                                                    <h2
+                                                                        class="[text-shadow: 0px 4.362116813659668px 4.362116813659668px rgba(0, 0, 0, 0.25)] StudentsCarousel_name__CbzkO">
+                                                                        Mandeep Singh Saini</h2>
+                                                                    <p class="StudentsCarousel_desg__5N20_">BAJMC,
+                                                                        Student</p>
+                                                                </div><button aria-label="play"><img
+                                                                        src="https://amityonline.com/_s/play_icon1_27947fe221.webp"
+                                                                        alt="play"
+                                                                        class="h-[61px] w-[60px] hidden lg:inline-block cursor-pointer homeSprite"
+                                                                        loading="lazy"><img
+                                                                        src="https://amityonline.com/_s/video_play_mobile_b081738065.svg"
+                                                                        alt="Play"
+                                                                        class="h-9 w-9 max-w-none inline-block lg:hidden cursor-pointer"></button>
+                                                            </div>
+                                                        </figcaption>
+                                                    </figure>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                                <div class="swiper-pagination-bullet swiper-pagination-bullet-active"></div>
+                                <div class="swiper-pagination-bullet"></div>
+                            </div>
+                        </div>
+                    </div>
+                </h2>
+            </div>
+        </div>
+      </div>
+  
+      <!-- Mobile Carousels -->
+      <div class="mobile-carousels">
+        <!-- Testimonials Carousel -->
+        <div class="swiper testimonial-carousel">
+          <div class="swiper-wrapper">
+            <!-- Testimonial Slide 1 -->
+            <div class="swiper-slide">
+              <div class="mobile-testimonial-card">
+                <div class="mobile-testimonial-image">
+                  <img src="https://amityonline.com/_s/pic_1_98296a61fc.webp" alt="Akanksha">
+                </div>
+                <div class="mobile-testimonial-content">
+                  <div class="mobile-testimonial-name">Akanksha</div>
+                  <div class="mobile-testimonial-course">B.Com Student</div>
+                  <div class="mobile-testimonial-text">
+                    "Hey, I'm Akanksha, a BCom graduate from Amity Online. I'm
+                                                            thrilled to be a gold medalist. Amity Online offered an
+                                                            incredible learning experience, allowing me to study from
+                                                            the comfort of my home with unmatched flexibility."
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Testimonial Slide 2 -->
+            <div class="swiper-slide">
+              <div class="mobile-testimonial-card">
+                <div class="mobile-testimonial-image">
+                  <img src="https://amityonline.com/_s/Group_48100630_1_4709c18a73_839eb2d67f.webp" alt="Jia Bhatia">
+                </div>
+                <div class="mobile-testimonial-content">
+                  <div class="mobile-testimonial-name">Jia Bhatia</div>
+                  <div class="mobile-testimonial-course">BBA Student</div>
+                  <div class="mobile-testimonial-text">
+                    "I am pursuing my BBA from Amity Online. My experience has
+                    been incredible till now. Faculty is very helpful and
+                    understanding in every aspect, whether it is related to
+                    studies or any other queries. I will be happy to recommend
+                    Amity Online to my peers."
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="mobile-testimonial-card">
+                <div class="mobile-testimonial-image">
+                  <img src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FGroup_48100559_b0edbbe374.webp&w=640&q=75" alt="Jia Bhatia">
+                </div>
+                <div class="mobile-testimonial-content">
+                  <div class="mobile-testimonial-name">Harshit Khanna</div>
+                  <div class="mobile-testimonial-course">MBA Student</div>
+                  <div class="mobile-testimonial-text">
+                    "I'm Harshit Khanna, a recent joiner at Amity Online,
+                                                            pursuing MBA in Finance and Accounting. It's been an
+                                                            enriching experience; the course portal is comprehensive,
+                                                            and the support has been excellent."
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="mobile-testimonial-card">
+                <div class="mobile-testimonial-image">
+                  <img src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FGroup_48100558_ee852669a6.webp&w=640&q=75" alt="Jia Bhatia">
+                </div>
+                <div class="mobile-testimonial-content">
+                  <div class="mobile-testimonial-name">Divisha Chowdhary</div>
+                  <div class="mobile-testimonial-course">MCA Student</div>
+                  <div class="mobile-testimonial-text">
+                    "I'm Divisha, a graduate from Amity Online. Discovered
+                                                            through 5 Star Academy as I work over there, the program
+                                                            provided excellent faculty support. I highly recommend it to
+                                                            my friends."
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+  
+        <!-- Videos Carousel -->
+        <div class="swiper video-carousel">
+          <div class="swiper-wrapper">
+            <!-- Video 1 -->
+            <div class="swiper-slide">
+              <div class="video-card">
+                <img src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FMask_group_3_59d238d03c.webp&w=1920&q=75" alt="Video" class="w-full h-full object-cover">
+                <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60">
+                  <h3 class="text-white font-bold">Faiz Ahmed Khan</h3>
+                  <p class="text-gray-200">BBA Student</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="video-card">
+                <img src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2Fvideo_3_a7bef87db5.webp&w=1920&q=75" alt="Video" class="w-full h-full object-cover">
+                <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60">
+                  <h3 class="text-white font-bold">Himanshu Chhabra</h3>
+                  <p class="text-gray-200">BBA Student</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="video-card">
+                <img src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2Fvideo_1_4e3dcc5783.webp&w=1920&q=75" alt="Video" class="w-full h-full object-cover">
+                <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60">
+                  <h3 class="text-white font-bold">Kareena</h3>
+                  <p class="text-gray-200">BCA Student</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="video-card">
+                <img src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FMask_group_1_1fdcd48681.webp&w=1920&q=75" alt="Video" class="w-full h-full object-cover">
+                <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60">
+                  <h3 class="text-white font-bold">Mandeep Singh Saini</h3>
+                  <p class="text-gray-200">BAJMC Student</p>
+                </div>
+              </div>
+            </div>
+            <!-- Add more video slides -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  </main>
+
+  <div class="secondary-menu-section" style="display: none;">
+    <div class="container">
+        <div class="secondary-menu-block">
+            <div class="secondary-menu">
+                <nav class="navigation" id="mainNav">
+                    <a class="navigation__link" href="#1">Overview</a>
+                    <a class="navigation__link" href="#2">Program Highlights</a>
+                    <a class="navigation__link" href="#3">Curriculum</a>
+                    <a class="navigation__link" href="#4">Degree offered</a>
+                    <a class="navigation__link" href="#5">Specializations</a>
+                    <a class="navigation__link" href="#6">Eligibility</a>
+                    <a class="navigation__link" href="#7">Fee</a>
+                    <a class="navigation__link" href="#8">Faculty</a>
+                    <a class="navigation__link cus-btn btn-blue sec-apply" id="apply-now-btn" style="color: #fff;" href="">Apply Now</a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="banner-section" style="display: none;">
+    <div class="container">
+        <div class="banner-block">
+            <div class="banner-bg">
+                <img src="images/banner.jpg" alt="">
+            </div>
+            <div class="banner-caption">
+                <h3>PG Program</h3>
+                <h1>Master of Business Administration (Online MBA)</h1>
+                <p class="banner-duration">
+                    <span class="banner-duration-title">Duration:</span> 2 years
+                </p>
+                <a href="#" id="download_brochure_button" class="cus-btn btn-yellow">Download Brochure<i
+                        class="las la-arrow-down"></i></a>
+                <div id="download_modal" style="display: none;">
+                    <div class="Modal_root__5nZXA">
+                        <div class="bg-white Modal_dialog__e3Pgf">
+                            <svg class="Modal_close__C0ggP" xmlns="http://www.w3.org/2000/svg" width="24"
+                                height="24" viewBox="0 0 24 24" fill="none">
+                                <g clip-path="url(#clip0_380_520)">
+                                    <path
+                                        d="M18.2648 20.9813L11.6211 14.3376L4.9774 20.9813L2.76284 18.7667L9.40653 12.123L2.76284 5.47935L4.9774 3.26479L11.6211 9.90848L18.2648 3.26479L20.4794 5.47935L13.8357 12.123L20.4794 18.7667L18.2648 20.9813Z"
+                                        fill="#1A325D"></path>
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_380_520">
+                                        <rect width="24" height="24" fill="white"></rect>
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                            <div class="Modal_root__oWe5F">
+                                <img src="https://amityonline.com/_s/wtoc_9701d9f876.webp" alt="man-uses-laptop">
+                                <div>
+                                    <div class="banner-form-title2">
+                                        Download Brochure</div>
+                                    <div class="">
+                                        <form class="Modal_content__bZhM7 py-4 flex flex-col">
+                                            <div class="text-sec font-railway font-medium Modal_text__hr_T8">Fill in
+                                                your details here and
+                                                download a detailed brochure of the program</div>
+                                            <div class="font-railway text-secondary-gray Form_group__rP395">
+                                                <label class="text-blu" for="name-input">Name *</label>
+                                                <!-- <div class="Form_control__eYGP8"> -->
+                                                <input placeholder="Enter your full name" id="name-input"
+                                                    class="TextInput_root__De36R undefined banner-input" value=""
+                                                    name="email">
+                                                <!-- </div> -->
+                                            </div>
+
+                                            <div class="flex items-center justify-start">
+                                                <div
+                                                    class="font-railway mr-2 mt-[1.125rem] lg:mt-[0.9166rem] basis-1/5 Form_group__rP395">
+                                                    <label class="text-blu" id="null-label2"
+                                                        for="country-code-select">Country Code *</label>
+                                                    <!-- <div class="Form_control__eYGP8"> -->
+                                                    <select class="banner-input" id="country-code-select">
+                                                        <option value="+91" selected="">+91</option>
+                                                        <option value="+7840">+7840</option>
+                                                        <option value="+93">+93</option>
+                                                        <option value="+355">+355</option>
+                                                        <option value="+213">+213</option>
+                                                        <option value="+1684">+1684</option>
+                                                        <option value="+376">+376</option>
+                                                        <option value="+244">+244</option>
+                                                    </select>
+                                                    <!-- </div> -->
+                                                </div>
+                                                <div
+                                                    class="font-railway flex-1 overflow-auto text-secondary-gray Form_group__rP395">
+                                                    <label class="text-blu" id="null-label3"
+                                                        for="phone-number">Phone Number *</label>
+                                                    <!-- <div class="Form_control__eYGP8"> -->
+                                                    <input placeholder="Enter your no."
+                                                        class="TextInput_root__De36R undefined banner-input"
+                                                        value="" id="phone-number" name="phone">
+                                                    <!-- </div> -->
+                                                </div>
+                                            </div>
+                                            <div class="font-railway mt-3 text-secondary-gray Form_group__rP395">
+                                                <label class="text-blu" id="null-label4" for="email-id">Email Id
+                                                    *</label>
+                                                <!-- <div class="Form_control__eYGP8"> -->
+                                                <input placeholder="Enter your email"
+                                                    class="TextInput_root__De36R undefined banner-input" value=""
+                                                    id="email-id" name="email">
+                                                <!-- </div> -->
+                                            </div>
+                                            <div class="flex justify-center items-start mt-3">
+                                                <div class="mt-2">
+                                                    <input required="" type="radio" value="1" checked=""
+                                                        name="consent">
+                                                </div>
+                                                <p
+                                                    class="ml-3 text-sec font-railway font-medium mb-2 Modal_text__hr_T8">
+                                                    I authorise Amity
+                                                    University Online and its associates to contact me with updates
+                                                    &amp; notifications via
+                                                    Email, SMS, WhatsApp, and Voice call as per the Privacy Policy.
+                                                    This consent will override
+                                                    any registration for DNC / NDNC.</p>
+                                            </div>
+                                            <button type="submit" disabled=""
+                                                class="button_root__RRK9v mt-auto !bg-[#E7E7E7] !border-stone-500 !text-stone-500 button_b__2Obj5">
+                                                <span class="uppercase font-raleway">SUBMIT</span>
+                                            </button>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="qs-strip">
+                    <div class="qs-img">
+                        <img src="images/qs-logo.jpg" class="w-100" alt="">
+                    </div>
+                    <div class="qs-text">
+                        <div class="qs-text-item">
+                            India's only Online MBA&nbsp;&nbsp; <br>
+                            Ranked by QS, 2024
+                        </div>&nbsp;&nbsp;
+                        <div class="qs-text-item">
+                            Asia Pacific <br>
+                            Top 10
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="new-lead-form" class="banner-form banner-form-desk">
+                <div class="banner-form-title">Apply Now</div>
+                <form>
+                    <div class="row g-1">
+                        <div class="col-12 col-md-5">
+                            <label for="full-name">Full Name <span class="text-xl">*</span></label>
+                            <input type="text" id="full-name" placeholder="Enter your full name"
+                                class="banner-input" value="">
+                        </div>
+
+                        <div class="col-12 col-md-7">
+                            <label for="phone-number2">Phone Number <span class="text-xl">*</span></label>
+                            <div class="row g-1">
+                                <div class="col-3">
+                                    <select class="banner-input">
+                                        <option value="+91" selected="">+91</option>
+                                        <option value="+7840">+7840</option>
+                                        <option value="+93">+93</option>
+                                        <option value="+355">+355</option>
+                                        <option value="+213">+213</option>
+                                        <option value="+1684">+1684</option>
+                                        <option value="+376">+376</option>
+                                        <option value="+244">+244</option>
+                                    </select>
+                                </div>
+                                <div class="col-9">
+                                    <input type="text" id="phone-number2" placeholder="Enter your phone number"
+                                        class="banner-input" value="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="email">Email Id <span class="text-xl">*</span></label>
+
+                            <input type="email" id="email" placeholder="Enter your email" class="banner-input"
+                                value="">
+                        </div>
+
+                        <div class="col-12">
+                            <div class="banner-check">
+                                <div class="banner-check-icon">
+                                    <input type="checkbox" name="consent" checked="">
+                                </div>
+                                <p>I authorise Amity University Online and its associates to contact me with updates
+                                    &amp;
+                                    notifications via Email, SMS, WhatsApp, and Voice call as per the Privacy
+                                    Policy. This consent will
+                                    override any registration for DNC / NDNC.</p>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <button type="submit" disabled="" class="cus-btn border-dark w-100">Submit</button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="banner-form-app">
+                    <!--<div class="app-close">
+          <p>Application closes in</p>
+          <h4>0d 6h 45m</h4>
+        </div>-->
+                    <div class="progress" role="progressbar" aria-label="Animated striped example"
+                        aria-valuenow="92" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated " style="width: 92%">
+                            <h4>92% <span>Seats filled</span></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<div class="cta-section" style="display: none;">
+    <div class="container">
+        <div class="cta-block">
+            <div class="row g-0">
+                <div class="col-12 col-md-6">
+                    <div class="cta-content">
+                        <p>Are you ready to take the next step in your career ?</p>
+                        <a href="" id="apply-now-btn" class="cus-btn btn-yellow enroll-now-btn">Enroll Now <i
+                                class="las la-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                    <div class="cta-img">
+                        <img src="images/medium_shot_graduate_student_1_054c237147_8a2c8536ee.webp" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+  <!-- footer start  -->
+  <div id="footer-container"></div>
+  <!-- footer end -->
+  <!-- toggel start  -->
+  <div class="sticky-apply">
+    <div class="sticky-apply-btn"  id="apply-now-btn">APPLY NOW</div>
+  </div>
+  <!-- togel end -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+    integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="../CommonJS/index.js"></script>
+  <script src="../CommonJS/footer.js"></script>
+  <script src="../CommonJS/modals.js"></script>
+  <script src="./amityadv.js"></script>
+  <!-- <script src="./../CommonJS/applyModal.js"></script> -->
+   
+  <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+    // Load components in order
+    await includeComponent('../components/header.html', 'header-container');
+    await includeComponent('../components/brochureModal.html', 'modal-container');
+    await includeComponent('../components/loginModal.html', 'login-modal');
+    await includeComponent('../components/applyModal.html', 'apply-modal-container');
+    await includeComponent('../components/programsModal.html', 'programs-modal-container');
+    await includeComponent('../components/mobileMenu.html', 'mobile-menu-container');
+
+    // Additional initializations that depend on header
+    initializeProgramsModal();
+    // initializeMobileMenu();
+});
+   
+    document.addEventListener('DOMContentLoaded', function() {
+        
+        includeFooterComponent('../components/footer.html', 'footer-container');
+        // includeHeaderComponent('../components/header.html', 'header-container');
+    });
+
+</script>
+<script>
+  // Initialize desktop carousel
+  const desktopSwiper = new Swiper('.desktop-carousel .swiper', {
+    slidesPerView: 1,
+    spaceBetween: 16,
+    loop: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+    autoplay: {
+      delay: 5000,
+      disableOnInteraction: false
+    }
+  });
+
+ // Initialize mobile testimonial carousel
+const testimonialSwiper = new Swiper('.testimonial-carousel', {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  pagination: {
+    el: '.testimonial-carousel .swiper-pagination',
+    clickable: true
+  },
+  breakpoints: {
+    // Small tablets
+    480: {
+      slidesPerView: 1.2
+    }
+  }
+});
+
+  const videoSwiper = new Swiper('.video-carousel', {
+    slidesPerView: 1.2,
+    centeredSlides: true,
+    spaceBetween: 16,
+    loop: true,
+    pagination: {
+      el: '.video-carousel .swiper-pagination',
+      clickable: true
+    }
+  });
+
+  // Handle window resize
+  window.addEventListener('resize', () => {
+    [desktopSwiper, testimonialSwiper, videoSwiper].forEach(swiper => swiper.update());
+  });
+</script>
+  
+  
+
+</body>
+
+</html>
