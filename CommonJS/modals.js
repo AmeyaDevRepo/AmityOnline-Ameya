@@ -523,6 +523,73 @@ function initializeMobileMenu() {
     });
 }
 
+function initializeMobileProgramMenu() {
+    // Mobile programs menu toggle
+    const mobileProgramsLink = document.querySelector('.header_menuItem__2qruK a[href="#"]');
+    const mobileProgramsMenu = document.querySelector('.ProgramsMenu_mobile__K4seG');
+
+    if (mobileProgramsLink && mobileProgramsMenu) {
+        mobileProgramsLink.addEventListener('click', (e) => {
+            e.preventDefault();
+            mobileProgramsMenu.style.display = 'block';
+            document.querySelector('.ProgramsMenu_sidemenu__frHFk').style.display = 'block';
+            document.querySelectorAll('.ProgramsMenu_contentBox__UHi_e').forEach(el => el.style.display = 'none');
+        });
+    }
+
+    // Mobile menu item handling
+    const mobileMenuItems = document.querySelectorAll('.ProgramsMenu_mobile__K4seG .ProgramsMenu_item__mfuSn');
+    
+    mobileMenuItems.forEach(item => {
+        item.addEventListener('click', function(e) {
+            e.preventDefault();
+            const category = this.dataset.category;
+            
+            // Toggle active state
+            mobileMenuItems.forEach(el => el.classList.remove('ProgramsMenu_active__4g64w'));
+            this.classList.add('ProgramsMenu_active__4g64w');
+    
+            // Hide the side menu
+            const sidemenu = this.closest('.ProgramsMenu_sidemenu__frHFk');
+            if (sidemenu) {
+                sidemenu.style.display = 'none';
+            }
+    
+            // Show corresponding content
+            const contentBox = sidemenu.nextElementSibling;
+            if (contentBox) {
+                contentBox.style.display = 'block';
+            }
+    
+            // Filter programs
+            const programs = document.querySelectorAll('.ProgramsMenu_tab__0j8Nn');
+            programs.forEach(program => {
+                if (category === 'all' || program.classList.contains(category)) {
+                    program.style.display = 'block';
+                } else {
+                    program.style.display = 'none';
+                }
+            });
+        });
+    });
+
+    // Mobile back button
+    // Mobile back button
+const mobileBackButton = document.querySelector('.ProgramsMenu_submenuArrow__gnbLw');
+if (mobileBackButton) {
+    mobileBackButton.addEventListener('click', () => {
+        // Show the side menu
+        const sidemenu = document.querySelector('.ProgramsMenu_sidemenu__frHFk');
+        if (sidemenu) {
+            sidemenu.style.display = 'block';
+        }
+
+        // Hide all content boxes
+        document.querySelectorAll('.ProgramsMenu_contentBox__UHi_e').forEach(el => el.style.display = 'none');
+    });
+}
+}
+
 
 // Modified component loader
 async function includeComponent(filepath, targetId) {
@@ -553,13 +620,16 @@ async function includeComponent(filepath, targetId) {
         if (targetId === 'mobile-menu-container') {
             // initializeProgramsModal();
             initializeMobileMenu();
+            initializeMobileProgramMenu();
         }
 
     } catch (error) {
         console.error('Error loading component:', error);
     }
 }
-
+document.addEventListener('DOMContentLoaded', function() {
+    initializeMobileProgramMenu();
+});
 $(document).on('click', '.header-search-icon', function () {
     $('#search-input').toggleClass('active');
 });
