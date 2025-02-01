@@ -38,6 +38,104 @@
   <!-- Custom CSS -->
   <link rel="stylesheet" href="./../CommonCss/style.css">
   <link rel="stylesheet" href="./amityOnline.css">
+  <style>
+    /* Hide desktop carousel on mobile */
+    @media (max-width: 1199px) {
+      .desktop-carousel {
+        display: none;
+      }
+      .mobile-carousels {
+        display: block;
+      }
+    }
+  
+    /* Hide mobile carousels on desktop */
+    @media (min-width: 1200px) {
+      .mobile-carousels {
+        display: none;
+      }
+    }
+  
+    /* Mobile carousel styling */
+    .mobile-carousels .swiper {
+      padding-bottom: 40px;
+    }
+    .testimonial-card {
+      border: 1px solid #1a325d;
+      border-radius: 16px;
+      margin: 16px;
+      padding: 16px;
+    }
+    .video-card {
+      height: 250px;
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      margin: 16px;
+    }
+  </style>
+  <style>
+    .mobile-testimonial-card {
+      border: 1px solid #1a325d;
+      border-radius: 16px;
+      margin: 16px;
+      overflow: hidden;
+    }
+    
+    .mobile-testimonial-image {
+      width: 100%;
+      height: 300px;
+      position: relative;
+    }
+    
+    .mobile-testimonial-image img {
+      width: 100%;
+      height: 100%;
+      object-fit:fill;
+    }
+    
+    .mobile-testimonial-content {
+      padding: 16px;
+      text-align: center;
+    }
+    
+    .mobile-testimonial-name {
+      font-size: 1.25rem;
+      font-weight: bold;
+      color: #1a325d;
+      margin-bottom: 8px;
+    }
+    
+    .mobile-testimonial-course {
+      color: #686868;
+      font-size: 0.875rem;
+      margin-bottom: 12px;
+    }
+    
+    .mobile-testimonial-text {
+      color: #1a325d;
+      font-size: 0.9375rem;
+      line-height: 1.4;
+    }
+    /* Add this to your CSS */
+.ContactUsBanner_imgContainer__RNgkF {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Adjust ratio as needed */
+  overflow: hidden;
+}
+
+.ContactUsBanner_imgContainer__RNgkF img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevent stretching */
+  object-position: center; /* Center the image */
+}
+.w-full.h-full.rounded-2xl.lg\:hidden {
+  aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+  object-fit: cover; /* Added to ensure proper scaling */
+}
+  </style>
 </head>
 
 <body>
@@ -125,11 +223,20 @@
     <div class="contactarti container">
       <div class="relative rounded-2xl ContactUsBanner_bannerWrapperHeight__c_RPx ContactUsBanner_bigHeight__usGJb">
         <div class="h-full ContactUsBanner_gradient__8_aSi ContactUsBanner_blueGradient__bhiqI">
-          <div class="ContactUsBanner_imgContainer__RNgkF"><img title="Contact Us"
-              class=" ContactUsBanner_aspected__V7yZA scale-x-75 origin-right"
-              src="https://amityonline.com/_sb/Rectangle_20050_70a182869e.webp" loading="lazy"
-              alt="&quot;Contact Us&quot;"><img class="w-full h-full rounded-2xl lg:hidden scale-y-75 origin-bottom"
-              src="https://amityonline.com/_sb/Rectangle_20050_70a182869e.webp" loading="lazy" alt=""></div>
+          <div class="ContactUsBanner_imgContainer__RNgkF">
+            <!-- Desktop image -->
+            <img title="Contact Us"
+                 class="ContactUsBanner_aspected__V7yZA"
+                 src="https://amityonline.com/_sb/Rectangle_20050_70a182869e.webp"
+                 loading="lazy"
+                 alt="&quot;Contact Us&quot;">
+    
+            <!-- Mobile image -->
+            <img class="w-full h-full rounded-2xl lg:hidden"
+                 src="https://amityonline.com/_sb/Rectangle_20050_70a182869e.webp"
+                 loading="lazy"
+                 alt="">
+          </div>
           <div>
             <h1 class="font-baskervville font-normal capitalize absolute bottom-0 left-0 z-20 ContactUsBanner_title__TVsDY ContactUsBanner_smallTitle__fm3Fv !text-white">
               Power your career dreams with a Top-ranked University
@@ -138,7 +245,7 @@
         </div>
       </div>
     </div>
-    <div class="container styles_container__vgMpz">
+    <div class="container styles_container__vgMpz pt-7">
       <div class="flex items-center"><img src="https://amityonline.com/_sb/qs_logo_3_3c0d563131.webp" alt="QS"
           title="QS" class="styles_img__ege1i">
         <div>
@@ -940,7 +1047,153 @@
             </div>
         </div>
       </div>
-      
+  
+      <!-- Mobile Carousels -->
+      <div class="mobile-carousels">
+        <!-- Testimonials Carousel -->
+        <div class="swiper testimonial-carousel">
+          <div class="swiper-wrapper">
+            <!-- Testimonial Slide 1 -->
+            <div class="swiper-slide">
+              <div class="mobile-testimonial-card">
+                <div class="mobile-testimonial-image">
+                  <img src="https://amityonline.com/_s/pic_1_98296a61fc.webp" alt="Akanksha">
+                </div>
+                <div class="mobile-testimonial-content">
+                  <div class="mobile-testimonial-name">Akanksha</div>
+                  <div class="mobile-testimonial-course">B.Com Student</div>
+                  <div class="mobile-testimonial-text">
+                    "Hey, I'm Akanksha, a BCom graduate from Amity Online. I'm
+                                                            thrilled to be a gold medalist. Amity Online offered an
+                                                            incredible learning experience, allowing me to study from
+                                                            the comfort of my home with unmatched flexibility."
+                  </div>
+                </div>
+              </div>
+            </div>
+        
+            <!-- Testimonial Slide 2 -->
+            <div class="swiper-slide">
+              <div class="mobile-testimonial-card">
+                <div class="mobile-testimonial-image">
+                  <img src="https://amityonline.com/_s/Group_48100630_1_4709c18a73_839eb2d67f.webp" alt="Jia Bhatia">
+                </div>
+                <div class="mobile-testimonial-content">
+                  <div class="mobile-testimonial-name">Jia Bhatia</div>
+                  <div class="mobile-testimonial-course">BBA Student</div>
+                  <div class="mobile-testimonial-text">
+                    "I am pursuing my BBA from Amity Online. My experience has
+                    been incredible till now. Faculty is very helpful and
+                    understanding in every aspect, whether it is related to
+                    studies or any other queries. I will be happy to recommend
+                    Amity Online to my peers."
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="mobile-testimonial-card">
+                <div class="mobile-testimonial-image">
+                  <img src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FGroup_48100559_b0edbbe374.webp&w=640&q=75" alt="Jia Bhatia">
+                </div>
+                <div class="mobile-testimonial-content">
+                  <div class="mobile-testimonial-name">Harshit Khanna</div>
+                  <div class="mobile-testimonial-course">MBA Student</div>
+                  <div class="mobile-testimonial-text">
+                    "I'm Harshit Khanna, a recent joiner at Amity Online,
+                                                            pursuing MBA in Finance and Accounting. It's been an
+                                                            enriching experience; the course portal is comprehensive,
+                                                            and the support has been excellent."
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="mobile-testimonial-card">
+                <div class="mobile-testimonial-image">
+                  <img src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FGroup_48100558_ee852669a6.webp&w=640&q=75" alt="Jia Bhatia">
+                </div>
+                <div class="mobile-testimonial-content">
+                  <div class="mobile-testimonial-name">Divisha Chowdhary</div>
+                  <div class="mobile-testimonial-course">MCA Student</div>
+                  <div class="mobile-testimonial-text">
+                    "I'm Divisha, a graduate from Amity Online. Discovered
+                                                            through 5 Star Academy as I work over there, the program
+                                                            provided excellent faculty support. I highly recommend it to
+                                                            my friends."
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+  
+        <!-- Videos Carousel -->
+        <div class="swiper video-carousel">
+          <div class="swiper-wrapper">
+            <!-- Video 1 -->
+            <div class="swiper-slide">
+              <div class="video-card">
+                <img src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FMask_group_3_59d238d03c.webp&w=1920&q=75" alt="Video" class="w-full h-full object-cover">
+                <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60">
+                  <h3 class="text-white font-bold">Faiz Ahmed Khan</h3>
+                  <p class="text-gray-200">BBA Student</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="video-card">
+                <img src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2Fvideo_3_a7bef87db5.webp&w=1920&q=75" alt="Video" class="w-full h-full object-cover">
+                <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60">
+                  <h3 class="text-white font-bold">Himanshu Chhabra</h3>
+                  <p class="text-gray-200">BBA Student</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="video-card">
+                <img src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2Fvideo_1_4e3dcc5783.webp&w=1920&q=75" alt="Video" class="w-full h-full object-cover">
+                <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60">
+                  <h3 class="text-white font-bold">Kareena</h3>
+                  <p class="text-gray-200">BCA Student</p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="video-card">
+                <img src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FMask_group_1_1fdcd48681.webp&w=1920&q=75" alt="Video" class="w-full h-full object-cover">
+                <button class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                  <svg class="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM9.555 7.168A1 1 0 008 8v4a1 1 0 001.555.832l3-2a1 1 0 000-1.664l-3-2z" clip-rule="evenodd"/>
+                  </svg>
+                </button>
+                <div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60">
+                  <h3 class="text-white font-bold">Mandeep Singh Saini</h3>
+                  <p class="text-gray-200">BAJMC Student</p>
+                </div>
+              </div>
+            </div>
+            <!-- Add more video slides -->
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
     </div>
   </section>
   </main>
