@@ -414,8 +414,7 @@
 <div class="container header_mobileContainer__pweEM block" id="mobileContainer" style="display: none;">
     <!-- Programs Menu Container Mobile -->
     <div class="header_mobileMenu__xKoaS flex flex-col items-start">
-        <div>
-            <div class="cursor-pointer relative header_searchBox__D3FsS">
+        <div class="cursor-pointer relative header_searchBox__D3FsS">
                 <div class="absolute header_searchIcon__bLdgL"><svg xmlns="http://www.w3.org/2000/svg" width="17"
                         height="16" viewBox="0 0 17 16" fill="none">
                         <path
@@ -427,17 +426,20 @@
                     <div class="absolute headFootSprite header_searchClose__QNMB5"></div>
                 </div>
             </div>
-            <div class="flex items-center header_menuItem__2qruK"><a href="#" target="_self"
+        <div>
+            
+            <div class="flex items-center header_menuItem__2qruK">
+                <a href="#" target="_self"
                     class="flex justify-center items-center"><span class="uppercase mr-3">PROGRAMS</span><svg width="13"
                         height="9" viewBox="0 0 13 9" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path id="Vector_832" d="M12 1L6.62222 7L0.999999 1" stroke="#1a325d" stroke-width="1.5"
                             stroke-linecap="round"></path>
 
                     </svg></a></div>
-            <div class="flex items-center header_menuItem__2qruK"><a href="/career-services" target="_blank"
+            <div class="flex items-center header_menuItem__2qruK"><a href="../carrer.html" target="_blank"
                     class="flex justify-center items-center"><span class="uppercase mr-3">CAREER SERVICES</span></a>
             </div>
-            <div class="flex items-center header_menuItem__2qruK"><a href="/amity-online-advantage/" target="_self"
+            <div class="flex items-center header_menuItem__2qruK"><a href="../amity-online-advantage/index.html" target="_self"
                     class="flex justify-center items-center"><span class="uppercase mr-3">ADVANTAGES</span></a></div>
         </div>
         
@@ -469,31 +471,79 @@
                 </svg></a>
         </div>
         <div class="header_programMenu__D5RVR">
+                
                 <div class="ProgramsMenu_mobile__K4seG program-menu" id="programs-menu" style="display: none;">
-                        
-                    <div class="ProgramsMenu_nav__Raw_V flex items-center"><img alt="Go Back" loading="lazy" width="13"
-                            height="9" decoding="async" data-nimg="1" class="ProgramsMenu_submenuArrow__gnbLw"
-                            style="color:transparent" src="/_next/static/media/down-lt.bac39a25.svg"></div>
-                    <div class="flex flex-col min-w-fit ProgramsMenu_sidemenu__frHFk" style="">
-                        <div class="ProgramsMenu_border__LTM60"><span title="PROGRAM WISE"
+                        <header class="site-navbar">
+                                <div class="container">
+                                <div class="header-block" style="padding: 26px 0px;">
+                                        <!-- Logo Wrapper -->
+                                        <div class="logo-wrapper">
+                                                <a href="index.html">
+                                                <img src="images/amity_logo_5ee70d67b4_f4e929fb4a.svg" alt="">
+                                                </a>
+                                        </div>
+                                        <div class="header-menu-toggle d-inline-block d-xl-none ml-md-0 mr-auto"
+                                        style="position: relative; top: 5px;">
+                                        <button id="menuToggleButton" aria-label="Hamburger Menu"
+                                                style="background: none; border: none; cursor: pointer;">
+                                                <div id="mobile-menu-container"></div>
+                                                
+                                                <img id="hamburgerImage" src="images/menu.svg" alt="Hamburger Menu">
+                                                <div class="absolute header_searchIcon__bLdgL" style="margin-top: -16px; margin-left: -52px;">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="16" viewBox="0 0 17 16" fill="none">
+                                                          <path
+                                                            d="M12.1498 10.0629H11.3819L11.1098 9.8159C12.0952 8.7401 12.6369 7.36667 12.6358 5.94626C12.6358 4.7702 12.2653 3.62055 11.571 2.6427C10.8768 1.66484 9.89009 0.902692 8.73565 0.452634C7.58121 0.0025764 6.31089 -0.115179 5.08534 0.114258C3.85979 0.343696 2.73404 0.910021 1.85047 1.74162C0.966898 2.57322 0.365177 3.63274 0.121399 4.7862C-0.122378 5.93966 0.00273745 7.13525 0.480924 8.22179C0.95911 9.30832 1.76889 10.237 2.80786 10.8904C3.84684 11.5438 5.06834 11.8925 6.3179 11.8925C7.88279 11.8925 9.32133 11.3528 10.4294 10.4563L10.6918 10.7124V11.4351L15.5517 16L17 14.6369L12.1498 10.0629ZM6.3179 10.0629C3.89766 10.0629 1.94397 8.22413 1.94397 5.94626C1.94397 3.66838 3.89766 1.82962 6.3179 1.82962C8.73814 1.82962 10.6918 3.66838 10.6918 5.94626C10.6918 8.22413 8.73814 10.0629 6.3179 10.0629Z"
+                                                            fill="white"></path>
+                                                        </svg>
+                                                      </div>
+                                                <svg id="closeIcon" width="24" height="20" viewBox="0 0 19 18" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg" style="display: none; margin-top: -6px; margin-right: 16px;">
+                                                
+                                                <path
+                                                d="M16.2648 17.9813L9.62109 11.3376L2.9774 17.9813L0.762835 15.7667L7.40653 9.12305L0.762835 2.47935L2.9774 0.264788L9.62109 6.90848L16.2648 0.264788L18.4794 2.47935L11.8357 9.12305L18.4794 15.7667L16.2648 17.9813Z"
+                                                fill="white">
+                                                </path>
+                                                </svg>
+                                        </button>
+                                        </div>
+                                </div>
+                                </div>
+                        </header>
+                        <div class="container cursor-pointer relative header_searchBox__D3FsS">
+                                <div class="absolute header_searchIcon__bLdgL"><svg xmlns="http://www.w3.org/2000/svg" width="17"
+                                        height="16" viewBox="0 0 17 16" fill="none">
+                                        <path
+                                            d="M12.1498 10.0629H11.3819L11.1098 9.8159C12.0952 8.7401 12.6369 7.36667 12.6358 5.94626C12.6358 4.7702 12.2653 3.62055 11.571 2.6427C10.8768 1.66484 9.89009 0.902692 8.73565 0.452634C7.58121 0.0025764 6.31089 -0.115179 5.08534 0.114258C3.85979 0.343696 2.73404 0.910021 1.85047 1.74162C0.966898 2.57322 0.365177 3.63274 0.121399 4.7862C-0.122378 5.93966 0.00273745 7.13525 0.480924 8.22179C0.95911 9.30832 1.76889 10.237 2.80786 10.8904C3.84684 11.5438 5.06834 11.8925 6.3179 11.8925C7.88279 11.8925 9.32133 11.3528 10.4294 10.4563L10.6918 10.7124V11.4351L15.5517 16L17 14.6369L12.1498 10.0629ZM6.3179 10.0629C3.89766 10.0629 1.94397 8.22413 1.94397 5.94626C1.94397 3.66838 3.89766 1.82962 6.3179 1.82962C8.73814 1.82962 10.6918 3.66838 10.6918 5.94626C10.6918 8.22413 8.73814 10.0629 6.3179 10.0629Z"
+                                            fill="#1A325D"></path>
+                                    </svg></div>
+                                <div class="relative program-menu header_searchBoxContainer__BasaK"><input type="text" autofocus=""
+                                        class="text-sm lg:text-xs">
+                                    <div class="absolute headFootSprite header_searchClose__QNMB5"></div>
+                                </div>
+                            </div>
+                        <div>
+                                <div class="container ProgramsMenu_nav__Raw_V flex items-center"><img alt="Go Back" loading="lazy" width="13" height="9" decoding="async" data-nimg="1" class="ProgramsMenu_submenuArrow__gnbLw" style="color:transparent" src="/_next/static/media/down-lt.bac39a25.svg"></div>
+                    <div class="conatiner ProgramsMenu_sidemenu__frHFk" style="">
+                        <div class="container ProgramsMenu_border__LTM60">
+                                <span title="PROGRAM WISE"
                                 class="font-semibold uppercase ProgramsMenu_label__lTn_Z">PROGRAM WISE</span>
                             <div>
-                                <div class="cursor-pointer flex ProgramsMenu_item__mfuSn" title="All Programs">
+                                <div class="cursor-pointer flex ProgramsMenu_item__mfuSn ProgramsMenu_active__4g64w font-semibold" data-category="all">
                                     <div class="ProgramsMenu_tagSignifierandNameDiv__y1ksK"><span
-                                            class="flex items-center relative">All
-                                            Programs</span></div><img alt="Go Back" loading="lazy" width="13" height="9"
+                                            class="flex items-center relative">All Programs</span></div><img alt="Go Back" loading="lazy" width="13" height="9"
                                         decoding="async" data-nimg="1" class="ProgramsMenu_tabArrow__TO6K0"
                                         style="color:transparent" src="/_next/static/media/down-lt.bac39a25.svg">
                                 </div>
-                                <div class="cursor-pointer flex ProgramsMenu_item__mfuSn ProgramsMenu_active__4g64w font-semibold"
+                                <div class="cursor-pointer flex ProgramsMenu_item__mfuSn " data-category="UG"
                                     title="UG Program" data-category="UG">
-                                    <div class="ProgramsMenu_tagSignifierandNameDiv__y1ksK"><span
+                                    <div class="ProgramsMenu_tagSignifierandNameDiv__y1ksK">
+                                        <span
                                             class="flex items-center relative">UG
-                                            Program</span></div><img alt="Go Back" loading="lazy" width="13" height="9"
-                                        decoding="async" data-nimg="1" class="ProgramsMenu_tabArrow__TO6K0"
-                                        style="color:transparent" src="/_next/static/media/down-lt.bac39a25.svg">
+                                            Program</span>
+                                        </div>
+                                        <img alt="Go Back" loading="lazy" width="13" height="9" decoding="async" data-nimg="1" class="ProgramsMenu_tabArrow__TO6K0" style="color:transparent" src="/_next/static/media/down-lt.bac39a25.svg">
                                 </div>
-                                <div class="cursor-pointer flex ProgramsMenu_item__mfuSn" title="PG Program" data-category="PG">
+                                <div class="cursor-pointer flex ProgramsMenu_item__mfuSn" data-category="PG" >
                                     <div class="ProgramsMenu_tagSignifierandNameDiv__y1ksK"><span
                                             class="flex items-center relative">PG
                                             Program</span></div><img alt="Go Back" loading="lazy" width="13" height="9"
@@ -516,9 +566,10 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="ProgramsMenu_border__LTM60"><span title="INDUSTRY ALIGNED PROGRAM"
+                        <div class="container ProgramsMenu_border__LTM60">
+                                <span title="INDUSTRY ALIGNED PROGRAM"
                                 class="font-semibold ProgramsMenu_label__lTn_Z">INDUSTRY-ALIGNED PROGRAMS<br><span
-                                    class="capitalize">In</span><span class="lowercase"> collaboration with</span></span>
+                                class="capitalize">In</span><span class="lowercase"> collaboration with</span></span>
                             <div>
                                 <div class="cursor-pointer flex ProgramsMenu_item__mfuSn" title="HCLTech" data-category="hcl" >
                                     <div class="ProgramsMenu_tagSignifierandNameDiv__y1ksK"><span
@@ -537,7 +588,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="ProgramsMenu_border__LTM60"><span title="Trending programs"
+                        <div class="container ProgramsMenu_border__LTM60"><span title="Trending programs"
                                 class="font-semibold uppercase ProgramsMenu_label__lTn_Z">Trending programs</span>
                             <div>
                                 <div class="cursor-pointer flex ProgramsMenu_item__mfuSn" title="Artificial Intelligence" data-category="ai">
@@ -563,7 +614,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="ProgramsMenu_border__LTM60"><span title="DOMAIN WISE"
+                        <div class="container ProgramsMenu_border__LTM60"><span title="DOMAIN WISE"
                                 class="font-semibold uppercase ProgramsMenu_label__lTn_Z">DOMAIN WISE</span>
                             <div>
                                 <div class="capitalize cursor-pointer flex ProgramsMenu_item__mfuSn" title="Management" data-category="management">
@@ -612,7 +663,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="flex">
+                        <div class="conatiner flex">
                             <div class="header_linkBtn__tEslW w-full"><a href="../Program/index.html" target="_self"
                                     class="flex items-center justify-center"><span
                                         class="uppercase font-raleway mr-3">Explore
@@ -631,7 +682,7 @@
                                     </svg></a></div>
                         </div>
                     </div>
-                    <div class="w-full ProgramsMenu_contentBox__UHi_e" style="display: none;">
+                    <div class="w-full ProgramsMenu_contentBox__UHi_e" data-category="all" style="display:none" >
                         <div class="flex ProgramsMenu_tabContainer__DpfaV">
                             <div class="ProgramsMenu_tab__0j8Nn" data-category="UG"><a
                                     title="Master of Business Administration (  Online MBA )"
@@ -688,7 +739,7 @@
                                             decoding="async" data-nimg="1" style="color:transparent"
                                             src="/_next/static/media/left-arrow.fd4bb094.svg"></span></button></div>
                     </div>
-                    <div class="w-full ProgramsMenu_contentBox__UHi_e" style="display: none;">
+                    <div class="w-full ProgramsMenu_contentBox__UHi_e" data-category="UG" style="display:none">
                         <div class="flex ProgramsMenu_tabContainer__DpfaV">
                             <div class="ProgramsMenu_tab__0j8Nn"><a title="Bachelor of Business Administration (BBA)"
                                     href="/bachelor-of-business-administration-online">
@@ -735,14 +786,15 @@
                                             class="ml-3">Bachelor
                                             of Arts (Malayalam Medium ( BA)</span></div>
                                 </a><span class="ProgramsMenu_year__nCObZ">3 Years</span></div>
-                        </div>
-                        <div class="flex justify-center mt-4"><a href="../Program/index.html" target="_self"><button
-                                    class="flex items-center px-4 py-2 border-2 border-gray-500 rounded-full">View All<span
-                                        class="ml-2 flex items-center"><img alt="Left" loading="lazy" width="19" height="16"
-                                            decoding="async" data-nimg="1" style="color:transparent"
-                                            src="/_next/static/media/left-arrow.fd4bb094.svg"></span></button></div>
+                                </div>
+                                <div class="flex justify-center mt-4"><a href="../Program/index.html" target="_self"><button
+                                        class="flex items-center px-4 py-2 border-2 border-gray-500 rounded-full">View All<span
+                                                class="ml-2 flex items-center"><img alt="Left" loading="lazy" width="19" height="16"
+                                                decoding="async" data-nimg="1" style="color:transparent"
+                                                src="/_next/static/media/left-arrow.fd4bb094.svg"></span></button>
+                                </div>
                     </div>
-                    <div class="w-full ProgramsMenu_contentBox__UHi_e" style="display:none">
+                    <div class="w-full ProgramsMenu_contentBox__UHi_e" data-category="PG" style="display:none">
                         <div class="flex ProgramsMenu_tabContainer__DpfaV">
                             <div class="ProgramsMenu_tab__0j8Nn"><a
                                     title="Master of Business Administration (  Online MBA )"
@@ -1275,3 +1327,4 @@
     </div>
     <!-- END: Programs Menu Container -->
 </div>
+
