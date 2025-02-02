@@ -2,68 +2,44 @@
 <html lang="en">
 
 <head>
+  <!-- Metadata -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon -->
   <link rel="icon" type="image/png" href="images/fav.png">
 
+  <!-- Fonts Preconnect for Optimization -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <!-- Google Fonts -->
   <link
     href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
     rel="stylesheet">
+
+  <!-- Font Awesome (Icons) -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
     integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
     integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <!-- Line Awesome (Icons) -->
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
     integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
     crossorigin="anonymous" referrerpolicy="no-referrer">
-  <link rel="stylesheet" href="CommonCss/style.css">
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <link rel="stylesheet" href="_next/static/css/492ca83a35c52311.css">
-  <link rel="stylesheet" href="_next/static/css/7237f76f6ea66841.css">
 
-  <link rel="stylesheet" href="css/nav-style.css">
-  <link rel="stylesheet" href="css/style.css">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./../CommonCss/style.css">
 
+  <!-- Page Title -->
   <title>Amity Online</title>
-  <style>
-    /* Add mobile-specific styles */
-.ProgramsMenu_mobile__K4seG {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: white;
-    z-index: 1000;
-    overflow-y: auto;
-}
-
-.ProgramsMenu_sidemenu__frHFk {
-    padding: 20px;
-}
-
-.ProgramsMenu_item__mfuSn {
-    padding: 12px;
-    border-bottom: 1px solid #eee;
-}
-
-.ProgramsMenu_contentBox__UHi_e {
-    padding: 20px;
-}
-
-@media (min-width: 1024px) {
-    .ProgramsMenu_mobile__K4seG {
-        display: none !important;
-    }
-}
-
-  </style>
 </head>
 
 <body>
@@ -147,6 +123,7 @@
   <div id="apply-modal-container"></div>
   <!-- The Apply Modal END-->
 
+
   <div class="banner-strip">
     <div class="container">
       <div class="banner-strip-block">
@@ -175,86 +152,10 @@
           <p class="banner-duration">
             <span class="banner-duration-title">Duration:</span> 2 years
           </p>
-          <a href="#" id="download_brochure_button" class="cus-btn btn-yellow">Download Brochure<i
+          <a href="#" id="download_brochure_button" class="cus-btn btn-yellow">Explore Curriculum<i
               class="las la-arrow-down"></i></a>
           <!-- Download Brochure start -->
-          <div id="download_modal" style="display: none;">
-            <div class="Modal_root__5nZXA">
-              <div class="bg-white Modal_dialog__e3Pgf">
-                <svg class="Modal_close__C0ggP" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                  viewBox="0 0 24 24" fill="none">
-                  <g clip-path="url(#clip0_380_520)">
-                    <path
-                      d="M18.2648 20.9813L11.6211 14.3376L4.9774 20.9813L2.76284 18.7667L9.40653 12.123L2.76284 5.47935L4.9774 3.26479L11.6211 9.90848L18.2648 3.26479L20.4794 5.47935L13.8357 12.123L20.4794 18.7667L18.2648 20.9813Z"
-                      fill="#1A325D"></path>
-                  </g>
-                  <defs>
-                    <clipPath id="clip0_380_520">
-                      <rect width="24" height="24" fill="white"></rect>
-                    </clipPath>
-                  </defs>
-                </svg>
-                <div class="Modal_root__oWe5F">
-                  <img src="https://amityonline.com/_s/wtoc_9701d9f876.webp" alt="man-uses-laptop">
-                  <div>
-                    <div class="banner-form-title2">
-                      Download Brochure</div>
-                    <div class="">
-                      <form class="Modal_content__bZhM7 py-4 flex flex-col">
-                        <div class="text-sec font-railway font-medium Modal_text__hr_T8">Fill in your details here and
-                          download a detailed brochure of the program</div>
-                        <div class="font-railway text-secondary-gray Form_group__rP395">
-                          <label class="text-blu" for="name-input">Name *</label>
-                          <input placeholder="Enter your full name" id="name-input"
-                            class="TextInput_root__De36R undefined banner-input" value="" name="email">
-                        </div>
-
-                        <div class="flex items-center justify-start">
-                          <div class="font-railway mr-2 mt-[1.125rem] lg:mt-[0.9166rem] basis-1/5 Form_group__rP395">
-                            <label class="text-blu" id="null-label2" for="country-code-select">Country Code *</label>
-                            <!-- <div class="Form_control__eYGP8"> -->
-                            <select class="banner-input" id="country-code-select">
-                              <option value="+91" selected="">+91</option>
-                              <option value="+7840">+7840</option>
-                              <option value="+93">+93</option>
-                              <option value="+355">+355</option>
-                              <option value="+213">+213</option>
-                              <option value="+1684">+1684</option>
-                              <option value="+376">+376</option>
-                              <option value="+244">+244</option>
-                            </select>
-                          </div>
-                          <div class="font-railway flex-1 overflow-auto text-secondary-gray Form_group__rP395">
-                            <label class="text-blu" id="null-label3" for="phone-number">Phone Number *</label>
-                            <input placeholder="Enter your no." class="TextInput_root__De36R undefined banner-input"
-                              value="" id="phone-number" name="phone">
-                          </div>
-                        </div>
-                        <div class="font-railway mt-3 text-secondary-gray Form_group__rP395">
-                          <label class="text-blu" id="null-label4" for="email-id">Email Id *</label>
-                          <input placeholder="Enter your email" class="TextInput_root__De36R undefined banner-input"
-                            value="" id="email-id" name="email">
-                        </div>
-                        <div class="flex justify-center items-start mt-3">
-                          <div class="mt-2">
-                            <input required="" type="radio" value="1" checked="" name="consent">
-                          </div>
-                          <p class="ml-3 text-sec font-railway font-medium mb-2 Modal_text__hr_T8">I authorise Amity
-                            University Online and its associates to contact me with updates &amp; notifications via
-                            Email, SMS, WhatsApp, and Voice call as per the Privacy Policy. This consent will override
-                            any registration for DNC / NDNC.</p>
-                        </div>
-                        <button type="submit" disabled=""
-                          class="button_root__RRK9v mt-auto !bg-[#E7E7E7] !border-stone-500 !text-stone-500 button_b__2Obj5">
-                          <span class="uppercase font-raleway">SUBMIT</span>
-                        </button>
-                      </form>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <div id="modal-container"></div>
           <!-- download Brochure end -->
           <div class="qs-strip">
             <div class="qs-img">
@@ -349,7 +250,8 @@
   <div class="banner-form-mob">
     <div class="container">
       <div class="banner-form">
-        <div class="banner-form-title">Apply Now</div>
+        <div class="banner-form-title" id="apply-now-btn">Apply Now</div>
+        <div id="apply-modal-container"></div>
         <form>
           <div class="row g-1">
             <div class="col-12 col-md-5">
@@ -528,7 +430,8 @@
             <a class="navigation__link" href="#6">Eligibility</a>
             <a class="navigation__link" href="#7">Fee</a>
             <a class="navigation__link" href="#8">Faculty</a>
-            <a class="navigation__link cus-btn btn-blue sec-apply" id="apply-now-btn" style="color: #fff;" href="">Apply Now</a>
+            <a class="navigation__link cus-btn btn-blue sec-apply" id="apply-now-btn" style="color: #fff;" href="">Apply
+              Now</a>
           </nav>
         </div>
       </div>
@@ -2282,7 +2185,8 @@
           <div class="col-12 col-md-6">
             <div class="cta-content">
               <p>Are you ready to take the next step in your career ?</p>
-              <a href="" id="apply-now-btn" class="cus-btn btn-yellow enroll-now-btn">Enroll Now <i class="las la-arrow-right"></i></a>
+              <a href="" id="apply-now-btn" class="cus-btn btn-yellow enroll-now-btn">Enroll Now <i
+                  class="las la-arrow-right"></i></a>
             </div>
           </div>
           <div class="col-12 col-md-6">
@@ -2912,7 +2816,6 @@
 
  </script>
  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
 </body>
 
 </html>

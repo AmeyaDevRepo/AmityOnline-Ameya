@@ -61,3 +61,102 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    // Select filter controls
+    const filterButtons = document.querySelectorAll('.styles_filterType__yfnkJ button');
+    const filterDiv = document.querySelector('.styles_filtersDesktop__Ejkci');
+    const programsContainer = document.querySelector('.styles_programsContainer__MSZLc');
+    const backButton = document.querySelector('.styles_backBtn__R1tTa');
+    
+    // Track current filters
+    let currentFilters = {
+        programType: null,
+        domain: null,
+        duration: null,
+        trending: null
+    };
+
+    // Initialize filter functionality
+    filterButtons.forEach(button => {
+        button.addEventListener('click', (e) => {
+            e.preventDefault();
+            applyFilter(button);
+        });
+    });
+
+    backButton.addEventListener('click', () => {
+        clearFilters();
+        filterDiv.classList.add('hidden-filter');
+        programsContainer.classList.remove('icons-hidden');
+    });
+
+    // Function to apply filter based on button click
+    function applyFilter(button) {
+        const filterCategory = button.closest('.styles_filterType__yfnkJ').querySelector('p').textContent.trim();
+        const filterValue = button.textContent.trim();
+        
+        switch(filterCategory) {
+            case 'Program Type':
+                currentFilters.programType = filterValue;
+                break;
+            case 'Domain':
+                currentFilters.domain = filterValue;
+                break;
+            case 'Duration':
+                currentFilters.duration = filterValue;
+                break;
+            case 'Trending Programs':
+                currentFilters.trending = filterValue;
+                break;
+        }
+        
+        filterPrograms();
+    }
+
+    // Function to reset all filters
+    function clearFilters() {
+        currentFilters = {
+            programType: null,
+            domain: null,
+            duration: null,
+            trending: null
+        };
+        filterPrograms();
+    }
+
+    // Function to apply current filters and display results
+    function filterPrograms() {
+        const programs = document.querySelectorAll('.styles_programListing__SWYKc');
+        
+        programs.forEach(program => {
+            let isVisible = true;
+
+            // Apply program type filter
+            if (currentFilters.programType) {
+                const typeElement = program.querySelector('.styles_programType__UPZjf');
+                isVisible = typeElement?.textContent.includes(currentFilters.programType);
+            }
+
+            // Apply domain filter (case-insensitive partial match)
+            if (currentFilters.domain && isVisible) {
+                const nameElement = program.querySelector('.styles_name__ffrQn');
+                isVisible = nameElement?.textContent.toLowerCase().includes(currentFilters.domain.toLowerCase());
+            }
+
+            // Apply duration filter
+            if (currentFilters.duration && isVisible) {
+                const durationElement = program.querySelector('.styles_yearContainer__FFpQm span');
+                isVisible = durationElement?.textContent.includes(currentFilters.duration);
+            }
+
+            // Apply trending filter
+            if (currentFilters.trending && isVisible) {
+                const stripElement = program.querySelector('.styles_strip__HEmoT');
+                isVisible = stripElement?.textContent.includes(currentFilters.trending);
+            }
+
+            // Show/hide program
+            program.style.display = isVisible ? 'block' : 'none';
+        });
+    }
+});
