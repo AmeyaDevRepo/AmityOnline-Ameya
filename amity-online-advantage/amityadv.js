@@ -1,4 +1,6 @@
-
+$('.header-search-icon').click(function () {
+	$('#search-input').toggleClass('active');
+  });
     const swiper = new Swiper('.StudentsCarousel_carousel__XLxe_', {
         // Optional parameters
         slidesPerView: 1,

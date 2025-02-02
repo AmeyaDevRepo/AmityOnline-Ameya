@@ -664,51 +664,51 @@ function initializeMobileMenu() {
 // }
 
 function initializeMobileProgramMenu() {
-    // Get references to elements
     const mobileProgramsLink = document.querySelector('.header_menuItem__2qruK a[href="#"]');
     const mobileProgramsMenu = document.querySelector('.ProgramsMenu_mobile__K4seG');
-    const mobileMenuItems = document.querySelectorAll('.ProgramsMenu_mobile__K4seG .ProgramsMenu_item__mfuSn');
     const contentBoxes = document.querySelectorAll('.ProgramsMenu_contentBox__UHi_e');
 
     if (mobileProgramsLink && mobileProgramsMenu) {
+        // Open menu and show "All Programs" by default
         mobileProgramsLink.addEventListener('click', (e) => {
             e.preventDefault();
             mobileProgramsMenu.style.display = 'block';
-            // Hide all content boxes initially
-            contentBoxes.forEach(box => box.style.display = 'none');
+            contentBoxes.forEach(box => box.style.display = 'none'); // Hide all content
+
+            // Show "All Programs" content and activate its menu item
+            const allProgramsContent = document.querySelector('.ProgramsMenu_contentBox__UHi_e[data-category="all"]');
+            const allProgramsItem = mobileProgramsMenu.querySelector('.ProgramsMenu_item__mfuSn[data-category="all"]');
+            
+            if (allProgramsContent) allProgramsContent.style.display = 'block';
+            if (allProgramsItem) allProgramsItem.classList.add('ProgramsMenu_active__4g64w');
         });
 
-        // Add click event listener to each menu item
-        mobileMenuItems.forEach(item => {
-            item.addEventListener('click', () => {
-                // Remove active class from all menu items
-                mobileMenuItems.forEach(el => el.classList.remove('ProgramsMenu_active__4g64w'));
-                // Add active class to the clicked item
-                item.classList.add('ProgramsMenu_active__4g64w');
+        // Handle menu item clicks via event delegation
+        mobileProgramsMenu.addEventListener('click', (e) => {
+            const menuItem = e.target.closest('.ProgramsMenu_item__mfuSn');
+            if (menuItem) {
+                // Reset active state
+                mobileProgramsMenu.querySelectorAll('.ProgramsMenu_item__mfuSn').forEach(item => 
+                    item.classList.remove('ProgramsMenu_active__4g64w')
+                );
+                
+                menuItem.classList.add('ProgramsMenu_active__4g64w');
+                const category = menuItem.dataset.category;
 
-                // Get the data-category attribute of the clicked item
-                const category = item.dataset.category;
-
-                // Hide all content boxes
+                // Hide all content and show the selected category
                 contentBoxes.forEach(box => box.style.display = 'none');
-
-                // Show the content box that matches the category
                 const contentBox = document.querySelector(`.ProgramsMenu_contentBox__UHi_e[data-category="${category}"]`);
-                if (contentBox) {
-                    contentBox.style.display = 'block';
-                }
-            });
+                if (contentBox) contentBox.style.display = 'block';
+            }
         });
-    } else {
-        console.log('Mobile programs link or menu not found');
-    }
 
-    // Add event listener to the close button if it exists
-    const closeButton = document.querySelector('.ProgramsMenu_closeButton__3QVlI');
-    if (closeButton) {
-        closeButton.addEventListener('click', () => {
-            mobileProgramsMenu.style.display = 'none';
-        });
+        // Close menu when close button is clicked
+        const closeButton = mobileProgramsMenu.querySelector('.ProgramsMenu_closeButton__3QVlI');
+        if (closeButton) {
+            closeButton.addEventListener('click', () => {
+                mobileProgramsMenu.style.display = 'none';
+            });
+        }
     }
 }
 
@@ -751,9 +751,7 @@ async function includeComponent(filepath, targetId) {
         console.error('Error loading component:', error);
     }
 }
-document.addEventListener('DOMContentLoaded', function() {
-    initializeMobileProgramMenu();
-});
+
 $(document).on('click', '.header-search-icon', function () {
     $('#search-input').toggleClass('active');
 });

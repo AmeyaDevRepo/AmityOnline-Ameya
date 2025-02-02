@@ -2903,6 +2903,7 @@ ul.footer-sub-menu li a{
     padding-left: 20px;
     line-height: 1.1666666667rem;
 }
+
 .why-block{
     border-radius: 1.3333333333rem;
     background: #fff;
@@ -12702,3 +12703,9 @@ img,video {
 }
 
 /* End of common css */
+.hidden-filter {
+    display: none;
+}
+/* .icons-hidden {
+    display: none;
+} */
