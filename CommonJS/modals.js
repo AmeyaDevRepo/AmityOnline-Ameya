@@ -123,7 +123,7 @@ function initializeLoginModal() {
     const submitButton = form.querySelector('button[type="submit"]');
     const inputs = form.querySelectorAll('input, select');
 
-    // Get the download button
+    // Get the login button
     const loginButton = document.getElementById('login-button');
 
     // Toggle modal visibility
@@ -131,7 +131,7 @@ function initializeLoginModal() {
         loginModal.style.display = show ? 'block' : 'none';
     }
 
-    // Add click handler to download button
+    // Add click handler to login button
     loginButton.addEventListener('click', (e) => {
         e.preventDefault();  // Prevent default anchor behavior
         toggleModal(true);
@@ -148,9 +148,18 @@ function initializeLoginModal() {
         toggleModal(false);
     });
 
-    // login modal script start
-    // const studentLoginlet = true;
+    // Initialize the login method to 'email' by default
+    let studentLoginlet = true;
+
+    // Set initial states
+    document.getElementById('emailinputfield').style.display = 'block';
+    document.getElementById('phoneinputfield').style.display = 'none';
+    document.getElementById('phoneinputfieldapplicant').style.display = 'none';
+    document.getElementById('loginwithemail').checked = true;
+    document.getElementById('loginwithotp').checked = false;
+
     document.getElementById('loginwithotp').addEventListener('click', (e) => {
+        console.log('Login With OTP clicked');
         if (studentLoginlet) {
             document.getElementById('phoneinputfield').style.display = 'block';
             document.getElementById('emailinputfield').style.display = 'none';
@@ -167,6 +176,7 @@ function initializeLoginModal() {
     });
 
     document.getElementById('loginwithemail').addEventListener('click', (e) => {
+        console.log('Login With Email clicked');
         if (studentLoginlet) {
             document.getElementById('emailinputfield').style.display = 'block';
             document.getElementById('forgotPasswordBtn').style.display = 'block';
@@ -181,58 +191,54 @@ function initializeLoginModal() {
             document.getElementById('phoneinputfieldapplicant').style.display = 'none';
             document.getElementById('loginwithotp').checked = false;
             document.getElementById('loginwithemail').checked = true;
-
         }
-    })
-
-
+    });
 
     document.getElementById('studentlogin').addEventListener('click', (e) => {
         e.preventDefault();
+        console.log('Student Login clicked');
         document.getElementById('applicantlogin').style = `
-       background: #fff;
-color: #1a325d`;
+           background: #fff;
+           color: #1a325d`;
 
         document.getElementById('studentlogin').style = `
-         color: #fff;
-border-color: #1a325d;
-background: #1a325d;`;
+           color: #fff;
+           border-color: #1a325d;
+           background: #1a325d;`;
         studentLoginlet = true;
-        handleEmailForm()
-        handlePhoneForm()
-
-
+        handleEmailForm();
+        handlePhoneForm();
     });
 
     document.getElementById('applicantlogin').addEventListener('click', (e) => {
         e.preventDefault();
+        console.log('Applicant Login clicked');
         document.getElementById('applicantlogin').style = `
-         color: #fff !important;
-border-color: #1a325d !important;
-background: #1a325d !important;`;
+           color: #fff !important;
+           border-color: #1a325d !important;
+           background: #1a325d !important;`;
         document.getElementById('studentlogin').style = `
-background: #fff;
-color: #1a325d`;
+           background: #fff;
+           color: #1a325d`;
 
         studentLoginlet = false;
-        handleEmailForm()
-        handlePhoneForm()
-
+        handleEmailForm();
+        handlePhoneForm();
     });
 
     document.getElementById('forgotPasswordBtn').addEventListener('click', (e) => {
         e.preventDefault();
+        console.log('Forgot Password clicked');
         document.getElementById('loginForm').style.display = 'none';
         document.getElementById('forgotPasswordForm').style.display = 'block';
-
     });
+
     document.getElementById('backToLoginBtn').addEventListener('click', (e) => {
         e.preventDefault();
+        console.log('Back to Login clicked');
         document.getElementById('forgotPasswordForm').style.display = 'none';
         document.getElementById('loginForm').style.display = 'block';
-
     });
-    // login modal script end
 
     // Form validation
     function validateForm() {
@@ -297,13 +303,12 @@ color: #1a325d`;
     // Initialize form validation state
     validateForm();
 }
-
 function applyNowPopupMobileView() {
     const applyModal = document.getElementById("Apply_modal");
     applyModal.style.display = "grid";
 }
 
-function loginPopupMobileView(){
+function loginPopupMobileView() {
     const loginModal = document.getElementById('_modal');
     loginModal.style.display = 'block';
 }
@@ -416,7 +421,18 @@ function initializeApplyModal() {
         e.preventDefault();
         applyModal.style.display = "grid";
     });
+    const checkbox = document.getElementById('consent_checkbox');
+    const submitButton = document.getElementById('submit_button');
+
+    // Check if the checkbox exists and the submit button exists
+    if (checkbox && submitButton) {
+        checkbox.addEventListener('change', function() {
+            // Enable or disable the submit button based on the checkbox state
+            submitButton.disabled = !this.checked;
+        });
+    }
 }
+
 
 function initializeProgramsModal() {
     const programsDiv = document.getElementById("programsDiv");
@@ -539,28 +555,28 @@ function initializeMobileMenu() {
 
 //     // Mobile menu item handling
 //     const mobileMenuItems = document.querySelectorAll('.ProgramsMenu_mobile__K4seG .ProgramsMenu_item__mfuSn');
-    
+
 //     mobileMenuItems.forEach(item => {
 //         item.addEventListener('click', function(e) {
 //             e.preventDefault();
 //             const category = this.dataset.category;
-            
+
 //             // Toggle active state
 //             mobileMenuItems.forEach(el => el.classList.remove('ProgramsMenu_active__4g64w'));
 //             this.classList.add('ProgramsMenu_active__4g64w');
-    
+
 //             // Hide the side menu
 //             const sidemenu = this.closest('.ProgramsMenu_sidemenu__frHFk');
 //             if (sidemenu) {
 //                 sidemenu.style.display = 'none';
 //             }
-    
+
 //             // Show corresponding content
 //             const contentBox = sidemenu.nextElementSibling;
 //             if (contentBox) {
 //                 contentBox.style.display = 'block';
 //             }
-    
+
 //             // Filter programs
 //             const programs = document.querySelectorAll('.ProgramsMenu_tab__0j8Nn');
 //             programs.forEach(program => {
@@ -611,23 +627,23 @@ function initializeMobileMenu() {
 
 //     // Mobile menu item handling
 //     const mobileMenuItems = document.querySelectorAll('.ProgramsMenu_mobile__K4seG .ProgramsMenu_item__mfuSn');
-    
+
 //     mobileMenuItems.forEach(item => {
 //         item.addEventListener('click', function(e) {
 //             e.preventDefault();
 //             const category = this.dataset.category;
 //             console.log(`Menu item clicked: ${category}`);
-            
+
 //             // Toggle active state
 //             mobileMenuItems.forEach(el => el.classList.remove('ProgramsMenu_active__4g64w'));
 //             this.classList.add('ProgramsMenu_active__4g64w');
-    
+
 //             // Hide the side menu
 //             const sidemenu = this.closest('.ProgramsMenu_sidemenu__frHFk');
 //             if (sidemenu) {
 //                 sidemenu.style.display = 'none';
 //             }
-    
+
 //             // Show corresponding content
 //             const contentBox = document.querySelector(`.ProgramsMenu_contentBox__UHi_e[data-category="${category}"]`);
 //             if (contentBox) {
@@ -678,7 +694,7 @@ function initializeMobileProgramMenu() {
             // Show "All Programs" content and activate its menu item
             const allProgramsContent = document.querySelector('.ProgramsMenu_contentBox__UHi_e[data-category="all"]');
             const allProgramsItem = mobileProgramsMenu.querySelector('.ProgramsMenu_item__mfuSn[data-category="all"]');
-            
+
             if (allProgramsContent) allProgramsContent.style.display = 'block';
             if (allProgramsItem) allProgramsItem.classList.add('ProgramsMenu_active__4g64w');
         });
@@ -688,10 +704,10 @@ function initializeMobileProgramMenu() {
             const menuItem = e.target.closest('.ProgramsMenu_item__mfuSn');
             if (menuItem) {
                 // Reset active state
-                mobileProgramsMenu.querySelectorAll('.ProgramsMenu_item__mfuSn').forEach(item => 
+                mobileProgramsMenu.querySelectorAll('.ProgramsMenu_item__mfuSn').forEach(item =>
                     item.classList.remove('ProgramsMenu_active__4g64w')
                 );
-                
+
                 menuItem.classList.add('ProgramsMenu_active__4g64w');
                 const category = menuItem.dataset.category;
 
@@ -711,9 +727,6 @@ function initializeMobileProgramMenu() {
         }
     }
 }
-
-// Initialize the mobile program menu
-initializeMobileProgramMenu();
 
 // Modified component loader
 async function includeComponent(filepath, targetId) {
@@ -736,6 +749,8 @@ async function includeComponent(filepath, targetId) {
         }
         if (targetId === 'apply-modal-container') {
             initializeApplyModal();
+            // handleCheckboxClick();
+
         }
         if (targetId === 'programs-modal-container') {
             initializeProgramsModal();
@@ -751,6 +766,10 @@ async function includeComponent(filepath, targetId) {
         console.error('Error loading component:', error);
     }
 }
+
+
+
+
 
 $(document).on('click', '.header-search-icon', function () {
     $('#search-input').toggleClass('active');
