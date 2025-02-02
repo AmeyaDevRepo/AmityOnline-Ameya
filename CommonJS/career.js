@@ -1,6 +1,8 @@
 // KEY SPECIALIZATION JS
 
-
+$('.header-search-icon').click(function () {
+	$('#search-input').toggleClass('active');
+});
 document.addEventListener('DOMContentLoaded', () => {
 	const carouselContainers = document.querySelectorAll('.iso-carousel');
 	carouselContainers.forEach(container => {
