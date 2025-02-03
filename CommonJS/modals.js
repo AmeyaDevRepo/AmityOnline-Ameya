@@ -495,7 +495,7 @@ function initializeProgramsModal() {
 
 function initializeMobileMenu() {
     // Get references to elements
-    const searchIcon = document.querySelector('.header-search-icon');
+    const searchIcon = document.querySelector('.header-search-icon, #hamburgerImage');
     const menuToggleButton = document.getElementById('menuToggleButton');
     const hamburgerImage = document.getElementById('hamburgerImage');
     const closeIcon = document.getElementById('closeIcon');
@@ -630,7 +630,7 @@ function initializeMobileMenu() {
 
 function initializeMobileProgramMenu() {
     // Get references to elements
-    const mobileProgramsLink = document.querySelector('.header_menuItem__2qruK a[href="#"]'); // mobile nav bar or inside link
+    const mobileProgramsLink = document.querySelector('.header_menuItem__2qruK, .loginameya a[href="#"]'); // mobile nav bar or inside link
     const mobileProgramsMenu = document.querySelector('.ProgramsMenu_mobile__K4seG'); // this is a popover menu list
     const mobileMenuItems = document.querySelectorAll('.ProgramsMenu_mobile__K4seG .ProgramsMenu_item__mfuSn'); // this is a popover menu list with inside links
     const contentBoxes = document.querySelectorAll('.ProgramsMenu_contentBox__UHi_e'); // detailed menu box of particular program
@@ -639,7 +639,7 @@ function initializeMobileProgramMenu() {
     const ameya_backbtn_programmelist = document.querySelectorAll('.ameya_backbtn_programmelist');
 
     // Elements to hide/show
-    const elementsToHide = document.querySelectorAll('.header_menuItem__2qruK, .mt-auto.flex.flex-col.items-start');
+    const elementsToHide = document.querySelectorAll('.header_menuItem__2qruK, .loginameya');
 
     // Function to hide specified elements
     function hideElements() {
@@ -651,7 +651,7 @@ function initializeMobileProgramMenu() {
     // Function to show specified elements
     function showElements() {
         elementsToHide.forEach(element => {
-            element.style.display = '';
+            element.style.display = 'flex';
         });
     }
 
@@ -702,7 +702,7 @@ function initializeMobileProgramMenu() {
                     e.stopPropagation();
                     ameya_programm_list.style.display = "block";
                     contentBox.style.display = 'none';
-                    showElements(); // Show elements when back button is clicked
+                    hideElements(); // Show elements when back button is clicked
                 }));
 
                 if (contentBox) {
@@ -775,6 +775,6 @@ async function includeComponent(filepath, targetId) {
 
 
 
-$(document).on('click', '.header-search-icon', function () {
+$(document).on('click', '.header-search-icon, #hamburgerImage, #closeIcon', function () {
     $('#search-input').toggleClass('active');
 });
