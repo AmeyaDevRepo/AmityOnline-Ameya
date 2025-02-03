@@ -1,0 +1,2793 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/fav.png">
+
+    <!-- Fonts Preconnect for Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Line Awesome (Icons) -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+        integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./../CommonCss/style.css">
+
+    <!-- Page Title -->
+    <title>Amity Online</title>
+</head>
+
+<body>
+    <header class="site-navbar">
+        <div class="container">
+            <div class="header-block">
+                <!-- Logo Wrapper -->
+                <div class="logo-wrapper">
+                    <a href="index.html">
+                        <img src="images/amity_logo_5ee70d67b4_f4e929fb4a.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="header-content">
+                    <div class="header-menu">
+                        <!-- Navigation Menu -->
+                        <nav class="site-navigation position-relative text-right">
+                            <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                                <li class="has-children">
+                                    <a href="#" class="menu-link" id="programsLink"><span>PROGRAMS</span></a>
+                                </li>
+                                <li><a href="./carrer.html" class="menu-link"><span>CAREER SERVICE</span></a></li>
+                                <li><a href="./amity-online-advantage/index.html"
+                                        class="menu-link"><span>ADVANTAGES</span></a></li>
+                            </ul>
+                        </nav>
+                        <!-- End of Navigation Menu -->
+
+                        <div id="programs-modal-container"></div>
+                        <!-- Start: Header Menu Toggle -->
+
+                        <div class="header-menu-toggle d-inline-block d-xl-none ml-md-0 mr-auto"
+                            style="position: relative; top: 3px;">
+                            <button id="menuToggleButton" aria-label="Hamburger Menu"
+                                style="background: none; border: none; cursor: pointer;">
+                                <!-- Mobile Menu Container -->
+                                <div id="mobile-menu-container"></div>
+                                <!-- end -->
+                                <!-- Hamburger Image -->
+                                <img id="hamburgerImage" src="images/menu.svg" alt="Hamburger Menu"
+                                    style="display: block; width:30px; margin-top: 5px;">
+                                <!-- Cross Icon SVG (Hidden by default) -->
+                                <svg id="closeIcon" width="24" height="20" viewBox="0 0 19 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" style="display: none; margin-top: 5px">
+                                    <path
+                                        d="M16.2648 17.9813L9.62109 11.3376L2.9774 17.9813L0.762835 15.7667L7.40653 9.12305L0.762835 2.47935L2.9774 0.264788L9.62109 6.90848L16.2648 0.264788L18.4794 2.47935L11.8357 9.12305L18.4794 15.7667L16.2648 17.9813Z"
+                                        fill="white"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- End: Header Menu Toggle -->
+
+
+                    </div>
+
+                    <div class="header-search">
+                        <div class="header-search-icon">
+                            <i class="las la-search"></i>
+                        </div>
+                        <input type="text" id="search-input">
+
+                    </div>
+                    <div class="header-btn">
+                        <a href="#" class="cus-btn border-light header-login" id="login-button">
+                            <i class="las la-user"></i> Login
+                        </a>
+                        <!-- The Login Modal -->
+                        <div id="login-modal"></div>
+                        <!-- The Login Modal END -->
+
+                        <a href="#" class="cus-btn btn-yellow header-apply" id="apply-now-btn">Apply Now <i
+                                class="las la-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- The Apply Modal -->
+    <div id="apply-modal-container"></div>
+    <!-- The Apply Modal END-->
+
+
+   <!-- hero section start-->
+  <div class="banner-strip">
+    <div class="container">
+      <div class="banner-strip-block">
+        <div class="banner-strip-right">
+          <div class="jan25-block">
+            <div class="jan25-item">
+              Jan'25 Session Admissions Open Now!
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="banner-section">
+    <div class="container">
+      <div class="banner-block">
+        <div class="banner-bg">
+          <img src="https://static.amityonline.com/_s/mca_cybersecurity_5f2acd26ca.jpg" alt="">
+        </div>
+        <div class="banner-caption">
+          <h3>PG Specialization</h3>
+          <h1>MCA with specialization in Cyber Security (MCA CS)</h1>
+          <p class="banner-duration">
+            <span class="banner-duration-title">Duration:</span> 2 years
+          </p>
+          <a href="#" id="download_brochure_button" class="cus-btn btn-yellow">Download Brochure<i
+              class="las la-arrow-down"></i></a>
+          <div id="download_modal" style="display: none;">
+            <div class="Modal_root__5nZXA">
+              <div class="bg-white Modal_dialog__e3Pgf">
+                <svg class="Modal_close__C0ggP" xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                  viewBox="0 0 24 24" fill="none">
+                  <g clip-path="url(#clip0_380_520)">
+                    <path
+                      d="M18.2648 20.9813L11.6211 14.3376L4.9774 20.9813L2.76284 18.7667L9.40653 12.123L2.76284 5.47935L4.9774 3.26479L11.6211 9.90848L18.2648 3.26479L20.4794 5.47935L13.8357 12.123L20.4794 18.7667L18.2648 20.9813Z"
+                      fill="#1A325D"></path>
+                  </g>
+                  <defs>
+                    <clipPath id="clip0_380_520">
+                      <rect width="24" height="24" fill="white"></rect>
+                    </clipPath>
+                  </defs>
+                </svg>
+                <div class="Modal_root__oWe5F">
+                  <img src="https://amityonline.com/_s/wtoc_9701d9f876.webp" alt="man-uses-laptop">
+                  <div>
+                    <div class="banner-form-title2">
+                      Download Brochure</div>
+                    <div class="">
+                      <form class="Modal_content__bZhM7 py-4 flex flex-col">
+                        <div class="text-sec font-railway font-medium Modal_text__hr_T8">Fill in your details here and
+                          download a detailed brochure of the program</div>
+                        <div class="font-railway text-secondary-gray Form_group__rP395">
+                          <label class="text-blu" for="name-input">Name *</label>
+                          <!-- <div class="Form_control__eYGP8"> -->
+                          <input placeholder="Enter your full name" id="name-input"
+                            class="TextInput_root__De36R undefined banner-input" value="" name="email">
+                          <!-- </div> -->
+                        </div>
+
+                        <div class="flex items-center justify-start">
+                          <div class="font-railway mr-2 mt-[1.125rem] lg:mt-[0.9166rem] basis-1/5 Form_group__rP395">
+                            <label class="text-blu" id="null-label2" for="country-code-select"
+                              style="white-space: nowrap;">Country Code *</label>
+                            <select id="country-code-select" class="banner-input">
+                              <option value="+91" selected="">+91</option>
+                              <option value="+7840">+7840</option>
+                              <option value="+93">+93</option>
+                              <option value="+355">+355</option>
+                              <option value="+213">+213</option>
+                              <option value="+1684">+1684</option>
+                              <option value="+376">+376</option>
+                              <option value="+244">+244</option>
+                            </select>
+                            <!-- <div class="Form_control__eYGP8"> -->
+                            <!-- </div> -->
+                          </div>
+                          <div class="font-railway flex-1 overflow-auto text-secondary-gray Form_group__rP395">
+                            <label class="text-blu" id="null-label3" for="phone-number">Phone Number *</label>
+                            <!-- <div class="Form_control__eYGP8"> -->
+                            <input placeholder="Enter your no." class="TextInput_root__De36R undefined banner-input"
+                              value="" id="phone-number" name="phone">
+                            <!-- </div> -->
+                          </div>
+                        </div>
+                        <div class="font-railway mt-3 text-secondary-gray Form_group__rP395">
+                          <label class="text-blu" id="null-label4" for="email-id">Email Id *</label>
+                          <!-- <div class="Form_control__eYGP8"> -->
+                          <input placeholder="Enter your email" class="TextInput_root__De36R undefined banner-input"
+                            value="" id="email-id" name="email">
+                          <!-- </div> -->
+                        </div>
+                        <div class="flex justify-center items-start mt-3">
+                          <div class="mt-2">
+                            <input required="" type="radio" value="1" checked="" name="consent">
+                          </div>
+                          <p class="ml-3 text-sec font-railway font-medium mb-2 Modal_text__hr_T8">I authorise Amity
+                            University Online and its associates to contact me with updates &amp; notifications via
+                            Email, SMS, WhatsApp, and Voice call as per the Privacy Policy. This consent will override
+                            any registration for DNC / NDNC.</p>
+                        </div>
+                        <button type="submit" disabled=""
+                          class="button_root__RRK9v mt-auto !bg-[#E7E7E7] !border-stone-500 !text-stone-500 button_b__2Obj5">
+                          <span class="uppercase font-raleway">SUBMIT</span>
+                        </button>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="BannerWithImageNew_sponsor__AB7wG">
+            <div>
+              <h6 style="white-space: nowrap;">IN COLLABORATION WITH:</h6>
+            </div>
+            <div><img src="https://amityonline.com/_s/HCL_Tech_76cbaa29e8_8f340feb88.webp" alt="" loading="lazy"></div>
+          </div>
+        </div>
+        <!-- </div> -->
+
+        <div id="new-lead-form" class="banner-form banner-form-desk">
+          <div class="banner-form-title">Apply Now</div>
+          <form>
+            <div class="row g-1">
+              <div class="col-12 col-md-5">
+                <label for="full-name">Full Name <span class="text-xl">*</span></label>
+                <input type="text" id="full-name" placeholder="Enter your full name" class="banner-input" value="">
+              </div>
+
+              <div class="col-12 col-md-7">
+                <label for="phone-number">Phone Number <span class="text-xl">*</span></label>
+                <div class="row g-1">
+                  <div class="col-3">
+                    <select class="banner-input">
+                      <option value="+91" selected="">+91</option>
+                      <option value="+7840">+7840</option>
+                      <option value="+93">+93</option>
+                      <option value="+355">+355</option>
+                      <option value="+213">+213</option>
+                      <option value="+1684">+1684</option>
+                      <option value="+376">+376</option>
+                      <option value="+244">+244</option>
+                    </select>
+                  </div>
+                  <div class="col-9">
+                    <input type="text" id="phone-number-" placeholder="Enter your no." class="banner-input" value="">
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <label for="email">Email <span class="text-xl">*</span></label>
+                <input type="email" id="email" placeholder="abc@xyz.com" class="banner-input" value="">
+              </div>
+
+              <div class="col-12">
+                <div class="banner-check">
+                  <div class="banner-check-icon">
+                    <input type="checkbox" name="consent" checked="">
+                  </div>
+                  <p>I authorise Amity University Online and its associates to contact me with updates &amp;
+                    notifications via Email, SMS, WhatsApp, and Voice call as per the Privacy Policy. This consent will
+                    override any registration for DNC / NDNC.</p>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <button type="submit" disabled="" class="cus-btn border-dark w-100">Submit</button>
+              </div>
+            </div>
+          </form>
+
+          <div class="banner-form-app">
+            <!--<div class="app-close">
+              <p>Application closes in</p>
+              <h4>0d 6h 45m</h4>
+            </div>-->
+            <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="92"
+              aria-valuemin="0" aria-valuemax="100">
+              <div class="progress-bar progress-bar-striped progress-bar-animated " style="width: 92%">
+                <h4>92% <span>Seats filled</span></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  <!-- hero section end-->
+  <!-- hero section start Mobile-->
+  <div class="banner-form-mob">
+    <div class="container">
+      <div class="banner-form">
+        <div class="banner-form-title">Apply Now</div>
+        <form>
+          <div class="row g-1">
+            <div class="col-12 col-md-5">
+              <label for="full-name">Full Name <span class="text-xl">*</span></label>
+              <input type="text" id="full-name-3" placeholder="Enter your full name" class="banner-input" value="">
+            </div>
+            <div class="col-12 col-md-7">
+              <label for="phone-number">Phone Number <span class="text-xl">*</span></label>
+              <div class="row g-1">
+                <div class="col-3">
+                  <select class="banner-input" id="phone-number-3">
+                    <option value="+91" selected="">+91</option>
+                    <option value="+7840">+7840</option>
+                    <option value="+93">+93</option>
+                    <option value="+355">+355</option>
+                    <option value="+213">+213</option>
+                    <option value="+1684">+1684</option>
+                    <option value="+376">+376</option>
+                    <option value="+244">+244</option>
+                  </select>
+                </div>
+                <div class="col-9">
+                  <input type="text" id="phone-number-input-3" placeholder="Enter your no." class="banner-input"
+                    value="">
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <label for="email-id-3">Email ID <span class="text-xl">*</span></label>
+              <input type="text" id="email-id-3" placeholder="abc@xyz.com" class="banner-input" value="">
+            </div>
+            <div class="col-12">
+              <div class="banner-check">
+                <div class="banner-check-icon">
+                  <input type="checkbox" class="" name="consent" checked="">
+                </div>
+                <p>I authorise Amity University Online and its associates to contact me with updates &amp; notifications
+                  via Email, SMS, WhatsApp, and Voice call as per the Privacy Policy. This consent will override any
+                  registration for DNC / NDNC.</p>
+              </div>
+            </div>
+            <div class="col-12">
+              <button type="submit" disabled="" class="cus-btn border-dark w-100">Submit</button>
+            </div>
+          </div>
+        </form>
+        <div class="banner-form-app">
+          <div class="progress" role="progressbar" aria-label="Animated striped example" aria-valuenow="92"
+            aria-valuemin="0" aria-valuemax="100">
+            <div class="progress-bar progress-bar-striped progress-bar-animated" style="width: 92%">
+              <h4>92% <span>Seats filled</span></h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- hero section end mobile-->
+  <!-- payment strip start  -->
+  <div class="payment-strip">
+    <div class="scrolling-text">
+      <p>Payments are accepted only through the secure link on this website; no other payment methods are valid.</p>
+      <p>Hurry! Zero-cost EMI option available.</p>
+    </div>
+  </div>
+  <!-- payment strip end -->
+  <!-- announcement section cards start  -->
+  <div class="annoucement-section">
+    <div class="container">
+      <div class="annoucement-block">
+        <div class="row g-4">
+          <div class="col-6 col-md-3">
+            <div class="annoucement-card">
+              <div class="annoucement-inner">
+                <div class="annoucement-item" style="--bcolor:#FF3E6C; background-color: #FF3E6C; color: #fff;">
+                  <div class="annoucement-title">
+                    <h4>Admissions <br>
+                      Closing Soon</h4>
+                  </div>
+                  <div class="annoucement-subtitle">
+                    <h3>For July'24 session</h3>
+                  </div>
+                  <div class="annoucement-img">
+                    <img src="images/icon1_8608611963.webp" alt="">
+                  </div>
+                </div>
+                <div class="annoucement-card-back" style="--bgcolor: #FF3E6C; --color:#fff;">
+                  <p>Unlock the best scholarship options available for you.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="annoucement-card">
+              <div class="annoucement-inner">
+                <div class="annoucement-item" style="--bcolor: #4A9C61;">
+                  <div class="annoucement-title">
+                    <h4>Attractive <br>
+                      Scholarships</h4>
+                  </div>
+                  <div class="annoucement-subtitle">
+                    <h3>Avail Now</h3>
+                  </div>
+                  <div class="annoucement-img">
+                  </div>
+                </div>
+                <div class="annoucement-card-back" style="--bgcolor: #4A9C61; --color:#fff;">
+                  <p>Avail perfect Scholarship from multiple options Now !</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="annoucement-card">
+              <div class="annoucement-inner">
+                <div class="annoucement-item " style="--bcolor: #4194F4; ;">
+                  <div class="annoucement-title">
+                    <h2>₹8,300<b>*</b></h2>
+                    <p></p>
+                  </div>
+                  <div class="annoucement-subtitle">
+                    <h3>Per Month Zero Cost EMI*</h3>
+                  </div>
+                  <div class="annoucement-img">
+                    <img src="images/icon2_56fb744843.webp" alt="">
+                  </div>
+                </div>
+                <div class="annoucement-card-back" style="--bgcolor: #4194F4; --color:#fff;">
+                  <p>Remove financial obstacles from learning by opting loan / EMI options.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="col-6 col-md-3">
+            <div class="annoucement-card">
+              <div class="annoucement-inner">
+                <div class="annoucement-item " style="--bcolor: #FFC907;">
+                  <div class="annoucement-title">
+                    <h2>1,12,000+</h2>
+                  </div>
+                  <div class="annoucement-subtitle">
+                    <h3>Learners' First Choice</h3>
+                  </div>
+                  <div class="annoucement-img">
+                    <img src="images/icon3_f57565e840.webp" alt="">
+                  </div>
+                </div>
+                <div class="annoucement-card-back" style="--bgcolor: #FFC907; --color:#1a325d;">
+                  <p>More than 1,12,000 learners have trusted us for quality education and flexible learning.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- announcement section ends -->
+
+  <!-- secondary menu start -->
+  <div class="secondary-menu-section">
+    <div class="container">
+      <div class="secondary-menu-block">
+        <div class="secondary-menu">
+          <nav class="navigation" id="mainNav">
+            <a class="navigation__link" href="#1">Overview</a>
+            <a class="navigation__link" href="#2">Program Highlights</a>
+            <a class="navigation__link" href="#3">Curriculum</a>
+            <a class="navigation__link" href="#4">Degree offered</a>
+            <!-- <a class="navigation__link" href="#5">Specializations</a> -->
+            <a class="navigation__link" href="#6">Eligibility</a>
+            <a class="navigation__link" href="#7">Fee</a>
+            <a class="navigation__link" href="#8">Faculty</a>
+            <a class="navigation__link cus-btn btn-blue sec-apply" id="apply-now-btn" style="color: #fff;" href="">Apply Now</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- secondary menu end -->
+
+  <!-- overview section start-->
+  <div class="page-section overview-section" id="1">
+    <div class="container">
+      <div class="overview-block">
+        <div class="row g-4">
+          <div class="col-12 col-md-7 ">
+            <div class="overview-content">
+              <div class="heading-block mb-3">
+                <h2>Become a master at programming with India's first UGC entitled online MCA program</h2>
+              </div>
+              <p>
+                A Master of Computer Applications program with a specialization in Cyber security online is tailored to
+                equip students with advanced knowledge and skills in protecting digital systems, networks, and data from
+                cyber threats. The curriculum starts with foundational courses covering computer networks, operating
+                systems, and information security principles. Students then delve into specialized cybersecurity courses
+                online topics such as ethical hacking, cryptography, risk management, and incident response. Throughout
+                the program, students gain hands-on experience with cyber security tools and techniques, including
+                penetration testing tools, encryption algorithms, and intrusion detection systems. They learn to
+                identify vulnerabilities, assess risks, and implement security measures to safeguard against cyber
+                attacks. Practical projects and simulations allow students to apply their cyber security skills in
+                simulated environments, preparing them to address real-world cyber threats effectively. By graduation,
+                students are well-equipped to pursue roles as cyber security analysts, security consultants, or
+                information security managers, ready to protect organizations from cyber threats and ensure the
+                integrity and confidentiality of digital assets. Partner with HCLTech for cutting-edge internships in
+                your final semester!
+              </p>
+
+            </div>
+          </div>
+          <div class="col-12 col-md-5 ">
+            <div class="overview-img">
+              <img src="https://static.amityonline.com/_s/about_3adda4e6f2_c75935ad61.webp" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- overview section end -->
+
+  <!-- program highlights start -->
+  <div class="page-section hightlight-section" id="2">
+    <div class="container">
+      <div class="hightlight-block">
+        <div class="heading-block">
+          <h2>Program Highlights and Advantages</h2>
+          <p>Discover our online PG degree program and <br>
+            begin an exciting educational journey.</p>
+        </div>
+
+        <div class="key-hightlight-list">
+          <div class="row g-2 g-md-3">
+            <div class="col-6 col-md-3">
+              <div class="key-hightlight-item">
+                <div class="key-hightlight-img">
+                  <img
+                    src="images/front_view_stacked_books_earth_globe_open_book_pencils_education_day_1_9fa23e9918.webp"
+                    class="w-100" alt="">
+                </div>
+                <h4>Global Education</h4>
+                <p>Experience a truly global education with renowned international faculty</p>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="item">
+                <div class="key-hightlight-item">
+                  <div class="key-hightlight-img">
+                    <img src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2Fstudent_class_looking_course_2_e2422e8a21_47906c83d0.webp&w=384&q=75" class="w-100" alt="">
+                  </div>
+                  <h4>Robust Learning Model</h4>
+                  <p>350+ hours of video lectures to enhance your learning outcomes
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="item">
+                <div class="key-hightlight-item">
+                  <div class="key-hightlight-img">
+                    <img src="images/virtual_classroom_study_space_1_c2ac1e0a17.webp" class="w-100" alt="">
+                  </div>
+                  <h4>Industry Collaborations
+                  </h4>
+                  <p>Specialization in collaboration with HCLTech for industry readiness
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="col-6 col-md-3">
+              <div class="item">
+                <div class="key-hightlight-item">
+                  <div class="key-hightlight-img">
+                    <img src="https://static.amityonline.com/_s/about_3adda4e6f2_c75935ad61.webp" class="w-100" alt="">
+                  </div>
+                  <h4>Real World Projects
+                  </h4>
+                  <p>Real world projects and case studies to help you succeed in your industry
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- program highlights end -->
+
+  <!-- fee structure start -->
+  <div class="page-section fee-section" id="7">
+    <div class="container">
+      <div class="fee-block">
+        <div class="heading-block pb-4">
+          <h2>Fee Structure</h2>
+        </div>
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <div class="fee-card">
+              <div class="fee-sub-title">
+                <p>24 Months Zero Cost EMI</p>
+              </div>
+              <div class="fee-title">
+                <h2>₹8,292<b>*</b></h2>
+                <h5>Interest free</h5>
+              </div>
+              <div class="fee-img">
+                <img src="images/Frame_1000001899_2_437f090901_8d104d7813.webp" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="fee-card1">
+              <div class="fee-sub-title">
+                <p>Per Semester Fee</p>
+              </div>
+              <div class="fee-title">
+                <h2>₹49,750</h2>
+              </div>
+              <div class="fee-img">
+                <img src="images/Frame_1000001968_0ff53522df_b0e1afe985.webp" alt="">
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="fee-card1">
+              <div class="fee-sub-title">
+                <p>Full Course Fee</p>
+              </div>
+              <div class="fee-title">
+                <h2>₹1,99,000</h2>
+              </div>
+              <div class="fee-img">
+                <img src="images/Frame_1000001969_801b8412c7_5fbe000c68.webp" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- fee structure end -->
+  <!-- advantages section start -->
+  <div class="page-section advantage-section pb-4">
+    <div class="container">
+      <div class="advantage-block">
+        <div class="heading-block border-bottom pb-4">
+          <h2 style="color: #fff;">Why Choose Amity Online ?</h2>
+          <p>Be ahead with Industry-first <br>
+            Advantages</p>
+        </div>
+        <div class="advantage-list">
+          <div class="advantage owl-carousel owl-theme">
+            <div class="item">
+              <div class="advantage-item">
+                <div class="advantage-img">
+                  <img src="images/industry.png" alt="">
+                </div>
+                <h5>Industry Visits for Real-World Exposure</h5>
+                <p>Experience hands-on learning through visits to top industry workplaces.</p>
+              </div>
+              <div class="advantage-item">
+                <div class="advantage-img">
+                  <img src="images/icon7.png" alt="">
+                </div>
+                <h5>Offline Experiences</h5>
+                <p>Weave a close bond with faculties & peers, via on campus orientation programs and activities</p>
+              </div>
+
+            </div>
+            <div class="item">
+              <div class="advantage-item">
+                <div class="advantage-img">
+                  <img src="images/icon2.png" alt="">
+                </div>
+                <h5>Dedicated Academic Advisors</h5>
+                <p>Dedicated experts and advisor to guide you at every step of your professional career</p>
+              </div>
+              <div class="advantage-item">
+                <div class="advantage-img">
+                  <img src="images/besocial.png" alt="">
+                </div>
+                <h5>beSocial - Student Community Platform</h5>
+                <p>Where 75,000+ students connect, engage, and grow.</p>
+              </div>
+
+            </div>
+            <div class="item">
+              <div class="advantage-item">
+                <div class="advantage-img">
+                  <img src="images/icon3.png" alt="">
+                </div>
+                <h5>AI-Professor AMI</h5>
+                <p>Powered by Chat-GPT 4 and open AI-driven technology for online learning</p>
+              </div>
+              <div class="advantage-item">
+                <div class="advantage-img">
+                  <img src="images/icon4.png" alt="">
+                </div>
+                <h5>Career Services</h5>
+                <p>Be job-ready with resume building workshops, internships & industry mentorship</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="advantage-item">
+                <div class="advantage-img">
+                  <img src="images/icon8.png" alt="">
+                </div>
+                <h5>Placement opportunities</h5>
+                <p>Job interview prep, placement assistance & resume building for students to be job-ready</p>
+              </div>
+              <div class="advantage-item">
+                <div class="advantage-img">
+                  <img src="images/icon5.png" alt="">
+                </div>
+                <h5>Doorstep delivery of books</h5>
+                <p>India's only online university to provide physical books to read at your door step</p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="advantage-item">
+                <div class="advantage-img">
+                  <img src="images/icon1.png" alt="">
+                </div>
+                <h5>Diverse learning mediums</h5>
+                <p>E-books, printed & audio books, videos to cater your preferences & unique learning style</p>
+              </div>
+              <div class="advantage-item">
+                <div class="advantage-img">
+                  <img src="images/icon6.png" alt="">
+                </div>
+                <h5>Metaverse Campus</h5>
+                <p>Discovering endless possibilities of Amity campus through our metaverse tour experience</p>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="text-center mt-3">
+            <a href="#" class="cus-btn btn-yellow">Fast-track your career <i class="las la-arrow-right"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- advantages section end -->
+
+  <!-- HCL section start -->
+  <div class="advantage-block2">
+
+    <div class="heading-block border-bottom pb-4">
+      <h2 style="color: #1a325d;">HCLTech Career Shaper Advantage</h2>
+    </div>
+
+    <div class="advantage-list">
+
+      <div class="advantage owl-carousel owl-theme">
+
+        <div class="item">
+          <div class="advantage-item2">
+            <div class="advantage-img">
+              <img src="https://static.amityonline.com/_s/key_icon1_ce691d01a8.png" alt="">
+            </div>
+            <h5>Legacy</h5>
+            <p>With over 47 years of rich heritage, HCLTech stands as a trusted partner, having served Fortune 500 and
+              Global 2000 enterprises with distinction.</p>
+          </div>
+          <div class="advantage-item2">
+            <div class="advantage-img">
+              <img src="https://static.amityonline.com/_s/key_icon5_edefbead3c.png" alt="">
+            </div>
+            <h5>The Right Balanced Delivery</h5>
+            <p>HCLTech strikes a harmonious balance between industry practitioners and academicians, delivering
+              unparalleled value through a blend of practical experience and theoretical expertise.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="advantage-item2">
+            <div class="advantage-img">
+              <img src="https://static.amityonline.com/_s/key_icon2_c21d057d11.png" alt="">
+            </div>
+            <h5>Industry Relevance</h5>
+            <p>Renowned as a tech giant, HCLTech offers unparalleled Tech Learning opportunities, leveraging its legacy
+              of innovation to stay at the forefront of the digital age.</p>
+          </div>
+          <div class="advantage-item2">
+            <div class="advantage-img">
+              <img src="https://static.amityonline.com/_s/key_icon6_a89e0be0f1.png" alt="">
+            </div>
+            <h5>Purposeful Outcomes</h5>
+            <p>HCLTech's learning initiatives are meticulously crafted to facilitate job-based career pathways,
+              providing immersive learning experiences through innovative tools such as learning labs, work ware, and
+              capstones.</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="advantage-item2">
+            <div class="advantage-img">
+              <img src="https://static.amityonline.com/_s/key_icon2_c21d057d11.png" alt="">
+            </div>
+            <h5>Expert Pool</h5>
+            <p>Drawing upon expertise from various service lines within HCLTech business, learners benefit from a
+              powerhouse of skilled professionals dedicated to driving excellence across diverse domains</p>
+          </div>
+        </div>
+
+        <div class="item">
+          <div class="advantage-item2">
+            <div class="advantage-img">
+              <img src="https://static.amityonline.com/_s/key_icon4_d79d1d2943.png" alt="">
+            </div>
+            <h5>Ever Growing Inventory</h5>
+            <p>Learners can access a vast array of tech learning offerings spanning multi-disciplinary tracks, ensuring
+              continuous growth and adaptability in today's dynamic market landscape.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- HCL section end -->
+  <!-- Accreditations Section Start -->
+
+  <div class="page-section accre-section">
+    <div class="container">
+      <div class="accre-block">
+        <div class="heading-block">
+          <h2>Accreditations & Recognitions</h2>
+          <p class="">Endorsements of Excellence, Recognitions and Accreditations <br>
+            Celebrating Academic Quality of Amity Online</p>
+        </div>
+        <div class="accre-slider">
+          <div class="accre owl-carousel owl-theme">
+            <div class="item">
+              <div class="accre-item">
+                <div class="accre-img">
+                  <img src="images/Group_48099254_1_46922cfc87_373b0aebce.webp" alt="">
+                </div>
+                <h5>India's only Online MBA ranked by QS:Global top 50 and Asia Pacific Top 10</h5>
+              </div>
+              <div class="accre-item">
+                <div class="accre-img">
+                  <img src="images/Group_48100135_1_132c0a9195_8215e4ff75.webp" alt="">
+                </div>
+                <h5>Ranked 32 by National Institutional Ranking Framework </h5>
+              </div>
+            </div>
+            <div class="item">
+              <div class="accre-item">
+                <div class="accre-img">
+                  <img src="images/UGC_c7308364f3_0c92cb6f17.webp" alt="">
+                </div>
+                <h5>First university in India to receive UGC approval for Online Degrees and Learning Platform</h5>
+              </div>
+              <div class="accre-item">
+                <div class="accre-img">
+                  <img src="images/the_62b2a634db_eedf54d391.webp" alt="">
+                </div>
+                <h5>Ranked among Top 3% Globally</h5>
+              </div>
+            </div>
+            <div class="item">
+              <div class="accre-item">
+                <div class="accre-img">
+                  <img src="images/Group_48100133_1_6d300979e5_698e5804d6.webp" alt="">
+                </div>
+                <h5>The Western Association
+                  of Schools and Colleges</h5>
+              </div>
+              <div class="accre-item">
+                <div class="accre-img">
+                  <img src="images/AICTE_6b131890a9_dbd7744c02.webp" alt="">
+                </div>
+                <h5>Degree programs approved by All India Council of Technical Education</h5>
+              </div>
+            </div>
+            <div class="item">
+              <div class="accre-item">
+                <div class="accre-img">
+                  <img src="images/Group_48099252_1_df96398b17_7a9d37adb4.webp" alt="">
+                </div>
+                <h5>WES accredited in Canada</h5>
+              </div>
+              <div class="accre-item">
+                <div class="accre-img">
+                  <img src="images/DEC_Main_Dark_72dpi_7b970c0a32_78e05c7964.webp" alt="">
+                </div>
+                <h5>India's first private university to be a member</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Accreditations section end -->
+
+  <!-- program overview and structure start  -->
+  <div class="page-section curri-section" id="3">
+    <div class="container">
+      <div class="curri-block">
+        <div class="row g-0">
+          <div class="col-12 col-md-8">
+            <div class="curri-list">
+              <div class="heading-block">
+                <h2>Program Overview & Structure</h2>
+                <a href="#" class="brochure-btn cus-btn btn-blue">Explore Curriculum<i
+                    class="las la-arrow-down"></i></a>
+              </div>
+              <div class="curri-tabs">
+                <div class="accordion" id="accordionExample1">
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="curriheadingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#curricollapseTwo" aria-expanded="false" aria-controls="curricollapseTwo">
+
+                        Semester 1
+
+                      </button>
+                    </h2>
+                    <div id="curricollapseTwo" class="accordion-collapse collapse" aria-labelledby="curriheadingTwo"
+                      data-bs-parent="#accordionExample1">
+                      <div class="accordion-body">
+                        <ul class="curri-detail">
+                          <li><i class="fas fa-check"></i> Graph Theory and Combinatorics</li>
+                          <li><i class="fas fa-check"></i> Advanced Database Management Systems</li>
+                          <li><i class="fas fa-check"></i>
+                            Core Java</li>
+                          <li><i class="fas fa-check"></i> Advanced Software Engineering Principles</li>
+                          <li><i class="fas fa-check"></i> Professional Communication
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="curriheadingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#curricollapseThree" aria-expanded="false" aria-controls="curricollapseThree">
+
+                        Semester 2
+
+                      </button>
+                    </h2>
+                    <div id="curricollapseThree" class="accordion-collapse collapse" aria-labelledby="curriheadingThree"
+                      data-bs-parent="#accordionExample1">
+                      <div class="accordion-body">
+                        <ul class="curri-detail">
+                          <li><i class="fas fa-check"></i> Research Methodology</li>
+                          <li><i class="fas fa-check"></i>Data Structures and Algorithm Design</li>
+                          <li><i class="fas fa-check"></i> Network Security and Cryptography</li>
+                          <li><i class="fas fa-check"></i> Cognitive Analytics & Social Skills for Professionals</li>
+                          <li><i class="fas fa-check"></i> Information Security, Cloud Security, Risk & Compliance</li>
+                          <li><i class="fas fa-check"></i>
+                            CyberSecurity Information Threat Intelligence & Hunting, Cyber Incident Response,
+                            Vulnerability Assessment
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#curricollapseFive" aria-expanded="false" aria-controls="curricollapseFive">
+
+                        Semester 3
+
+                      </button>
+                    </h2>
+                    <div id="curricollapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive"
+                      data-bs-parent="#accordionExample1">
+                      <div class="accordion-body">
+                        <ul class="curri-detail">
+                          <li><i class="fas fa-check"></i> Cloud Infrastructure and Services</li>
+                          <li><i class="fas fa-check"></i> UNIX / Linux Programming</li>
+                          <li><i class="fas fa-check"></i>Professional Ethics</li>
+                          <li><i class="fas fa-check"></i> Quantitative Aptitude</li>
+                          <li><i class="fas fa-check"></i> Seminar (Evaluation)</li>
+                          <li><i class="fas fa-check"></i> Application Security, Data Security, Malware Analysis</li>
+                          <li><i class="fas fa-check"></i> SIEM and Security Operation, UEBA
+                          </li>
+
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingSix">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#curricollapseSix" aria-expanded="false" aria-controls="curricollapseSix">
+
+                        Semester 4
+
+                      </button>
+                    </h2>
+                    <div id="curricollapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix"
+                      data-bs-parent="#accordionExample1">
+                      <div class="accordion-body">
+                        <ul class="curri-detail">
+                          <li><i class="fas fa-check"></i> Major Project</li>
+
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4" id="4">
+            <div class="curri-degree-section">
+              <div class="curri-degree">
+                <div class="curri-img">
+                  <img
+                    src="https://amityonline.com/_next/image?url=https%3A%2F%2Famityonline.com%2F_s%2FMCA_4089df4a4b.webp&w=828&q=75"
+                    class="w-100" alt="">
+                </div>
+                <div class="curri-degree-content">
+                  <p>Amity Online's 2 year MCA in Cybersecurity program provides a strong foundation in programming
+                    languages, catering to both professionals and beginners, fostering cross-functional expertise in a
+                    dynamic economy.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- program overview and structure end -->
+
+  <!-- Eligibility Criteria container start-->
+  <div class="page-section eligible-section" id="6">
+    <div class="container">
+      <div class="eligible-block">
+        <div class="row g-0">
+          <div class="col-12 col-md-6">
+            <div class="eligible-content">
+              <div class="heading-block">
+                <h2>Eligibility Criteria</h2>
+                <img style="width: 3rem;" src="images/Group_48100151_c379ede5cc_9cb075b091.webp" alt="">
+              </div>
+              <div class="eligible-list">
+                <div class="row g-3">
+                  <div class="col-12">
+                    <div class="eligible-item">
+                      <i class="las la-check"></i>
+                      <p>Fresh graduates or final year students seeking a career in the Computer and Software industry.
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="eligible-item">
+                      <i class="las la-check"></i>
+                      <p>Working professionals seeking higher education in computer technology and those wishing to
+                        further their knowledge to solve complex real world issues and build cutting edge products. </p>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="eligible-item">
+                      <i class="las la-check"></i>
+                      <p>Aspirants willing to explore career opportunities in private/public sector organizations in
+                        industries including IT & ITES, Financial Services, and more as Computer Programmer, Information
+                        Security Analyst, Network and Test Engineer, Database Administrator, Quality Assurance Engineer,
+                        Full Stack Developer, among others. </p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="eligible-logo-block">
+              <div class="eligible-logo-title">
+                <h2>For Indian students</h2>
+              </div>
+              <div class="eligible-list">
+                <div class="row g-1">
+                  <div class="col-12">
+                    <div class="eligible-item">
+                      <i class="las la-check"></i>
+                      <p>Bachelor of Computer Applications (BCA)</p>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="eligible-item">
+                      <i class="las la-check"></i>
+                      <p>Bachelor’s Degree in Computer Science / Engineering</p>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="eligible-item">
+                      <i class="las la-check"></i>
+                      <p>Bachelor's Degree in Science / Commerce / Arts with Mathematics at 10+2 level</p>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="eligible-item">
+                      <i class="las la-check"></i>
+                      <p>Students without Mathematics at 10+2 or graduation can also apply after qualifying the bridge
+                        course</p>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+              <div class="eligible-logo-title">
+                <h2>For Foreign students</h2>
+              </div>
+              <div class="eligible-list mb-0">
+                <div class="row g-1">
+                  <div class="col-12">
+                    <div class="eligible-item">
+                      <i class="las la-check"></i>
+                      <p>Bachelor’s Degree or any of the degrees mentioned for the Indian students. (BCA is preferable)
+                      </p>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="eligible-item">
+                      <i class="las la-check"></i>
+                      <p>Well versed in spoken as well as written English</p>
+                    </div>
+                  </div>
+                  <div class="col-12">
+                    <div class="eligible-item">
+                      <i class="las la-check"></i>
+                      <p>Certificate of equivalence from the Association of Indian Universities (required by any student
+                        with foreign education to apply to any University in India, Refer to <a
+                          href="https://www.aiu.ac.in/" style="color: black; text-decoration: none;">
+                          https://aiu.ac.in/</a> for more details)</p>
+                    </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- Eligibility section end -->
+  <!-- carrer section start  -->
+
+  <div class="career-section">
+    <div class="container">
+      <div class="career-block">
+        <div class="heading-block">
+          <h2>Admission Process</h2>
+        </div>
+        <div class="career-list">
+          <div class="career-item">
+            <div class="career-icon">
+              <img src="images/Group_48100511_ee8e218674_b8a2ff8c7b.webp" alt="">
+            </div>
+            <div class="career-detail">
+              <h4 class="extra">01. Select Your Program </h4>
+              <p>Choose the program that suits your goals</p>
+            </div>
+          </div>
+          <div class="career-item">
+            <div class="career-icon">
+              <img src="images/Group_48100512_2eda748696_6f054941b7.webp" alt="">
+            </div>
+            <div class="career-detail">
+              <h4 class="extra">02. Complete Your Application</h4>
+              <p>Fill out your application with all the necessary information</p>
+            </div>
+          </div>
+          <div class="career-item">
+            <div class="career-icon">
+              <img src="images/Group_48100513_ab28110901_ef7ae586cf.webp" alt="">
+            </div>
+            <div class="career-detail">
+              <h4 class="extra">03. Pay your program fees </h4>
+              <p>Make your program payment securely & easily</p>
+            </div>
+          </div>
+          <div class="career-item">
+            <div class="career-icon">
+              <img src="images/Group_48100514_717f07b14d_4f03dbe2d1.webp" alt="">
+            </div>
+            <div class="career-detail">
+              <h4 class="extra">04. Submit & register </h4>
+              <p>Submit your application and complete your registration</p>
+            </div>
+          </div>
+          <div class="career-item">
+            <div class="career-icon">
+              <img src="images/Group_48100515_344aaae406_b5ffed7b3a.webp" alt="">
+            </div>
+            <div class="career-detail">
+              <h4 class="extra">05. Await enrollment details </h4>
+              <p>Wait for your enrollment details and guidance</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- carrer section end -->
+  <!-- journey section start  -->
+  <div class="page-section journey-section">
+    <div class="container">
+      <div class="journey-block">
+        <div class="row g-0">
+          <div class="col-12">
+            <div class="heading-block">
+              <h2>Journey Towards: Online Degree Program</h2>
+            </div>
+            <hr>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="journey-list">
+
+              <div class="journey-tabs">
+                <div class="accordion" id="accordionExample2">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="journeyheadingOne">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#journeycollapseOne" aria-expanded="true" aria-controls="journeycollapseOne">
+
+                        Online Orientation
+
+                      </button>
+                    </h2>
+                    <div id="journeycollapseOne" class="accordion-collapse collapse show"
+                      aria-labelledby="journeyheadingOne" data-bs-parent="#accordionExample2">
+                      <div class="accordion-body">
+                        <div class="journey-detail">
+                          <p>Attend orientation sessions to familiarize yourself with the program, university policies,
+                            and resources.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="journeyheadingTwo">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#journeycollapseTwo" aria-expanded="false" aria-controls="journeycollapseTwo">
+
+                        On-Campus Meet
+
+                      </button>
+                    </h2>
+                    <div id="journeycollapseTwo" class="accordion-collapse collapse" aria-labelledby="journeyheadingTwo"
+                      data-bs-parent="#accordionExample2">
+                      <div class="accordion-body">
+                        <div class="journey-detail">
+                          <p>Meet your peers and faculty at an on-campus event.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="journeyheadingThree">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#journeycollapseThree" aria-expanded="false"
+                        aria-controls="journeycollapseThree">
+
+                        Academic Progress
+
+                      </button>
+                    </h2>
+                    <div id="journeycollapseThree" class="accordion-collapse collapse"
+                      aria-labelledby="journeyheadingThree" data-bs-parent="#accordionExample2">
+                      <div class="accordion-body">
+                        <div class="journey-detail">
+                          <p>Attend live and recorded classes, complete your assignments, and maintain a strong academic
+                            performance.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="accordion-item">
+                    <h2 class="accordion-header" id="journeyheadingFive">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#journeycollapseFive" aria-expanded="false" aria-controls="journeycollapseFive">
+
+                        Utilize Resources
+
+                      </button>
+                    </h2>
+                    <div id="journeycollapseFive" class="accordion-collapse collapse"
+                      aria-labelledby="journeyheadingFive" data-bs-parent="#accordionExample2">
+                      <div class="accordion-body">
+                        <div class="journey-detail">
+                          <p>Avail library resources at the Noida campus, online learning resources, and academic
+                            support services to enhance your learning.</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="journey-img-block">
+              <div class="journey-img">
+                <img src="images/shutterstock_1325772443_2dc962661e.jpg" class="w-100" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- journey section end -->
+
+  <!-- Holistic Career Services start -->
+  <div class="page-section cs-section pb-4">
+    <div class="container">
+      <div class="cs-block">
+        <div class="heading-block">
+          <h2>Holistic Career Services: How we help you build your dream career</h2>
+          <p>Our wide range of services are designed <br>
+            to meet your specific needs for career</p>
+        </div>
+        <div class="cs-list">
+          <div class="cs-slider owl-carousel owl-theme">
+            <div class="item">
+              <div class="cs-item">
+                <div class="cs-img">
+                  <img src="images/image_10134_d8c4e7eb2f_bdbadeccfb.webp" alt="">
+                </div>
+                <div class="cs-info">
+                  <h5>Career exploration tools</h5>
+                  <ul>
+                    <li>Assessing your interests and strengths</li>
+                    <li>Exploring different career options and pathways</li>
+                    <li>Identifying your passion and potential</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cs-item">
+                <div class="cs-img">
+                  <img src="images/image_10135_6040bd8742_48391742c0.webp" alt="">
+                </div>
+                <div class="cs-info">
+                  <h5>Resume/CV assistance</h5>
+                  <ul>
+                    <li>Crafting professional resumes and CVs</li>
+                    <li>Customizing application for specific industries</li>
+                    <li>Highlighting your skills and achievements effectively</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cs-item">
+                <div class="cs-img">
+                  <img src="images/image_10136_ec714781ff_c2aa81da6b.webp" alt="">
+                </div>
+                <div class="cs-info">
+                  <h5>Virtual job search support</h5>
+                  <ul>
+                    <li>Guiding through the online application process</li>
+                    <li>Networking support via virtual events and platforms</li>
+                    <li>Preparing for virtual interviews to establish a professional online presence</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="item">
+              <div class="cs-item">
+                <div class="cs-img">
+                  <img src="images/image_10137_4d740ef08a_01c1a85249.webp" alt="">
+                </div>
+                <div class="cs-info">
+                  <h5>Career counselling & advising</h5>
+                  <ul>
+                    <li>1-on-1 sessions with experienced counsellors</li>
+                    <li>Personalized career assessments and goal setting</li>
+                    <li>Guidance on making informed decisions</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--<div class="text-center mt-5">
+            <a href="#" class="cus-btn btn-blue">Get Placement Support <i class="las la-arrow-right"></i></a>
+          </div>-->
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Holistic Career Services end -->
+  <!-- potential job roles start -->
+  <div class="page-section fee-section" id="5">
+    <div class="container">
+      <div class="fee-block">
+        <div class="heading-block mb-4">
+          <h2>Potential Job Roles</h2>
+        </div>
+        <div class="row g-0" style="color: grey">
+          <div class="col-12 col-md-4">
+            <div class="curri-degree-block">
+              <div class="curri-degree">
+                <div class="text">
+                  <h4>Entry Level</h4>
+                </div>
+                <div class="text-2">
+                  <ul>
+                    <li><img src="images/done.202e60ad.svg" alt=""> Junior Software Developer</li>
+                    <li><img src="images/done.202e60ad.svg" alt="">
+                      System Analyst</li>
+                    <li><img src="images/done.202e60ad.svg" alt=""> Technical Support Engineer</li>
+                    <li><img src="images/done.202e60ad.svg" alt=""> Web Developer </li>
+                    <li><img src="images/done.202e60ad.svg" alt="">Network Administrator </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="curri-degree-block">
+              <div class="curri-degree">
+                <div class="text">
+                  <h4>Mid Level</h4>
+                </div>
+                <div class="text-2">
+                  <ul>
+                    <li><img src="images/done.202e60ad.svg" alt=""> Software Engineer </li>
+                    <li><img src="images/done.202e60ad.svg" alt=""> Database Administrator </li>
+                    <li><img src="images/done.202e60ad.svg" alt=""> IT Project Manager </li>
+                    <li><img src="images/done.202e60ad.svg" alt=""> IT Consultant </li>
+                    <li><img src="images/done.202e60ad.svg" alt=""> Quality Assurance Analyst </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-12 col-md-4">
+            <div class="curri-degree-block">
+              <div class="curri-degree">
+                <div class="text">
+                  <h4>Advanced Level</h4>
+                </div>
+                <div class="text-2">
+                  <ul>
+                    <li><img src="images/done.202e60ad.svg" alt=""> Senior Solutions Architect </li>
+                    <li><img src="images/done.202e60ad.svg" alt=""> IT Director </li>
+                    <li><img src="images/done.202e60ad.svg" alt=""> Chief Technology Officer (CTO)</li>
+                    <li><img src="images/done.202e60ad.svg" alt=""> Information Systems Manager </li>
+                    <li><img src="images/done.202e60ad.svg" alt=""> Chief Information Officer (CIO) </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- potential job roles end -->
+    
+    <!-- our student works at start -->
+    <div class="rec-section">
+        <div class="container">
+            <div class="rec-block">
+                <div class="heading-block">
+                    <h2>Our Students Work At</h2>
+                    <p></p>
+                </div>
+                <div class="rec-list">
+                    <div class="rec-slider owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="rec-item-block">
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/google.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>101</h4>
+                                            <p>Students works at Google</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/accenture.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>323</h4>
+                                            <p>Students works at Accenture</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/amazon.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>113</h4>
+                                            <p>Students works at Amazon</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="rec-item-block">
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/cognizant.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>118</h4>
+                                            <p>Students works at Cognizant</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/capgemini.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>121</h4>
+                                            <p>Students works at Capegemini</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/hcltech.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>114</h4>
+                                            <p>Students works at HCLTech</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="rec-item-block">
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/techmahindra.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>189</h4>
+                                            <p>Students works at Tech Mahindra</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/wipro.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>198</h4>
+                                            <p>Students works at Wipro</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/infosys.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>184</h4>
+                                            <p>Students works at Infosys</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="rec-item-block">
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/tcs.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>242</h4>
+                                            <p>Students works at TCS</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/l&t-infotech.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>114</h4>
+                                            <p>Students works at L&T</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/ernst-young.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>213</h4>
+                                            <p>Students works at Ernst Young</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="rec-item-block">
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/cisco.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>107</h4>
+                                            <p>Students works at Cisco</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/hitachi-vantara.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>109</h4>
+                                            <p>Students works at Hitachi Vantara</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/flipkart.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>113</h4>
+                                            <p>Students works at Flipkart</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="rec-item-block">
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/maxlife.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>219</h4>
+                                            <p>Students works at Max Life</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/hdfc.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>283</h4>
+                                            <p>Students works at HDFC</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/ICICI-Bank.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>217</h4>
+                                            <p>Students works at ICICI Bank</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="rec-item-block">
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/mahindra-group.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>93</h4>
+                                            <p>Students works at Mahindra Group</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/aditya-birla-group.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>114</h4>
+                                            <p>Students works at Aditya Birla Group</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/jp-morgan.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>71</h4>
+                                            <p>Students works at JP Morgan</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="rec-item-block">
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/vedanta.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>121</h4>
+                                            <p>Students works at Vedanta</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/siemens.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>79</h4>
+                                            <p>Students works at Siemens</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/kpmg.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>129</h4>
+                                            <p>Students works at KPMG</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="rec-item-block">
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/Vi-logo.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>59</h4>
+                                            <p>Students works at VI</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/hindustan-unilever.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>79</h4>
+                                            <p>Students works at Hindustan Unilever</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/hero.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>87</h4>
+                                            <p>Students works at Hero</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="rec-item-block">
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/dhl.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>143</h4>
+                                            <p>Students works at DHL</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/HappiestMinds.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>27</h4>
+                                            <p>Students works at Happiest Minds</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="rec-card">
+                                    <div class="rec-inner">
+                                        <div class="rec-item">
+                                            <img src="images/tata-steel.svg" alt="">
+                                        </div>
+                                        <div class="rec-back">
+                                            <h4>118</h4>
+                                            <p>Students works at Tata Steel</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- our student works at end -->
+    <!-- mentor section start  -->
+    <div class="mentor-section" id="8">
+        <div class="container">
+            <div class="mentor-block">
+                <div class="heading-block">
+                    <h2 style="color: #fff;">Meet our top-ranked faculty</h2>
+                    <p>Learn from the best at Amity Online with world-class <br>
+                        education and leading International faculty</p>
+                </div>
+                <div class="mentor-slider">
+                    <div class="mentor owl-carousel owl-theme">
+
+                        <div class="item">
+                            <div class="mentor-item">
+                                <div class="mentor-img">
+                                    <img src="images/neha_tandon_71af2c647e.webp" alt="">
+                                </div>
+                                <div class="mentor-detail-block">
+                                    <div class="mentor-detail">
+                                        <h3>Neha Tandon</h3>
+                                        <p>Assistant Professor, <br>8+ years of experience; &amp; Double PG in
+                                            Management & Commerce</p>
+                                    </div>
+                                    <div class="mentor-desc">
+                                        <p>Neha Tandon is an Assistant Professor at Amity University, Noida, with over 3
+                                            years of experience
+                                            in this role. She has a strong background in International Business,
+                                            Accounting, Managerial
+                                            Finance, and content creation for e-learning. Neha has also worked as an
+                                            Assistant Professor at
+                                            the Institute of Management Studies, Noida. She holds an MBA in Finance from
+                                            Guru Gobind Singh
+                                            Indraprastha University and a B.Sc. (Honors) from Delhi University. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="mentor-item">
+                                <div class="mentor-img">
+                                    <img src="images/sunil_kumar_35e3366dd3.webp" alt="">
+                                </div>
+                                <div class="mentor-detail-block">
+                                    <div class="mentor-detail">
+                                        <h3>Dr. Sunil Kumar</h3>
+                                        <p>Assistant Professor, <br>10+ years of experience; P.hD. in Management</p>
+                                    </div>
+                                    <div class="mentor-desc">
+                                        <p>Sunil is an assistant professor also he holds 11 years of academic
+                                            experience, with Pune
+                                            Institute of Business Management and Galgotias University, and he has a
+                                            Ph.D. in Management. He
+                                            has worked in supply chain management and quality control for Pepsi Foods
+                                            and Calpro Foods. In
+                                            addition, Dr. Kumar is the author of multiple scientific publications, with
+                                            published patents in
+                                            India, and an invention patent from IP Australia.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="mentor-item">
+                                <div class="mentor-img">
+                                    <img src="images/sachit_paliwal_ae4bf7ed73.webp" alt="">
+                                </div>
+                                <div class="mentor-detail-block">
+                                    <div class="mentor-detail">
+                                        <h3>Sachit Paliwal</h3>
+                                        <p>Assistant Professor, <br>12+ years of experience; MBA in Finance Management
+                                        </p>
+                                    </div>
+                                    <div class="mentor-desc">
+                                        <p>Sachit Paliwal is a seasoned academician with 14 years of experience in
+                                            teaching and academic
+                                            administration. He holds a Ph.D. in Finance, an MBA in Finance and is
+                                            UGC-NET qualified in both
+                                            Commerce and Management. Currently, he serves as Assistant Professor and
+                                            Course Coordinator at
+                                            Amity University Online, managing accounting and finance programs,
+                                            curriculum development, and
+                                            e-learning platforms.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="mentor-item">
+                                <div class="mentor-img">
+                                    <img src="images/q1_514b1b86e6.webp" alt="">
+                                </div>
+                                <div class="mentor-detail-block">
+                                    <div class="mentor-detail">
+                                        <h3>Dr Ron Darnell</h3>
+                                        <p>International Faculty, <br>Ph.D. from Capella University; MBA from University
+                                            of Texas</p>
+                                    </div>
+                                    <div class="mentor-desc">
+                                        <p>Ron, is an Agile Enablement Coach and University Professor who has vast
+                                            experience with Agile
+                                            transformations and project management. With over 20 years of academic
+                                            experience, he also advises
+                                            corporations like Verizon, Sony Pictures, and Southwest Airlines, helping
+                                            them navigate Agile
+                                            transitions. His academic credentials include a Ph.D. in Organisation
+                                            Management, an MBA in MIS,
+                                            and a B.S. in Economics & Finance.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="mentor-item">
+                                <div class="mentor-img">
+                                    <img src="images/q2_ed8f504ce2.webp" alt="">
+                                </div>
+                                <div class="mentor-detail-block">
+                                    <div class="mentor-detail">
+                                        <h3>Dr. Hayley Stainton</h3>
+                                        <p>International Faculty, <br>11+ years of experience; Ph.D. from Coventry
+                                            University</p>
+                                    </div>
+                                    <div class="mentor-desc">
+                                        <p>Dr. Hayley Stainton is an international school leader, academic, and founder
+                                            of Tourism Teacher,
+                                            with expertise in geography and tourism. She has extensive teaching
+                                            experience at various levels,
+                                            from secondary to postgraduate, and is a Chair of Examiners for Pearson. She
+                                            has held roles such
+                                            as Assistant Headteacher at NCBIS and Senior Lecturer at Buckinghamshire New
+                                            University. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="mentor-item">
+                                <div class="mentor-img">
+                                    <img src="images/Lastfaculty.webp" alt="">
+                                </div>
+                                <div class="mentor-detail-block">
+                                    <div class="mentor-detail">
+                                        <h3>Luke Pearce</h3>
+                                        <p>International Faculty, <br>10+ years of experience; Master's in Education and
+                                            Language</p>
+                                    </div>
+                                    <div class="mentor-desc">
+                                        <p>Luke is an English teacher, associate lecturer, and writer with more than ten
+                                            years of experience
+                                            in education. He has a Master's degree in Education and Languages, a PGCE in
+                                            Post-16 and Further
+                                            Education, a CELTA certification, and a BA in Politics and Spanish. His
+                                            teaching experience
+                                            includes UCL, EFL, EAP, ESOL, GCSE, etc. </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- mentor section end -->
+    <!-- cta section start  -->
+    <div class="cta-section">
+        <div class="container">
+            <div class="cta-block">
+                <div class="row g-0">
+                    <div class="col-12 col-md-6">
+                        <div class="cta-content">
+                            <p>Are you ready to take the next step in your career ?</p>
+                            <a href="" id="apply-now-btn" class="cus-btn btn-yellow enroll-now-btn">Enroll Now <i
+                                    class="las la-arrow-right"></i></a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6">
+                        <div class="cta-img">
+                            <img src="images/medium_shot_graduate_student_1_054c237147_8a2c8536ee.webp" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- cta section end -->
+    <!-- faq start -->
+    <div class="faq-section">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-12 col-md-8">
+                    <div class="faq-block">
+                        <div class="heading-block">
+                            <h2>Frequently Asked Questions</h2>
+                        </div>
+                        <div class="faq-list">
+                            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link active" id="general-tab" data-bs-toggle="tab"
+                                        data-bs-target="#general-tab-pane" type="button" role="tab"
+                                        aria-controls="general-tab-pane" aria-selected="true">General</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="academics-tab" data-bs-toggle="tab"
+                                        data-bs-target="#academics-tab-pane" type="button" role="tab"
+                                        aria-controls="academics-tab-pane" aria-selected="false">Academics</button>
+                                </li>
+                                <li class="nav-item" role="presentation">
+                                    <button class="nav-link" id="admission-tab" data-bs-toggle="tab"
+                                        data-bs-target="#admission-tab-pane" type="button" role="tab"
+                                        aria-controls="admission-tab-pane" aria-selected="false">Admission</button>
+                                </li>
+                            </ul>
+                            <div class="tab-content" id="myTabContent">
+                                <div class="tab-pane fade show active" id="general-tab-pane" role="tabpanel"
+                                    aria-labelledby="general-tab" tabindex="0">
+                                    <div class="accordion" id="accordionExampletwo">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading1">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse1"
+                                                    aria-expanded="false" aria-controls="faqcollapse1">
+
+                                                    What is Amity University Online?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse1" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading1" data-bs-parent="#accordionExampletwo">
+                                                <div class="accordion-body">
+                                                    Amity University Online is India's first UGC-approved online
+                                                    university offering globally
+                                                    recognized online undergraduate, postgraduate, and certificate
+                                                    programs. Designed for working
+                                                    professionals and students, the platform provides the flexibility to
+                                                    advance education and
+                                                    careers without compromising existing commitments.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading2">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse2"
+                                                    aria-expanded="false" aria-controls="faqcollapse2">
+
+                                                    Is Amity University Online Accredited?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse2" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading2" data-bs-parent="#accordionExampletwo">
+                                                <div class="accordion-body">
+                                                    Yes, Amity University Online is fully accredited by the University
+                                                    Grants Commission (UGC) and
+                                                    meets global academic standards. It is the only Indian institution
+                                                    offering a QS-ranked online
+                                                    MBA program and also holds accreditations from AICTE and WASC.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading3">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse3"
+                                                    aria-expanded="false" aria-controls="faqcollapse3">
+
+                                                    What sets Amity University Online apart?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse3" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading3" data-bs-parent="#accordionExampletwo">
+                                                <div class="accordion-body">
+                                                    Amity University Online is a leader in online education, offering:
+                                                    <ul>
+                                                        <li>India's first UGC-approved online university programs.</li>
+                                                        <li>The only QS-ranked online MBA program in India.</li>
+                                                        <li>Flexible learning schedules with renowned faculty and global
+                                                            networking opportunities.
+                                                        </li>
+                                                        <li>Comprehensive learning resources, including live sessions,
+                                                            recorded lectures, and
+                                                            interactive content.</li>
+                                                        <li>AI-Professor AMI, providing 24/7 academic support for doubt
+                                                            resolution and guidance.
+                                                        </li>
+                                                        <li><b>beSocial</b>, a virtual campus experience with webinars,
+                                                            gamified activities, peer
+                                                            networking, and program-specific channels.</li>
+                                                        <li>Industry visits for practical exposure, enabling students to
+                                                            connect with professionals
+                                                            and apply theoretical knowledge in real-world settings.</li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading4">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse4"
+                                                    aria-expanded="false" aria-controls="faqcollapse4">
+
+                                                    What support services are available for students?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse4" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading4" data-bs-parent="#accordionExampletwo">
+                                                <div class="accordion-body">
+                                                    Amity University Online offers:
+                                                    <ul>
+                                                        <li>AI-Professor AMI powered by Chat-GPT 4 & OpenAI technology,
+                                                            available 24/7 for instant
+                                                            doubt clearing, academic guidance, and technical support.
+                                                        </li>
+                                                        <li>Dedicated student support through calls and chat for
+                                                            resolving queries.</li>
+                                                        <li>Career assistance, including placement support and
+                                                            resume-building workshops.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading5">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse5"
+                                                    aria-expanded="false" aria-controls="faqcollapse5">
+
+                                                    How does online learning at Amity University Online work?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse5" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading5" data-bs-parent="#accordionExampletwo">
+                                                <div class="accordion-body">
+                                                    Learning at Amity University Online is conducted through a
+                                                    sophisticated student portal,
+                                                    offering 24/7 access to:
+                                                    <ul>
+                                                        <li>Live lectures, recorded sessions, assignments, and quizzes.
+                                                        </li>
+                                                        <li>Assignments, quizzes, proctored examinations and other
+                                                            academic resources. </li>
+                                                        <li>Support from AI-Professor AMI for a seamless and engaging
+                                                            learning experience.</li>
+                                                        <li>Students can also enhance their experience through beSocial,
+                                                            which offers collaboration
+                                                            and networking opportunities.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading6">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse6"
+                                                    aria-expanded="false" aria-controls="faqcollapse6">
+
+                                                    Can credits from other institutions be transferred?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse6" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading6" data-bs-parent="#accordionExampletwo">
+                                                <div class="accordion-body">
+                                                    Yes, Amity University Online evaluates transfer credits on a
+                                                    case-by-case basis to ensure they
+                                                    meet program requirements. The admissions team guides students
+                                                    through this process.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading7">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse7"
+                                                    aria-expanded="false" aria-controls="faqcollapse7">
+
+                                                    How are exams conducted?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse7" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading7" data-bs-parent="#accordionExampletwo">
+                                                <div class="accordion-body">
+                                                    Exams are conducted online in a secure and proctored environment on
+                                                    our student portal to
+                                                    maintain academic integrity. Mock exams are provided to familiarize
+                                                    students with the system.
+                                                    Flexible time slots are offered to accommodate learners' schedules.
+                                                    Support from faculty and
+                                                    AI-Professor AMI ensures students are well-prepared.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="tab-pane fade" id="academics-tab-pane" role="tabpanel"
+                                    aria-labelledby="academics-tab" tabindex="0">
+                                    <div class="accordion" id="accordionExamplefour">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading15">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse15"
+                                                    aria-expanded="false" aria-controls="faqcollapse15">
+
+                                                    How can I access my courses?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse15" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading15" data-bs-parent="#accordionExamplefour">
+                                                <div class="accordion-body">
+                                                    Once enrolled, students receive login credentials for the student
+                                                    portal. This platform
+                                                    provides access to all learning resources, including live lectures,
+                                                    recorded sessions,
+                                                    e-books, and assignments. AI-Professor AMI is also available 24/7 to
+                                                    assist with academic
+                                                    queries. The learning platform also provides various skill
+                                                    enhancement courses to enhance
+                                                    learners' employability skills.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading16">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse16"
+                                                    aria-expanded="false" aria-controls="faqcollapse16">
+
+                                                    What study resources are available?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse16" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading16" data-bs-parent="#accordionExamplefour">
+                                                <div class="accordion-body">
+                                                    Students have access to:
+                                                    <ul>
+                                                        <li>Live and recorded lectures by experienced Indian & global
+                                                            faculty and industry experts.
+                                                        </li>
+                                                        <li>E-books, physical study materials, and case studies.</li>
+                                                        <li>Collaborative activities and webinars.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading17">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse17"
+                                                    aria-expanded="false" aria-controls="faqcollapse17">
+
+                                                    How are classes conducted?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse17" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading17" data-bs-parent="#accordionExamplefour">
+                                                <div class="accordion-body">
+                                                    Classes are delivered through live interactive sessions, recorded
+                                                    lectures, and forums for
+                                                    discussions. This hybrid model ensures a flexible yet engaging
+                                                    learning experience. Students
+                                                    can also participate in beSocial for additional collaborative and
+                                                    peer-based learning
+                                                    opportunities.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading18">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse18"
+                                                    aria-expanded="false" aria-controls="faqcollapse18">
+
+                                                    How are exams conducted?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse18" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading18" data-bs-parent="#accordionExamplefour">
+                                                <div class="accordion-body">
+                                                    Exams are conducted in a secure online proctored environment on the
+                                                    student portal. The system
+                                                    uses advanced technology to maintain academic integrity. Assessments
+                                                    also include quizzes,
+                                                    assignments, and hands-on projects, ensuring a comprehensive
+                                                    evaluation. Faculty and
+                                                    AI-Professor AMI are available to support students and help them
+                                                    prepare for exams better.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading19">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse19"
+                                                    aria-expanded="false" aria-controls="faqcollapse19">
+
+                                                    Where can I find the academic calendar?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse19" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading19" data-bs-parent="#accordionExamplefour">
+                                                <div class="accordion-body">
+                                                    The academic calendar is accessible on the student portal and
+                                                    provides details on assignment
+                                                    deadlines, examination schedules, and other milestones. The student
+                                                    community portal,
+                                                    beSocial, also updates students with reminders about key academic
+                                                    events.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading20">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse20"
+                                                    aria-expanded="false" aria-controls="faqcollapse20">
+
+                                                    How can I interact with faculty?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse20" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading20" data-bs-parent="#accordionExamplefour">
+                                                <div class="accordion-body">
+                                                    Faculty interaction is facilitated through live Q&A sessions,
+                                                    offline meet-ups, and discussion
+                                                    forums. AI-Professor AMI provides additional support for instant
+                                                    query resolution.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading21">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse21"
+                                                    aria-expanded="false" aria-controls="faqcollapse21">
+
+                                                    Are additional courses or certifications offered?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse21" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading21" data-bs-parent="#accordionExamplefour">
+                                                <div class="accordion-body">
+                                                    Yes, over 75 open learning courses and free certifications in areas
+                                                    like Advanced Excel,
+                                                    Leadership, and Strategic HR are available to enhance employability.
+                                                    Collaborative learning
+                                                    opportunities on beSocial further enrich the experience.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading22">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse22"
+                                                    aria-expanded="false" aria-controls="faqcollapse22">
+
+                                                    What are the advantages of industry visits?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse22" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading22" data-bs-parent="#accordionExamplefour">
+                                                <div class="accordion-body">
+                                                    Industry visits allow students to engage with professionals, explore
+                                                    career opportunities, and
+                                                    apply classroom knowledge in real-world scenarios. These visits are
+                                                    a valuable addition to the
+                                                    learning journey.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="admission-tab-pane" role="tabpanel"
+                                    aria-labelledby="admission-tab" tabindex="0">
+                                    <div class="accordion" id="accordionExamplethree">
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading8">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse8"
+                                                    aria-expanded="false" aria-controls="faqcollapse8">
+
+                                                    What is the admission process?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse8" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading8" data-bs-parent="#accordionExamplethree">
+                                                <div class="accordion-body">
+                                                    The admission process is simple:
+                                                    <ul>
+                                                        <li>Select your program and complete the online application
+                                                            form.</li>
+                                                        <li>Upload the required documents and pay the registration fee.
+                                                        </li>
+                                                        <li>Upon acceptance, confirm your enrollment by making the
+                                                            program fee payment.</li>
+                                                    </ul>
+                                                    The admissions team and AI-Professor AMI are available to assist at
+                                                    every step.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading9">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse9"
+                                                    aria-expanded="false" aria-controls="faqcollapse9">
+
+                                                    What are the admission requirements?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse9" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading9" data-bs-parent="#accordionExamplethree">
+                                                <div class="accordion-body">
+                                                    Admission requirements vary by program:
+                                                    <ul>
+                                                        <li>For undergraduate programs: Completion of 10+2.</li>
+                                                        <li>For postgraduate programs: A bachelor's degree is required.
+                                                        </li>
+                                                        <li>Academic certificates and a valid government-issued ID.</li>
+                                                        <li>Some programs may require additional eligibility tests.</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading10">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse10"
+                                                    aria-expanded="false" aria-controls="faqcollapse10">
+
+                                                    When are admissions open?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse10" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading10" data-bs-parent="#accordionExamplethree">
+                                                <div class="accordion-body">
+                                                    Admissions are conducted twice annually. Updates and deadlines are
+                                                    posted on the official
+                                                    website.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading11">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse11"
+                                                    aria-expanded="false" aria-controls="faqcollapse11">
+
+                                                    How do I confirm my admission?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse11" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading11" data-bs-parent="#accordionExamplethree">
+                                                <div class="accordion-body">
+                                                    After completing the enrollment process, students receive a
+                                                    confirmation email with login
+                                                    credentials for the E-Campus portal, granting access to learning
+                                                    materials and resources.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading12">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse12"
+                                                    aria-expanded="false" aria-controls="faqcollapse12">
+
+                                                    Can I cancel my admission?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse12" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading12" data-bs-parent="#accordionExamplethree">
+                                                <div class="accordion-body">
+                                                    Yes, admission cancellations are reviewed individually. Refunds, if
+                                                    applicable, are processed
+                                                    as per university policies. The admissions team can assist with
+                                                    cancellation requests.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading13">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse13"
+                                                    aria-expanded="false" aria-controls="faqcollapse13">
+
+                                                    What documents are required for admission?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse13" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading13" data-bs-parent="#accordionExamplethree">
+                                                <div class="accordion-body">
+                                                    For a smooth admission process, the following documents are
+                                                    required: <br>
+                                                    <b>For Domestic Students:</b>
+                                                    <ul>
+                                                        <li>Academic certificates from 10th, 12th, and graduation.</li>
+                                                        <li>Consolidated marksheets for graduation.</li>
+                                                        <li>A valid government-issued ID such as Aadhar, PAN, or
+                                                            Passport.</li>
+                                                    </ul>
+                                                    <b>For International Students:</b>
+                                                    <ul>
+                                                        <li>O Level and A Level certificates or equivalent
+                                                            qualifications.</li>
+                                                        <li>Bachelor's degree certificate with consolidated marksheets.
+                                                        </li>
+                                                        <li>Passport copy (mandatory).</li>
+                                                    </ul>
+                                                    Once these documents are ready, our admissions team will guide you
+                                                    through the process.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="accordion-item">
+                                            <h2 class="accordion-header" id="faqheading14">
+                                                <button class="accordion-button collapsed" type="button"
+                                                    data-bs-toggle="collapse" data-bs-target="#faqcollapse14"
+                                                    aria-expanded="false" aria-controls="faqcollapse14">
+
+                                                    Can the online MBA program be completed while working full-time?
+
+                                                </button>
+                                            </h2>
+                                            <div id="faqcollapse14" class="accordion-collapse collapse"
+                                                aria-labelledby="faqheading14" data-bs-parent="#accordionExamplethree">
+                                                <div class="accordion-body">
+                                                    Yes, with online MBA programs, candidates can pursue part-time or
+                                                    full-time jobs. This is
+                                                    because online MBAs do not demand students to attend regular and
+                                                    in-person classes. They allow
+                                                    students the flexibility to balance their studies with their work
+                                                    and family.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 col-md-4">
+                    <div class="footer-form">
+                        <div class="footer-form-title">Apply Now</div>
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-12">
+                                    <label for="full-name-2">Full Name <span class="text-xl">*</span></label>
+                                    <input type="text" id="full-name-2" placeholder="Enter your full name"
+                                        class="footer-input" value="">
+                                </div>
+                                <div class="col-12">
+                                    <label for="phone-number-2">Phone Number <span class="text-xl">*</span></label>
+                                    <div class="row g-3">
+                                        <div class="col-3">
+                                            <select class="footer-input">
+                                                <option value="+91" selected="">+91</option>
+                                                <option value="+7840">+7840</option>
+                                                <option value="+93">+93</option>
+                                                <option value="+355">+355</option>
+                                                <option value="+213">+213</option>
+                                                <option value="+1684">+1684</option>
+                                                <option value="+376">+376</option>
+                                                <option value="+244">+244</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-9">
+                                            <input type="text" id="phone-number-2" placeholder="Enter your no."
+                                                class="footer-input" value="">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <label for="email-2">Email <span class="text-xl">*</span></label>
+                                    <input type="email" id="email-2" placeholder="abc@xyz.com" class="footer-input"
+                                        value="">
+                                </div>
+                                <div class="col-12">
+                                    <div class="footer-check">
+                                        <div class="footer-check-icon">
+                                            <input type="checkbox" class="" name="consent" checked="">
+                                        </div>
+                                        <p>I authorise Amity University Online and its associates to contact me with
+                                            updates &amp;
+                                            notifications via Email, SMS, WhatsApp, and Voice call as per the Privacy
+                                            Policy. This consent
+                                            will override any registration for DNC / NDNC.</p>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="footer-submit">
+                                        <button type="submit" class="cus-btn btn-yellow w-100">Submit</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <!-- faq end -->
+    <!-- footer start  -->
+    <div id="footer-container"></div>
+    <!-- footer end -->
+
+    <div class="sticky-apply">
+        <div class="sticky-apply-btn">APPLY NOW</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="CommonJS/index.js"></script>
+    <script src="CommonJS/footer.js"></script>
+    <script src="CommonJS/modals.js"></script>
+    <!-- <script src="CommonJS/menumobile.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+        integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="js/constant.js"></script>
+    <script src="js/applyNowForm.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            // Load components in order
+            // await includeComponent('../components/header.html', 'header-container');
+            await includeComponent('../components/brochureModal.html', 'modal-container');
+            await includeComponent('../components/loginModal.html', 'login-modal');
+            await includeComponent('../components/applyModal.html', 'apply-modal-container');
+            await includeComponent('../components/programsModal.html', 'programs-modal-container');
+            await includeComponent('../components/mobileMenu.html', 'mobile-menu-container');
+
+            // Additional initializations that depend on header
+            initializeProgramsModal();
+            // initializeMobileMenu();
+
+            const applyNowFormScript = document.createElement("script");
+            applyNowFormScript.src = "js/applyNowForm.js";
+            applyNowFormScript.async = true;
+            document.body.appendChild(applyNowFormScript);
+
+            const commonJsIndexScript = document.createElement("script");
+            commonJsIndexScript.src = "CommonJS/index.js";
+            commonJsIndexScript.async = true;
+            document.body.appendChild(commonJsIndexScript);
+
+            const commonJsFooterScript = document.createElement("script");
+            commonJsFooterScript.src = "CommonJS/footer.js";
+            commonJsFooterScript.async = true;
+            document.body.appendChild(commonJsFooterScript);
+
+            const commonJsModalScript = document.createElement("script");
+            commonJsModalScript.src = "CommonJS/modals.js";
+            commonJsModalScript.async = true;
+            document.body.appendChild(commonJsModalScript);
+
+            const commonJsProgramScript = document.createElement("script");
+            commonJsProgramScript.src = "CommonJS/program.js";
+            commonJsProgramScript.async = true;
+            document.body.appendChild(commonJsProgramScript);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            includeFooterComponent('../components/footer.html', 'footer-container');
+            // includeHeaderComponent('../components/header.html', 'header-container');
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>
