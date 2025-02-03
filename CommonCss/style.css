@@ -10930,6 +10930,10 @@ img,video {
     line-height: 1.25rem;
     letter-spacing: .0175rem;
     margin-left: 1px;
+    width: 200px;
+    overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
 }
 
 .Input_btn___g__n {
@@ -11493,8 +11497,47 @@ img,video {
     .Modal_root__oWe5F>img {
         display: none !important; /* Hide the image */
     }
+    .ConnectModalForm_authorization__FbK_y {
+        width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
 }
 
+/* Add this to your CSS */
+.ConnectModalForm_authorization__FbK_y {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+    display: block !important; /* Remove flex display */
+    width: 100%;
+    margin-left: 8px; /* Add some spacing between checkbox and text */
+}
+
+@media (max-width: 767px) {
+    .ConnectModalForm_commonMargins__efaYq {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .ConnectModalForm_authorization__FbK_y {
+        font-size: 12px;
+        line-height: 1.4;
+        margin-left: 0;
+    }
+    
+    .banner-check {
+        flex-wrap: nowrap;
+        align-items: flex-start;
+    }
+    
+    .banner-check-icon {
+        min-width: 20px;
+        margin-top: 2px;
+    }
+}
 
 /* Key Specializations CSS */
 

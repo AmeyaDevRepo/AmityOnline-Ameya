@@ -4154,16 +4154,99 @@ document.addEventListener('DOMContentLoaded', function () {
             el: '.swiper-pagination',
             clickable: true,
         },
-        // 移动端配置
+        
         breakpoints: {
-            480: { // 当屏幕宽度小于等于 480px 时
-                slidesPerView: 1, // 每页显示 1 个滑块
-                spaceBetween: 10, // 滑块间距
+            480: { 
+                slidesPerView: 1, 
+                spaceBetween: 10,
             },
-            768: { // 当屏幕宽度大于 480px 时
-                slidesPerView: 4, // 每页显示 2 个滑块
-                spaceBetween: 20, // 滑块间距
+            768: { 
+                slidesPerView: 4, 
+                spaceBetween: 20, 
             },
         },
+    });
+});
+
+function initializeMobileMenu() {
+    // Get references to elements
+    const searchIcon = document.querySelectorAll('.header-search-icon, #hamburgerImage');
+    const menuToggleButton = document.querySelectorAll('#menuToggleButton, .header-search-icon');
+    const hamburgerImage = document.getElementById('hamburgerImage');
+    const closeIcon = document.getElementById('closeIcon');
+    const mobileContainer = document.getElementById('mobileContainer');
+    console.log(mobileContainer)
+    // Toggle menu visibility and icons
+    menuToggleButton.forEach((el)=>el.addEventListener('click', () => {
+        const isHamburgerVisible = hamburgerImage.style.display !== 'none';
+
+        if (isHamburgerVisible) {
+            // Hide the hamburger image, show the cross icon, and display the mobile container
+            hamburgerImage.style.display = 'none';
+            closeIcon.style.display = 'block';
+            mobileContainer.style.display = 'block';
+        } else {
+            // Show the hamburger image, hide the cross icon, and hide the mobile container
+            hamburgerImage.style.display = 'block';
+            closeIcon.style.display = 'none';
+            mobileContainer.style.display = 'none';
+        }
+    }));
+    // Function to check if the device is mobile
+    function isMobile() {
+        return window.innerWidth <= 1024;  // Adjust this value based on your mobile breakpoint
+    }
+
+    // Toggle the mobile menu visibility when the search icon is clicked (only on mobile)
+    // searchIcon.addEventListener('click', function () {
+    //     if (isMobile()) {
+    //         // Toggle visibility of mobile menu
+    //         if (mobileContainer.style.display === 'block') {
+    //             mobileContainer.style.display = 'none';  // Hide the menu
+    //             hamburgerImage.style.display = 'block';  // Show hamburger
+    //             closeIcon.style.display = 'none';  // Hide close icon
+    //         } else {
+    //             mobileContainer.style.display = 'block';  // Show the menu
+    //             hamburgerImage.style.display = 'none';  // Hide hamburger
+    //             closeIcon.style.display = 'block';  // Show close icon
+    //         }
+    //     }
+    // });
+}
+
+initializeMobileMenu()
+
+//JS for youtube scripts of explore master class
+
+document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.querySelector('.video-modal');
+    const closeModal = document.querySelector('.close-modal');
+    const iframe = modal.querySelector('iframe');
+    
+    // Handle play button clicks
+    document.querySelectorAll('[data-video-id]').forEach(button => {
+        button.addEventListener('click', function() {
+            const videoId = this.dataset.videoId;
+            iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1`;
+            modal.classList.add('active');
+        });
+    });
+
+    // Close modal
+    function closeVideoModal() {
+        modal.classList.remove('active');
+        iframe.src = ''; // Stop video playback
+    }
+
+    closeModal.addEventListener('click', closeVideoModal);
+    
+    // Close when clicking outside
+    modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeVideoModal();
+    });
+
+    // Close on ESC key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') closeVideoModal();
     });
 });
