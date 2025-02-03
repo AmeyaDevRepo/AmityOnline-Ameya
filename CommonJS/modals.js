@@ -462,14 +462,14 @@ function initializeProgramsModal() {
             const category = item.getAttribute('data-category');
 
             // Filter and display programs
-            // const programs = document.querySelectorAll('.ProgramsMenu_tab__0j8Nn');
-            // programs.forEach(program => {
-            //     if (category === 'All' || program.classList.contains(category)) {
-            //         program.style.display = 'block';
-            //     } else {
-            //         program.style.display = 'none';
-            //     }
-            // });
+            const programs = document.querySelectorAll('.ProgramsMenu_tab__0j8Nn');
+            programs.forEach(program => {
+                if (category === 'All' || program.classList.contains(category)) {
+                    program.style.display = 'block';
+                } else {
+                    program.style.display = 'none';
+                }
+            });
         });
     });
 
@@ -500,7 +500,7 @@ function initializeMobileMenu() {
     const hamburgerImage = document.getElementById('hamburgerImage');
     const closeIcon = document.getElementById('closeIcon');
     const mobileContainer = document.getElementById('mobileContainer');
-    console.log(mobileContainer)
+
     // Toggle menu visibility and icons
     menuToggleButton.addEventListener('click', () => {
         const isHamburgerVisible = hamburgerImage.style.display !== 'none';
@@ -680,81 +680,42 @@ function initializeMobileMenu() {
 // }
 
 function initializeMobileProgramMenu() {
-    // Get references to elements
-    const mobileProgramsLink = document.querySelector('.header_menuItem__2qruK a[href="#"]'); // mobile nav bar or inside link
-    const mobileProgramsMenu = document.querySelector('.ProgramsMenu_mobile__K4seG'); // this is a popover menu list
-    const mobileMenuItems = document.querySelectorAll('.ProgramsMenu_mobile__K4seG .ProgramsMenu_item__mfuSn');// this is a popover menu list with inside links
-    const contentBoxes = document.querySelectorAll('.ProgramsMenu_contentBox__UHi_e'); // detailed menu box of particular program
-    const ameya_programm_list = document.querySelector('.ameya_programm_list');
-    const ameya_main_navbar = document.querySelector('.ameya_main_navbar');
-    const ameya_backbtn_programmelist = document.querySelectorAll('.ameya_backbtn_programmelist');
-    // console.log("vikas",mobileProgramsLink,mobileProgramsMenu,mobileMenuItems,contentBoxes)
-    ameya_main_navbar.addEventListener('click',()=>{
-        mobileProgramsMenu.style.display = 'none';
-    })
+    const mobileProgramsLink = document.querySelector('.header_menuItem__2qruK a[href="#"]');
+    const mobileProgramsMenu = document.querySelector('.ProgramsMenu_mobile__K4seG');
+    const contentBoxes = document.querySelectorAll('.ProgramsMenu_contentBox__UHi_e');
+
     if (mobileProgramsLink && mobileProgramsMenu) {
         // Open menu and show "All Programs" by default
         mobileProgramsLink.addEventListener('click', (e) => {
-            e.stopPropagation();
             e.preventDefault();
             mobileProgramsMenu.style.display = 'block';
-            // mobileProgramsMenu.style.backgroundColor = 'green';
-            // Hide all content boxes initially
-            contentBoxes.forEach(box => box.style.display = 'none');
+            contentBoxes.forEach(box => box.style.display = 'none'); // Hide all content
+
+            // Show "All Programs" content and activate its menu item
+            const allProgramsContent = document.querySelector('.ProgramsMenu_contentBox__UHi_e[data-category="all"]');
+            const allProgramsItem = mobileProgramsMenu.querySelector('.ProgramsMenu_item__mfuSn[data-category="all"]');
+
+            if (allProgramsContent) allProgramsContent.style.display = 'block';
+            if (allProgramsItem) allProgramsItem.classList.add('ProgramsMenu_active__4g64w');
         });
 
-        document.querySelectorAll('a[href$="/Program/index.html"]').forEach(a => {
-            // Move all child nodes before removing the <a>
-            while (a.firstChild) {
-                a.parentNode.insertBefore(a.firstChild, a);
-            }
-        
-            // Remove the <a> element
-            a.remove();
-        });
-        
+        // Handle menu item clicks via event delegation
+        mobileProgramsMenu.addEventListener('click', (e) => {
+            const menuItem = e.target.closest('.ProgramsMenu_item__mfuSn');
+            if (menuItem) {
+                // Reset active state
+                mobileProgramsMenu.querySelectorAll('.ProgramsMenu_item__mfuSn').forEach(item =>
+                    item.classList.remove('ProgramsMenu_active__4g64w')
+                );
 
-        // Add click event listener to each menu item
-        mobileMenuItems.forEach(item => {
-            item.addEventListener('click', () => {
-                // Remove active class from all menu items
-                mobileMenuItems.forEach(el => el.classList.remove('ProgramsMenu_active__4g64w'));
-                ameya_programm_list.style.display = "none"
-                // mobileMenuItems.forEach(el => el.style.display = "none");
-                // Add active class to the clicked item
-                item.classList.add('ProgramsMenu_active__4g64w');
-                // item.style.display = "block"
-                // Get the data-category attribute of the clicked item
-                const category = item.dataset.category;
+                menuItem.classList.add('ProgramsMenu_active__4g64w');
+                const category = menuItem.dataset.category;
 
                 // Hide all content and show the selected category
                 contentBoxes.forEach(box => box.style.display = 'none');
                 const contentBox = document.querySelector(`.ProgramsMenu_contentBox__UHi_e[data-category="${category}"]`);
-                ameya_backbtn_programmelist.forEach((el)=>el.addEventListener('click',(e)=>{
-                    // e.defaultPrevented();
-                    e.stopPropagation();
-                    ameya_programm_list.style.display = "block";
-                    contentBox.style.display = 'none';
-                }))
-                const programs = document.querySelectorAll('.ProgramsMenu_tab__0j8Nn');
-                if (contentBox) {
-                    contentBox.style.display = 'block';
-                    // contentBox.style.backgroundColor = "red"
-                    // mobileProgramsMenu.style.display = 'none';
-                }
-                programs.forEach(program => {
-                    if (category === 'All' || program.classList.contains(category)) {
-                        console.log("bikas")
-                        program.forEach((el)=>el.style.display = 'block!important')
-                        // program.style.display = 'block!important';
-                    } else {
-                        program.style.display = 'none';
-                        mobileProgramsMenu.style.display = 'block';
-                    }
-                });
-                console.log("vikas", contentBox)
-                
-            });
+                if (contentBox) contentBox.style.display = 'block';
+            }
         });
 
         // Close menu when close button is clicked
@@ -805,9 +766,11 @@ async function includeComponent(filepath, targetId) {
         console.error('Error loading component:', error);
     }
 }
-document.addEventListener('DOMContentLoaded', function () {
-    initializeMobileProgramMenu();
-});
+
+
+
+
+
 $(document).on('click', '.header-search-icon', function () {
     $('#search-input').toggleClass('active');
 });
