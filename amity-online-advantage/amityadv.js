@@ -5,7 +5,7 @@ $('.header-search-icon').click(function () {
         // Optional parameters
         slidesPerView: 1,
         spaceBetween: 16,
-        loop: true,
+        loop: false,
         
         // Pagination
         pagination: {
