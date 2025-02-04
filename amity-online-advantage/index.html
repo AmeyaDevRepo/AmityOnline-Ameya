@@ -1535,7 +1535,11 @@ const testimonialSwiper = new Swiper('.testimonial-carousel', {
     [desktopSwiper, testimonialSwiper, videoSwiper].forEach(swiper => swiper.update());
   });
 </script>
-  
+<script>
+  $('.header-search-icon').click(function () {
+    $('#search-input').toggleClass('active');
+  });
+</script>
   
 
 </body>
