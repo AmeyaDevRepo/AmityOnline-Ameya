@@ -4168,6 +4168,56 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
+
+// Get references to elements
+const searchIcon = document.querySelector('.header-search-icon, #hamburgerImage');
+const menuToggleButton = document.getElementById('menuToggleButton');
+const hamburgerImage = document.getElementById('hamburgerImage');
+const closeIcon = document.getElementById('closeIcon');
+const mobileContainer = document.getElementById('mobileContainer');
+
+// Toggle menu visibility and icons
+menuToggleButton.addEventListener('click', () => {
+	const mobileContainer = document.getElementById('mobileContainer');
+
+    const isHamburgerVisible = hamburgerImage.style.display !== 'none';
+ 
+    if (isHamburgerVisible) {
+        // Hide the hamburger image, show the cross icon, and display the mobile container
+        hamburgerImage.style.display = 'none';
+        closeIcon.style.display = 'block';
+        mobileContainer.style.display = 'block';
+    } else {
+        // Show the hamburger image, hide the cross icon, and hide the mobile container
+        hamburgerImage.style.display = 'block';
+        closeIcon.style.display = 'none';
+        mobileContainer.style.display = 'none';
+    }
+});
+// Function to check if the device is mobile
+function isMobile() {
+	return window.innerWidth <= 1024;  // Adjust this value based on your mobile breakpoint
+}
+
+// Toggle the mobile menu visibility when the search icon is clicked (only on mobile)
+searchIcon.addEventListener('click', function () {
+	const mobileContainer = document.getElementById('mobileContainer');
+
+	if (isMobile()) {
+		// Toggle visibility of mobile menu
+		if (mobileContainer.style.display === 'block') {
+			mobileContainer.style.display = 'none';  // Hide the menu
+			hamburgerImage.style.display = 'block';  // Show hamburger
+			closeIcon.style.display = 'none';  // Hide close icon
+		} else {
+			mobileContainer.style.display = 'block';  // Show the menu
+			hamburgerImage.style.display = 'none';  // Hide hamburger
+			closeIcon.style.display = 'block';  // Show close icon
+		}
+	}
+});
+
+
 function initializeMobileMenu() {
     // Get references to elements
     const searchIcon = document.querySelectorAll('.header-search-icon, #hamburgerImage');

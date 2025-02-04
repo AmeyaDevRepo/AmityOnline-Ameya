@@ -63,6 +63,8 @@
       <!-- <link rel="stylesheet" href="../_nextprogram/static/css/492d61f0aeb99b4a.css" data-precedence="next"> -->
       <link rel="stylesheet" href="../_nextprogram/static/css/77098de79c5abe44.css" data-precedence="next">
       <link rel="stylesheet" href="../_nextprogram/static/css/7c7c6db8c18d54d9.css" data-precedence="next">
+      <link rel="stylesheet" href="css/nav-style.css">
+    <link rel="stylesheet" href="css/style.css">
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
       <title>Amity Online</title>
@@ -1477,9 +1479,10 @@
       <script src="https://code.jquery.com/jquery-3.6.4.min.js"
             integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
       <!-- <script src="./../CommonJS/index.js"></script> -->
+      <script src="./../CommonJS/program.js"></script>
+      <script src="./../CommonJS/career.js"></script>
       <script src="./../CommonJS/footer.js"></script>
       <script src="./../CommonJS/modals.js"></script>
-      <script src="./../CommonJS/program.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
             integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
             crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -1507,22 +1510,22 @@
                   document.body.appendChild(applyNowFormScript);
 
                   const commonJsIndexScript = document.createElement("script");
-                  commonJsIndexScript.src = "CommonJS/index.js";
+                  commonJsIndexScript.src = "../CommonJS/index.js";
                   commonJsIndexScript.async = true;
                   document.body.appendChild(commonJsIndexScript);
 
                   const commonJsFooterScript = document.createElement("script");
-                  commonJsFooterScript.src = "CommonJS/footer.js";
+                  commonJsFooterScript.src = "../CommonJS/footer.js";
                   commonJsFooterScript.async = true;
                   document.body.appendChild(commonJsFooterScript);
 
                   const commonJsModalScript = document.createElement("script");
-                  commonJsModalScript.src = "CommonJS/modals.js";
+                  commonJsModalScript.src = "../CommonJS/modals.js";
                   commonJsModalScript.async = true;
                   document.body.appendChild(commonJsModalScript);
 
                   const commonJsProgramScript = document.createElement("script");
-                  commonJsProgramScript.src = "CommonJS/program.js";
+                  commonJsProgramScript.src = "../CommonJS/program.js";
                   commonJsProgramScript.async = true;
                   document.body.appendChild(commonJsProgramScript);
             });
@@ -1535,6 +1538,42 @@
 
       </script>
       <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+      <script>document.addEventListener('DOMContentLoaded', function () {
+        
+            var swiper = new Swiper('.swiper3', {
+                autoplay: {
+                    delay: 5000,
+                    disableOnInteraction: false,
+                },
+                loop: false,
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+               
+                breakpoints: {
+                   
+                    480: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                    },
+                  
+                    768: {
+                        slidesPerView: 2,
+                        spaceBetween: 20,
+                    },
+                },
+            });
+        });</script>
+        <script>
+            $('.header-search-icon').click(function () {
+              $('#search-input').toggleClass('active');
+            });
+        </script>
 
 </body>
 
