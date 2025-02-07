@@ -1,3 +1,35 @@
+@media(min-width:1200px) {
+    .styles_root__AtyNv:hover .styles_subtitleContainer__6KF5r {
+        height: 100%;
+        background: rgba(26, 50, 93, 0.8); /* Semi-transparent primary blue */
+        transition: height 0.5s ease-in-out, background 0.5s ease-in-out !important;
+    }
+      
+      /* Ensure the subtitle content is visible and properly layered */
+      .styles_subtitleContainer__6KF5r {
+        transition: height 0.5s ease-in-out !important;
+        z-index: 4; /* Ensure it's above other elements */
+        
+      }
+      
+      /* Optional: Add a slight delay for smoother transition */
+      .styles_root__AtyNv:hover .styles_subtitleContainer__6KF5r {
+        transition-delay: 0.1s;
+      }
+    
+      .styles_root__AtyNv:hover .styles_label__L4NIR,
+    .styles_root__AtyNv:hover .styles_title__0ieW0 {
+        color: transparent; /* Makes the text invisible but keeps the layout */
+    }
+    
+    .styles_root__AtyNv:hover .styles_subtitleContainer__6KF5r {
+        height: 100%;
+        background: rgba(26, 50, 93, 0.8); /* Semi-transparent primary blue */
+        transition: height 0.5s ease-in-out, background 0.5s ease-in-out !important;
+    }
+}
+
+
 .AuthorCard_authorCard__lQzMA {
     min-width: 100%;
     max-width: 20rem;

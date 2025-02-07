@@ -1,32 +1,31 @@
 document.addEventListener('DOMContentLoaded', function () {
-  // Initialize Swiper
-  const swiper = new Swiper('.swiper', {
-      // Optional parameters
-      loop: false, // Enable looping
-      slidesPerView: 3, // Number of slides per view
-      spaceBetween: 30, // Space between slides
-      centeredSlides: true, // Center the active slide
+    // Initialize Swiper for leadership section
+    const swiper = new Swiper('.swiper', {
+      loop: false, // Disable looping
+      slidesPerView: 3, // Show 3 slides on desktop
+      spaceBetween: 50, // Adjust space between slides as needed
+      centeredSlides: false, // Ensure slides start from the left
       pagination: {
-          el: '.swiper-pagination', // Pagination container
-          clickable: true, // Make pagination bullets clickable
+        el: '.swiper-pagination', // Pagination container
+        clickable: true, // Make pagination bullets clickable
       },
       breakpoints: {
-          // Responsive breakpoints
-          320: {
-              slidesPerView: 1, // 1 slide on small screens
-              spaceBetween: 20,
-          },
-          768: {
-              slidesPerView: 3, // 2 slides on medium screens
-              spaceBetween: 30,
-          },
-          1024: {
-              slidesPerView: 3, // 3 slides on large screens
-              spaceBetween: 30,
-          },
+        // Responsive breakpoints
+        320: {
+          slidesPerView: 1, // 1 slide on small screens
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 2, // 2 slides on medium screens
+          spaceBetween: 30,
+        },
+        1024: {
+          slidesPerView: 3, // 3 slides on large screens
+          spaceBetween: 50,
+        },
       },
+    });
   });
-});
 
 document.addEventListener('DOMContentLoaded', function () {
   const cards = document.querySelectorAll('.styles_root__AtyNv');
