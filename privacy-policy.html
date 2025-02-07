@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/fav.png">
+
+    <!-- Fonts Preconnect for Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Line Awesome (Icons) -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+        integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./CommonCss/style.css">
+    <link rel="stylesheet" href="./CommonCss/privacy-policy.css">
+
+    <!-- Page Title -->
+    <title>Terms and Conditions | Amity Online Courses &amp; Programs</title>
+</head>
+
+<body>
+    <header class="site-navbar">
+        <div class="container">
+            <div class="header-block">
+                <!-- Logo Wrapper -->
+                <div class="logo-wrapper">
+                    <a href="index.html">
+                        <img src="images/amity_logo_5ee70d67b4_f4e929fb4a.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="header-content">
+                    <div class="header-menu">
+                        <!-- Navigation Menu -->
+                        <nav class="site-navigation position-relative text-right">
+                            <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                                <li class="has-children">
+                                    <a href="#" class="menu-link" id="programsLink"><span>PROGRAMS</span></a>
+                                </li>
+                                <li><a href="./carrer.html" class="menu-link"><span>CAREER SERVICE</span></a></li>
+                                <li><a href="./amity-online-advantage/index.html"
+                                        class="menu-link"><span>ADVANTAGES</span></a></li>
+                            </ul>
+                        </nav>
+                        <!-- End of Navigation Menu -->
+
+                        <div id="programs-modal-container"></div>
+                        <!-- Start: Header Menu Toggle -->
+
+                        <div class="header-menu-toggle d-inline-block d-xl-none ml-md-0 mr-auto"
+                            style="position: relative; top: 3px;">
+                            <button id="menuToggleButton" aria-label="Hamburger Menu"
+                                style="background: none; border: none; cursor: pointer;">
+                                <!-- Mobile Menu Container -->
+                                <div id="mobile-menu-container"></div>
+                                <!-- end -->
+                                <!-- Hamburger Image -->
+                                <img id="hamburgerImage" src="images/menu.svg" alt="Hamburger Menu"
+                                    style="display: block; width:30px; margin-top: 5px;">
+                                <!-- Cross Icon SVG (Hidden by default) -->
+                                <svg id="closeIcon" width="24" height="20" viewBox="0 0 19 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" style="display: none; margin-top: 5px">
+                                    <path
+                                        d="M16.2648 17.9813L9.62109 11.3376L2.9774 17.9813L0.762835 15.7667L7.40653 9.12305L0.762835 2.47935L2.9774 0.264788L9.62109 6.90848L16.2648 0.264788L18.4794 2.47935L11.8357 9.12305L18.4794 15.7667L16.2648 17.9813Z"
+                                        fill="white"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- End: Header Menu Toggle -->
+
+
+                    </div>
+
+                    <div class="header-search">
+                        <div class="header-search-icon">
+                            <i class="las la-search"></i>
+                        </div>
+                        <input type="text" id="search-input">
+
+                    </div>
+                    <div class="header-btn">
+                        <a href="#" class="cus-btn border-light header-login" id="login-button">
+                            <i class="las la-user"></i> Login
+                        </a>
+                        <!-- The Login Modal -->
+                        <div id="login-modal"></div>
+                        <!-- The Login Modal END -->
+
+                        <a href="#" class="cus-btn btn-yellow header-apply" id="apply-now-btn">Apply Now <i
+                                class="las la-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- The Apply Modal -->
+    <div id="apply-modal-container"></div>
+    <!-- The Apply Modal END-->
+
+
+    <main class="relative">
+        <div class="container"><img src="https://amityonline.com/_sb/ezgif_com_gif_maker_52c682f3d2_6fecb446e3.webp"
+                alt="Banner Image" class="BannerImage_root__3fgTY" loading="lazy"></div>
+        <section class="styles_removePadding__Jg13f">
+            <div class="container">
+                <div class="SectionCard_root__vJRVT styles_rootPadding__GWabn">
+                    <div class="flex justify-between lining-nums lg:items-center flex-col lg:flex-row lg:align-center">
+                        <h2 class="SectionCard_title__DSA2A"></h2>
+                        <hr class="h-[1px] flex-1 lg:ml-4 lg:mt-5">
+                    </div>
+                    <div class="pt-7 lg:pt-7">
+                        <h2>
+                            <div class="styles_title__is0u3">
+                                <h2>Privacy Policy Summary</h2>
+                            </div>
+                            <div class="styles_desc__hsXF_">Thank you for visiting the Amity Online website and
+                                reviewing our privacy policy. Our policy is simple: We collect no personal information
+                                about you unless you choose to provide that information to us. We do not give, share,
+                                sell, or transfer any personal information to a third party. If you want to know more
+                                about how we record non-personal information about your visit or how we use information
+                                that you voluntarily submit.
+                            </div>
+                            <div class="styles_title__is0u3">Non-personal Information We Record
+                            </div>
+                            <div class="styles_desc__hsXF_">If you do nothing during your visit but browse through the
+                                website, read pages, or download information, our website's operating system will
+                                automatically record some general information about your visit.
+                            </div>
+                            <div class="styles_title__is0u3">During your visit, our web operating system will record
+                            </div>
+                            <div class="styles_desc__hsXF_">
+                                <ul>
+                                    <li>The Internet domain for your Internet service such as "xyz.com" or "xyz.net" if
+                                        you use a private Internet access account or "yourcollege.edu" if you connect
+                                        from a college or university domain.</li>
+                                    <li>The type of browser (such as "Netscape version X" or "Internet Explorer version
+                                        X") that you are using</li>
+                                    <li>The type of operating system that you use (such as Macintosh, Unix, or Windows)
+                                    </li>
+                                    <li>The date and time you visit our site, and the web pages that you visit on our
+                                        site</li>
+                                    <li>The address of the previous website you were visiting, if you linked to us from
+                                        another website</li>
+                                    <li>We use this information for statistical analysis, to help us make our site more
+                                        useful to visitors. This tracking system does not record information about
+                                        individuals</li>
+                                </ul>
+                            </div>
+                            <div class="styles_title__is0u3">OTP verification during payment gateway
+                            </div>
+                            <div class="styles_desc__hsXF_">Authentication using OTP is not new. For instance, when you
+                                make an transfer from your bank account, your bank will send you an OTP on your
+                                registered mobile number. Similarly, in the amity university app will send you an OTP
+                                through SMS for authentication purposes when you are doing payment.
+                            </div>
+                            <div class="styles_title__is0u3">Cookies
+                            </div>
+                            <div class="styles_desc__hsXF_">On certain Amity Online web pages, we use "cookies" to help
+                                you use our websites interactively. A cookie is a small file that a website transfers to
+                                your computer's hard disk, usually to keep track of you while you are connected to that
+                                site. The cookies on Amity web pages do not collect information about you, but only
+                                about your browser "session." The cookie makes it easier for you to use the dynamic
+                                features of these web pages, without having to provide the same information again as you
+                                move from one page to another. To protect your privacy, be sure to close your browser
+                                completely after you have finished conducting business with a website that uses cookies.
+                                If you are concerned about the potential use of information gathered from your computer
+                                by cookies, you can set your browser to prompt you before it accepts a cookie. Most
+                                Internet browsers have settings that let you identify or reject cookies.
+                            </div>
+                            <div class="styles_title__is0u3">Information from E-mail You Send to Us
+                            </div>
+                            <div class="styles_desc__hsXF_">If you decide to send us an electronic mail message
+                                (e-mail), the message will usually contain your return e-mail address. If you include
+                                personally-identifying information in your e-mail because you want us to address issues
+                                specific to your situation, we may use that information in responding to your request.
+                                Also, e-mail is not necessarily secure against interception. Please send only
+                                information necessary to help us process your request.
+                            </div>
+                            <div class="styles_title__is0u3">Consent &amp; Authorization
+                            </div>
+                            <div class="styles_desc__hsXF_">You authorise Amity University Online and its associates to
+                                contact you with updates &amp; notifications via Email, SMS, WhatsApp, and Voice call
+                                between 9 a.m. to 9 p.m. This consent will override any registration for DNC / NDNC.
+                            </div>
+                            <div class="styles_title__is0u3">Information Collected from Interactive Forms
+                            </div>
+                            <div class="styles_desc__hsXF_">In some of our web pages, we offer interactive forms that
+                                let you voluntarily submit personal information (such as your e-mail address, name, or
+                                organization). This occurs when you are registering for counseling, various tests,
+                                quizzes, seminars, workshops, or training sessions offered by Amity Online, downloading
+                                admission forms from Amity. In those cases, all submitted information is used only for
+                                the purposes for which it is intended and is not made available to any third party.
+                            </div>
+                            <div class="styles_title__is0u3">Links to Other Sites and Partners
+                            </div>
+                            <div class="styles_desc__hsXF_">Our policy discloses the privacy practices for the Amity
+                                Online website. But Amity provides links to other websites. When you leave the Amity
+                                Online website (www.amityonine.com), you will be going to sites that are beyond our
+                                control. These other sites may send their own cookies to users, collect data, or solicit
+                                personal information. The privacy policies and procedures described here for Amity do
+                                not apply to any external links. We encourage you to read the privacy policies of any
+                                site you link to from ours, especially if you share any personal information. Be
+                                informed. You are the person best qualified to protect your own privacy.“By using the
+                                Amity University and/or registering yourself at Amity University Online you authorize
+                                Amity University Online (including its representatives, affiliates, and its business
+                                partners) to contact you via email or phone call or sms and offer you our services for
+                                the programme/courses you have opted for, imparting programme/courses knowledge, for
+                                which reasons your information may be collected in the manner as detailed under this
+                                Policy. You hereby agree that you authorize Amity University Online to contact you for
+                                the above mentioned purposes even if you have registered yourself under DND or DNC or
+                                NCPR service(s). Your authorization, in this regard, shall be valid as long as your
+                                account is not deactivated by either you or us.”<br>
+                                Eligibility for internship/job opportunity will be on merit and case-by-case basis.
+                            </div>
+                            <div class="styles_title__is0u3">
+                                <h2>Extension Policy</h2>
+                            </div>
+                            <div class="styles_desc__hsXF_">The minimum stipulated period for completion of a programme
+                                is specified against each programme described as N period.<br>
+                                For any reason if a student is not able to complete the programme in minimum stipulated
+                                period, the student can exercise the option of extending the programme by another N
+                                period paying the continuation fee of Rs.4000 in INR or 80$ in USD for each year of
+                                extension.<br>
+                                In cases where a student despite availing extension is not able to complete the
+                                programme, student can still avail further extension to a period of N+N+1 year on
+                                specific recommendation of HOI and at the discretion of competent authority after paying
+                                a sum of Rs.4000 in INR or 80$ in USD as re-registration fee.
+                            </div>
+                            <div class="styles_title__is0u3">
+                                <h2>Refund Policy</h2>
+                            </div>
+                            <div class="styles_desc__hsXF_">Refund as per the University guidelines.
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <!-- footer start  -->
+    <div id="footer-container"></div>
+    <!-- footer end -->
+
+    <div class="sticky-apply">
+        <div class="sticky-apply-btn">APPLY NOW</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="CommonJS/index.js"></script>
+    <script src="CommonJS/footer.js"></script>
+    <script src="CommonJS/modals.js"></script>
+    <!-- <script src="CommonJS/menumobile.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+        integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="js/constant.js"></script>
+    <script src="js/applyNowForm.js"></script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            // Load components in order
+            // await includeComponent('../components/header.html', 'header-container');
+            await includeComponent('../components/brochureModal.html', 'modal-container');
+            await includeComponent('../components/loginModal.html', 'login-modal');
+            await includeComponent('../components/applyModal.html', 'apply-modal-container');
+            await includeComponent('../components/programsModal.html', 'programs-modal-container');
+            await includeComponent('../components/mobileMenu.html', 'mobile-menu-container');
+
+            // Additional initializations that depend on header
+            initializeProgramsModal();
+            // initializeMobileMenu();
+
+            const applyNowFormScript = document.createElement("script");
+            applyNowFormScript.src = "js/applyNowForm.js";
+            applyNowFormScript.async = true;
+            document.body.appendChild(applyNowFormScript);
+
+            const commonJsIndexScript = document.createElement("script");
+            commonJsIndexScript.src = "CommonJS/index.js";
+            commonJsIndexScript.async = true;
+            document.body.appendChild(commonJsIndexScript);
+
+            const commonJsFooterScript = document.createElement("script");
+            commonJsFooterScript.src = "CommonJS/footer.js";
+            commonJsFooterScript.async = true;
+            document.body.appendChild(commonJsFooterScript);
+
+            const commonJsModalScript = document.createElement("script");
+            commonJsModalScript.src = "CommonJS/modals.js";
+            commonJsModalScript.async = true;
+            document.body.appendChild(commonJsModalScript);
+
+            const commonJsProgramScript = document.createElement("script");
+            commonJsProgramScript.src = "CommonJS/program.js";
+            commonJsProgramScript.async = true;
+            document.body.appendChild(commonJsProgramScript);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            includeFooterComponent('../components/footer.html', 'footer-container');
+            // includeHeaderComponent('../components/header.html', 'header-container');
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>

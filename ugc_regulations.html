@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/fav.png">
+
+    <!-- Fonts Preconnect for Optimization -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome (Icons) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Line Awesome (Icons) -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+        integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Custom CSS -->
+    <!-- <link rel="stylesheet" href="./../CommonCss/style.css"> -->
+    <link rel="stylesheet" href="./CommonCss/ugc.css">
+
+    <!-- Page Title -->
+    <title>Amity Online</title>
+</head>
+
+<body>
+    <header class="site-navbar">
+        <div class="container">
+            <div class="header-block">
+                <!-- Logo Wrapper -->
+                <div class="logo-wrapper">
+                    <a href="index.html">
+                        <img src="images/amity_logo_5ee70d67b4_f4e929fb4a.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="header-content">
+                    <div class="header-menu">
+                        <!-- Navigation Menu -->
+                        <nav class="site-navigation position-relative text-right">
+                            <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                                <li class="has-children">
+                                    <a href="#" class="menu-link" id="programsLink"><span>PROGRAMS</span></a>
+                                </li>
+                                <li><a href="./carrer.html" class="menu-link"><span>CAREER SERVICE</span></a></li>
+                                <li><a href="./amity-online-advantage/index.html"
+                                        class="menu-link"><span>ADVANTAGES</span></a></li>
+                            </ul>
+                        </nav>
+                        <!-- End of Navigation Menu -->
+
+                        <div id="programs-modal-container"></div>
+                        <!-- Start: Header Menu Toggle -->
+
+                        <div class="header-menu-toggle d-inline-block d-xl-none ml-md-0 mr-auto"
+                            style="position: relative; top: 3px;">
+                            <button id="menuToggleButton" aria-label="Hamburger Menu"
+                                style="background: none; border: none; cursor: pointer;">
+                                <!-- Mobile Menu Container -->
+                                <div id="mobile-menu-container"></div>
+                                <!-- end -->
+                                <!-- Hamburger Image -->
+                                <img id="hamburgerImage" src="images/menu.svg" alt="Hamburger Menu"
+                                    style="display: block; width:30px; margin-top: 5px;">
+                                <!-- Cross Icon SVG (Hidden by default) -->
+                                <svg id="closeIcon" width="24" height="20" viewBox="0 0 19 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" style="display: none; margin-top: 5px">
+                                    <path
+                                        d="M16.2648 17.9813L9.62109 11.3376L2.9774 17.9813L0.762835 15.7667L7.40653 9.12305L0.762835 2.47935L2.9774 0.264788L9.62109 6.90848L16.2648 0.264788L18.4794 2.47935L11.8357 9.12305L18.4794 15.7667L16.2648 17.9813Z"
+                                        fill="white"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- End: Header Menu Toggle -->
+
+
+                    </div>
+
+                    <div class="header-search">
+                        <div class="header-search-icon">
+                            <i class="las la-search"></i>
+                        </div>
+                        <input type="text" id="search-input">
+
+                    </div>
+                    <div class="header-btn">
+                        <a href="#" class="cus-btn border-light header-login" id="login-button">
+                            <i class="las la-user"></i> Login
+                        </a>
+                        <!-- The Login Modal -->
+                        <div id="login-modal"></div>
+                        <!-- The Login Modal END -->
+
+                        <a href="#" class="cus-btn btn-yellow header-apply" id="apply-now-btn">Apply Now <i
+                                class="las la-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- The Apply Modal -->
+    <div id="apply-modal-container"></div>
+    <!-- The Apply Modal END-->
+
+
+
+    <div class="banner-section">
+        <div class="container">
+          <div class="banner-block">
+            <div class="banner-content">
+              <h1>UGC Approvals and <br> Guidelines</h1>
+            </div>
+            <div class="banner-img">
+              <img src="https://amityonline.com/ugc_regulations/images/banner1.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="approval-section">
+        <div class="container">
+          <div class="approval-block">
+            <div class="row g-4">
+              <div class="col-12 col-md-6 border-end pe-4">
+                <div class="approval-btn-block">
+                  <div class="heading-block mb-4 text-center">
+                    <h2>Application submitted for UGC DEB Approval (Amity University, Uttar Pradesh)</h2>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 ">
+                      <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                          <a href="pdf/1-a-UGC DEB Application (Entitled Programs).pdf" class="approval-btn approval-yellow" target="_blank">Entitled Program</a>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <a href="pdf/1-b-UGC DEB Application (Eligible Programs).pdf" class="approval-btn approval-green" target="_blank">Eligible Programs</a>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <a href="pdf/Affidavit (Entitled).pdf" class="approval-btn approval-blue" target="_blank">Affidavit</a>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <a href="pdf/3- University Academic Council Approval (Online Programmes).pdf" class="approval-btn approval-pink" target="_blank">Statutory body approval</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 ps-4">
+                <div class="approval-btn-block">
+                  <div class="heading-block mb-4 text-center">
+                    <h2>Application submitted for UGC DEB Approval (Amity University, Rajasthan)</h2>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 ">
+                      <div class="row g-3">
+                        <div class="col-12 col-md-12">
+                          <a href="https://www.amity.edu/jaipur/pdf/mandatory-disclosure/final-documents/application-submitted.pdf" class="approval-btn approval-yellow" target="_blank">Entitled Program</a>
+                        </div>
+                        
+                        <div class="col-12 col-md-6">
+                          <a href="pdf/AUR-Affidavit.pdf" class="approval-btn approval-blue" target="_blank">Affidavit</a>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <a href="pdf/AUR Online Program Approval (ACM).pdf" class="approval-btn approval-pink" target="_blank">Statutory body approval</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <hr class="my-4">
+            <div class="row g-4">
+              <div class="col-12 col-md-6 border-end pe-4">
+                <div class="approval-btn-block">
+                  <div class="heading-block mb-4 text-center">
+                    <h2>Regulatory body approval (Amity University, Uttar Pradesh)</h2>
+                  </div>
+                  <div class="row">
+                    <div class="col-12">
+                      <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                          <a href="https://deb.ugc.ac.in/OLSearch/preview?id=HEI-U-0497" class="approval-btn approval-yellow" target="_blank">UGC DEB Approval</a>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <a href="pdf/4-Regulatory Authority AICTE Approval AICTE 5 years Approval.pdf" class="approval-btn approval-green" target="_blank">AICTE Approval</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-6 ps-4">
+                <div class="approval-btn-block">
+                  <div class="heading-block mb-4 text-center">
+                    <h2>Regulatory body approval (Amity University, Rajasthan)</h2>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 ">
+                      <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                          <a href="https://deb.ugc.ac.in/pdf/onlinelist23243.pdf" class="approval-btn approval-yellow" target="_blank">UGC DEB Approval</a>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <a href="https://www.amity.edu/jaipur/pdf/mandatory-disclosure/final-documents/letter-of-recommendation-noc-1-43675567095.pdf" class="approval-btn approval-green" target="_blank">AICTE Approval</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+           
+            
+            <hr class="my-4">
+    
+    
+            <div class="row g-4">
+              <div class="col-12 col-md-6 border-end pe-4">
+                <div class="approval-btn-block">
+                  <div class="heading-block mb-4 text-center">
+                    <h2>CIQA (Amity University, Uttar Pradesh)</h2>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 ">
+                      <div class="row g-3">
+                        <div class="col-12 col-md-6">
+                          <a href="pdf/CIQA 2019-20.pdf" class="approval-btn approval-yellow" target="_blank">2019-20</a>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <a href="pdf/CIQA 2020-21.pdf" class="approval-btn approval-green" target="_blank">2020-21</a>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <a href="pdf/CIQA 2021-22.pdf" class="approval-btn approval-blue" target="_blank">2021-22</a>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <a href="pdf/CIQA 2022-23.pdf" class="approval-btn approval-pink" target="_blank">2022-23</a>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <a href="pdf/CIQA OL 2023-24.pdf" class="approval-btn approval-pink" target="_blank">2023-24</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="col-12 col-md-6 ps-4">
+                <div class="approval-btn-block">
+                  <div class="heading-block mb-4 text-center">
+                    <h2>Application submitted for UGC DEB Approval (Amity University, Rajasthan)</h2>
+                  </div>
+                  <div class="row">
+                    <div class="col-12 ">
+                      <div class="row g-3">
+                        <div class="col-12 col-md-12">
+                          <a href="https://www.amity.edu/jaipur/pdf/mandatory-disclosure/final-documents/application-submitted.pdf" class="approval-btn approval-yellow" target="_blank">Entitled Program</a>
+                        </div>
+                        
+                        <div class="col-12 col-md-6">
+                          <a href="pdf/AUR-Affidavit.pdf" class="approval-btn approval-blue" target="_blank">Affidavit</a>
+                        </div>
+                        <div class="col-12 col-md-6">
+                          <a href="pdf/AUR Online Program Approval (ACM).pdf" class="approval-btn approval-pink" target="_blank">Statutory body approval</a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+    
+            <hr class="my-4">
+            <div class="approval-btn-block">
+              <div class="heading-block mb-4 text-center">
+                <h2>Policies &amp; Instructions</h2>
+              </div>
+              <div class="row">
+                <div class="col-12 col-md-8 offset-md-2">
+                  <div class="row g-3">
+                    <div class="col-12 col-md-6">
+                      <a href="pdf/Fee-refund-policy (session - Jan'24).pdf" class="approval-btn approval-yellow" target="_blank">Refund Policy</a>
+                    </div>
+                    <div class="col-12 col-md-6">
+                      <a href="pdf/UGC_20240319151157_1.pdf" class="approval-btn approval-green" target="_blank">Public Notification</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+
+     <!-- footer start  -->
+     <div id="footer-container"></div>
+     <!-- footer end -->
+ 
+     <div class="sticky-apply">
+         <div class="sticky-apply-btn">APPLY NOW</div>
+     </div>
+ 
+     <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+         integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+     <script src="CommonJS/index.js"></script>
+     <script src="CommonJS/footer.js"></script>
+     <script src="CommonJS/modals.js"></script>
+     <!-- <script src="CommonJS/menumobile.js"></script> -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+         integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+ 
+     <script src="js/constant.js"></script>
+     <script src="js/applyNowForm.js"></script>
+ 
+     <script>
+         document.addEventListener('DOMContentLoaded', async function () {
+             // Load components in order
+             // await includeComponent('../components/header.html', 'header-container');
+             await includeComponent('../components/brochureModal.html', 'modal-container');
+             await includeComponent('../components/loginModal.html', 'login-modal');
+             await includeComponent('../components/applyModal.html', 'apply-modal-container');
+             await includeComponent('../components/programsModal.html', 'programs-modal-container');
+             await includeComponent('../components/mobileMenu.html', 'mobile-menu-container');
+ 
+             // Additional initializations that depend on header
+             initializeProgramsModal();
+             // initializeMobileMenu();
+ 
+             const applyNowFormScript = document.createElement("script");
+             applyNowFormScript.src = "js/applyNowForm.js";
+             applyNowFormScript.async = true;
+             document.body.appendChild(applyNowFormScript);
+ 
+             const commonJsIndexScript = document.createElement("script");
+             commonJsIndexScript.src = "CommonJS/index.js";
+             commonJsIndexScript.async = true;
+             document.body.appendChild(commonJsIndexScript);
+ 
+             const commonJsFooterScript = document.createElement("script");
+             commonJsFooterScript.src = "CommonJS/footer.js";
+             commonJsFooterScript.async = true;
+             document.body.appendChild(commonJsFooterScript);
+ 
+             const commonJsModalScript = document.createElement("script");
+             commonJsModalScript.src = "CommonJS/modals.js";
+             commonJsModalScript.async = true;
+             document.body.appendChild(commonJsModalScript);
+ 
+             const commonJsProgramScript = document.createElement("script");
+             commonJsProgramScript.src = "CommonJS/program.js";
+             commonJsProgramScript.async = true;
+             document.body.appendChild(commonJsProgramScript);
+         });
+ 
+         document.addEventListener('DOMContentLoaded', function () {
+ 
+             includeFooterComponent('../components/footer.html', 'footer-container');
+             // includeHeaderComponent('../components/header.html', 'header-container');
+         });
+ 
+     </script>
+     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+ </body>
+ 
+ </html>
