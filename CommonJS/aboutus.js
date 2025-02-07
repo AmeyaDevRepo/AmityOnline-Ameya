@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   // Initialize Swiper
   const swiper = new Swiper('.swiper', {
       // Optional parameters
-      loop: true, // Enable looping
+      loop: false, // Enable looping
       slidesPerView: 3, // Number of slides per view
       spaceBetween: 30, // Space between slides
       centeredSlides: true, // Center the active slide
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function () {
               spaceBetween: 20,
           },
           768: {
-              slidesPerView: 2, // 2 slides on medium screens
+              slidesPerView: 3, // 2 slides on medium screens
               spaceBetween: 30,
           },
           1024: {
