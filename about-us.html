@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="images/fav.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Baskervville:ital@0;1&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/css/bootstrap.min.css"
+        integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/line-awesome/1.3.0/line-awesome/css/line-awesome.min.css"
+        integrity="sha512-vebUliqxrVkBy3gucMhClmyQP9On/HAWQdKDXRaAlb/FKuTbxkjPKUyqVOxAcGwFDka79eTF+YXwfke1h3/wfg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="CommonCss/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="_next/static/css/492ca83a35c52311.css">
+    <link rel="stylesheet" href="_next/static/css/7237f76f6ea66841.css">
+
+    <link rel="stylesheet" href="css/nav-style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+    <!-- <link rel="stylesheet" href="/_next_about/static/css/399fcd9c5106740d.css" data-precedence="next"> -->
+    <!-- <link rel="stylesheet" href="/_next_about/static/css/75752b21ec5eb1b5.css" data-precedence="next"> -->
+    <!-- <link rel="stylesheet" href="/_next_about/static/css/0202ba7a34625186.css" data-precedence="next"> -->
+    <!-- <link rel="stylesheet" href="/_next_about/static/css/3d27a0a8026922db.css" data-precedence="next"> -->
+    <!-- <link rel="stylesheet" href="/_next_about/static/css/ef2254cfcd82a11a.css" data-precedence="next"> -->
+    <!-- <link rel="stylesheet" href="/_next_about/static/css/e8bd8d7ee3b0d7eb.css" data-precedence="next"> -->
+    <link rel="stylesheet" href="/_next_about/static/css/e48b3e14f36fdeca.css" data-precedence="next">
+    <link rel="stylesheet" href="/_next_about/static/css/fe4863d889f97df9.css" data-precedence="next">
+    <link rel="stylesheet" href="/_next_about/static/css/8e15f3349e368258.css" data-precedence="next">
+    <link rel="stylesheet" href="/_next_about/static/css/44c4570b589266c0.css" data-precedence="next">
+
+    <title>Amity Online</title>
+</head>
+
+<body>
+    <header class="site-navbar">
+        <div class="container">
+            <div class="header-block">
+                <!-- Logo Wrapper -->
+                <div class="logo-wrapper">
+                    <a href="index.html">
+                        <img src="images/amity_logo_5ee70d67b4_f4e929fb4a.svg" alt="">
+                    </a>
+                </div>
+
+                <div class="header-content">
+                    <div class="header-menu">
+                        <!-- Navigation Menu -->
+                        <nav class="site-navigation position-relative text-right">
+                            <ul class="site-menu js-clone-nav mr-auto d-none d-lg-block">
+                                <li class="has-children">
+                                    <a href="#" class="menu-link" id="programsLink"><span>PROGRAMS</span></a>
+                                </li>
+                                <li><a href="./carrer.html" class="menu-link"><span>CAREER SERVICE</span></a></li>
+                                <li><a href="./amity-online-advantage/index.html"
+                                        class="menu-link"><span>ADVANTAGES</span></a></li>
+                            </ul>
+                        </nav>
+                        <!-- End of Navigation Menu -->
+
+                        <div id="programs-modal-container"></div>
+                        <!-- Start: Header Menu Toggle -->
+
+                        <div class="header-menu-toggle d-inline-block d-xl-none ml-md-0 mr-auto"
+                            style="position: relative; top: 3px;">
+                            <button id="menuToggleButton" aria-label="Hamburger Menu"
+                                style="background: none; border: none; cursor: pointer;">
+                                <!-- Mobile Menu Container -->
+                                <div id="mobile-menu-container"></div>
+                                <!-- end -->
+                                <!-- Hamburger Image -->
+                                <img id="hamburgerImage" src="images/menu.svg" alt="Hamburger Menu"
+                                    style="display: block; width:30px; margin-top: 5px;">
+                                <!-- Cross Icon SVG (Hidden by default) -->
+                                <svg id="closeIcon" width="24" height="20" viewBox="0 0 19 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg" style="display: none; margin-top: 5px">
+                                    <path
+                                        d="M16.2648 17.9813L9.62109 11.3376L2.9774 17.9813L0.762835 15.7667L7.40653 9.12305L0.762835 2.47935L2.9774 0.264788L9.62109 6.90848L16.2648 0.264788L18.4794 2.47935L11.8357 9.12305L18.4794 15.7667L16.2648 17.9813Z"
+                                        fill="white"></path>
+                                </svg>
+                            </button>
+                        </div>
+                        <!-- End: Header Menu Toggle -->
+
+
+                    </div>
+
+                    <div class="header-search">
+                        <div class="header-search-icon">
+                            <i class="las la-search"></i>
+                        </div>
+                        <input type="text" id="search-input">
+
+                    </div>
+                    <div class="header-btn">
+                        <a href="#" class="cus-btn border-light header-login" id="login-button">
+                            <i class="las la-user"></i> Login
+                        </a>
+                        <!-- The Login Modal -->
+                        <div id="login-modal"></div>
+                        <!-- The Login Modal END -->
+
+                        <a href="#" class="cus-btn btn-yellow header-apply" id="apply-now-btn">Apply Now <i
+                                class="las la-arrow-right"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- The Apply Modal -->
+    <div id="apply-modal-container"></div>
+    <!-- The Apply Modal END-->
+
+
+
+
+    <main class="relative">
+        <div class="container">
+            <div class="style_root__shQ4n"><img
+                    src="https://beta-fe.amityonline.com/_sb/pexels_pixabay_2564901_ezgif_com_png_to_webp_converter_1494abbb1f.webp"
+                    alt="banner-image" class="style_banner__ztKjG">
+                <h1>
+                    <div class="style_para__95Oux">We dedicate ourselves to student empowerment through
+                        innovative online education.
+                    </div>
+                </h1>
+            </div>
+        </div>
+        <div id="secondary-menu" class="SecondaryMenu_SecondaryMenu__container__0dtHJ container !mt-6 lg:!mt-10">
+            <div class="Card 
+      bg-white 
+       
+      rounded-2xl 
+       NavWithScroll_NavWithScroll__cardContainer__OMUlO">
+                <nav class="relative">
+                    <ul
+                        class="NavWithScroll_NavWithScroll__listContainer__w7_NS flex gap-8 items-center sm:justify-around lg:justify-center uppercase font-raleway text-primary-blue overflow-x-scroll">
+                        <li id="#undefined" class="">About University</li>
+                        <li id="#undefined" class="">Vision &amp; Mission</li>
+                        <li id="#undefined" class="">Values</li>
+                        <li id="#undefined" class="">Amity Online advantages</li>
+                        <li id="#undefined" class="">Leadership</li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+        <section id="aboutuniversity" class="styles_section__eebij">
+            <div class="container">
+                <div class="SectionCard_root__vJRVT SectionCard_card__76a8h">
+                    <div class="styles_root__INLbL">
+                        <div class="styles_textContainer__K_xce">
+                            <div class="styles_title__eKCNz">About Amity University Online
+                            </div>
+                            <div class="styles_desc__Kkmt_">Amity University, established by the State
+                                Legislature and recognized by the UGC, stands as India's leading private
+                                education institution. Recognized among Asia's top 200 universities by
+                                QS and UK rankings, it is the sole Indian university accredited by the
+                                WASQ, US. With campuses worldwide, including Dubai, Abu Dhabi, London,
+                                Singapore, and New York, offering 300+ UG and PG programs and boasting a
+                                faculty of 6,000, we are a coveted global education hub with 150,000
+                                students.
+                            </div>
+                        </div>
+                        <div class="flex"><img src="https://amityonline.com/_s/amity_1_2_aa7b4bf389_be8820292d.webp"
+                                alt="" class="styles_img__AQg3p styles_selectedImage__REhBU" loading="lazy"><img
+                                src="https://amityonline.com/_s/jaredd_craig_HH_4_WBG_Nyltc_unsplash_4_b89ca703d7_514a2c0aea.webp"
+                                alt="" class="styles_img__AQg3p" loading="lazy"><img
+                                src="https://beta-fe.amityonline.com/_sb/multinational_graduates_male_female_celebrating_graduation_university_campus_removing_their_graduation_hats_smiling_camera_1_7e1fac06f0.webp"
+                                alt="" class="styles_img__AQg3p" loading="lazy"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="vision&amp;mission" class="undefined">
+            <div class="container">
+                <div class="SectionCard_root__vJRVT">
+                    <div class="flex">
+                        <div class="styles_root__k2VOR basis-1/2 mr-8">
+                            <div>
+                                <div class="styles_title__KhmWX">Our Vision:
+                                </div>
+                                <div class="styles_desc__fbR4C">We're dedicated to providing top-quality
+                                    education to people from all walks of life, fostering success and
+                                    growth. Our goal is to empower individuals from diverse
+                                    backgrounds through exceptional online education that makes a
+                                    lasting impact.
+                                </div>
+                            </div><img src="https://beta-fe.amityonline.com/_sb/our_vision_83a7faa318.svg" alt=""
+                                class="styles_img__WDNH_">
+                        </div>
+                        <div class="styles_root__k2VOR basis-1/2">
+                            <div>
+                                <div class="styles_title__KhmWX">Our Mission:
+                                </div>
+                                <div class="styles_desc__fbR4C">Our mission is to offer comprehensive
+                                    education across diverse disciplines, including emerging fields,
+                                    to nurture excellence in both professional and personal aspects.
+                                    We aim to mold students into compassionate individuals with strong
+                                    ethics, cultural pride, and a pursuit of perfection.
+                                </div>
+                            </div><img src="https://beta-fe.amityonline.com/_sb/ourmission_cf1e2d6a81.svg" alt=""
+                                class="styles_img__WDNH_">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="values" class="!mb-32">
+            <div class="container">
+                <div class="SectionCard_root__vJRVT SectionCard_card__76a8h">
+                    <div class="flex justify-between lining-nums lg:items-center flex-col lg:flex-row lg:align-center">
+                        <h2 class="SectionCard_title__DSA2A">The values we uphold
+                        </h2>
+                        <p class="SectionCard_subtitle__vVqmD hidden lg:block">Amity Online remains
+                            consistently<!-- --> <br>ahead with industry-first advantages.</p>
+                        <p class="SectionCard_subtitle__vVqmD block lg:hidden">Amity Online remains
+                            consistently ahead with industry-first advantages.
+                        </p>
+                    </div>
+                    <div class="SectionCard_hr__sFh5X"></div>
+                    <div class="pt-7 lg:pt-7">
+                        <h2>
+                            <div
+                                class="swiper swiper-initialized swiper-horizontal Carousel__blueBullet Carousel__withPreview Carousel__hAuto swiper-backface-hidden">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide swiper-slide-active"
+                                        style="width: 248.75px; margin-right: 20px;">
+                                        <div class="styles_root__AtyNv"><img
+                                                src="https://amityonline.com/_s/business_strategy_success_target_goals_1_dc8a6b7cfa_5f94cf11db.webp"
+                                                alt="">
+                                            <div class="styles_title__0ieW0">Academic Excellence
+                                            </div>
+                                            <div class="styles_subtitleContainer__6KF5r">
+                                                <div class="styles_subContainer__ohb4_">
+                                                    <div class="styles_label__L4NIR">The
+                                                        university strives to uphold:
+                                                    </div>
+                                                    <div class="styles_subtitle__aybLF">
+                                                        <ul>
+                                                            <li>The utmost ethical
+                                                                standards</li>
+                                                            <li>Uncompromising commitment
+                                                                to quality</li>
+                                                            <li>The highest level of
+                                                                excellence in teaching
+                                                            </li>
+                                                            <li>Impactful learning</li>
+                                                            <li>Research and scholarship
+                                                                across diverse
+                                                                disciplines</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-next"
+                                        style="width: 248.75px; margin-right: 20px;">
+                                        <div class="styles_root__AtyNv"><img
+                                                src="https://amityonline.com/_s/campaign_creators_g_Msn_Xq_I_Ljp4_unsplash_2_401334040b_5b6c1f04fd.webp"
+                                                alt="">
+                                            <div class="styles_title__0ieW0">Shared Governance
+                                            </div>
+                                            <div class="styles_subtitleContainer__6KF5r">
+                                                <div class="styles_subContainer__ohb4_">
+                                                    <div class="styles_label__L4NIR">We
+                                                        promote synergic decision-making by
+                                                        engaging in:
+                                                    </div>
+                                                    <div class="styles_subtitle__aybLF">
+                                                        <ul>
+                                                            <li>Collaborative consultation
+                                                            </li>
+                                                            <li>Transparent information
+                                                                sharing</li>
+                                                            <li>Inclusive participation
+                                                            </li>
+                                                            <li>Collective deliberations
+                                                                involving all
+                                                                stakeholders</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide" style="width: 248.75px; margin-right: 20px;">
+                                        <div class="styles_root__AtyNv"><img
+                                                src="https://amityonline.com/_s/close_up_business_people_hands_together_teamwork_concept_1d39b1a66d_49f39481e7.webp"
+                                                alt="">
+                                            <div class="styles_title__0ieW0">Integrity &amp;
+                                                Ethics
+                                            </div>
+                                            <div class="styles_subtitleContainer__6KF5r">
+                                                <div class="styles_subContainer__ohb4_">
+                                                    <div class="styles_label__L4NIR">We adhere
+                                                        to:
+                                                    </div>
+                                                    <div class="styles_subtitle__aybLF">
+                                                        <ul>
+                                                            <li>Highest ethical principles
+                                                            </li>
+                                                            <li>Integrity</li>
+                                                            <li>Professionalism</li>
+                                                            <li>A steadfast dedication to
+                                                                academic freedom</li>
+                                                            <li>Transparency</li>
+                                                            <li>Accountability</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide" style="width: 248.75px; margin-right: 20px;">
+                                        <div class="styles_root__AtyNv"><img
+                                                src="https://amityonline.com/_s/chess_wooden_pieces_with_copy_space_1_de548723a4_168d1f0b9f.webp"
+                                                alt="">
+                                            <div class="styles_title__0ieW0">Diversity &amp;
+                                                Mutual Respect
+                                            </div>
+                                            <div class="styles_subtitleContainer__6KF5r">
+                                                <div class="styles_subContainer__ohb4_">
+                                                    <div class="styles_label__L4NIR">We
+                                                        foster:
+                                                    </div>
+                                                    <div class="styles_subtitle__aybLF">
+                                                        <ul>
+                                                            <li>An atmosphere
+                                                                characterized by safety,
+                                                                trust, and mutual
+                                                                respect.</li>
+                                                            <li>Fair and inclusive
+                                                                strategic plans to
+                                                                promote equality and
+                                                                diversity.</li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal swiper-pagination-lock">
+                                    <span class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="lg:my-[2.29rem] lg:p-[1.75rem]">
+            <div class="container">
+                <div class="bg-blu BannerCard_root__ejUd8">
+                    <div class="BannerCard_content__gyu4c">
+                        <h2 class="BannerCard_title__b8sHf font-baskervville font-normal capitalize text-white">Each one
+                            of our students will be success story,_
+                            This is our dream and commitment
+                        </h2>
+                    </div>
+                    <div class="BannerCard_bannerImageWrapper__Ju7aa">
+                        <div style="height:100%;display:flex"><img class="BannerCard_image__Bt4tu"
+                                src="https://beta-fe.amityonline.com/_sb/medium_shot_woman_posing_with_graduation_background_1_dfd632e69f.webp"
+                                alt="Amity Online" title="Amity Online"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="amityonlineadvantages" class="undefined">
+            <div class="container">
+                <div class="SectionCard_root__vJRVT">
+                    <div class="flex justify-between"><h2 class="SectionCard_title__DSA2A">Amity online Advantages
+                    </h2><p class="SectionCard_subtitle__vVqmD hidden lg:block">Our distinct online methods empower students
+                    to<!-- --> <br>learn through innovative approaches.</p><p class="SectionCard_subtitle__vVqmD block lg:hidden">Our distinct online methods empower students<br>
+                    to learn through innovative approaches.
+                    </p></div>
+                    <div class="SectionCard_hr__sFh5X"></div>
+                    <div class="pt-7 lg:pt-7">
+                        <h2>
+                            <div class="grid lg:grid-cols-4 lg:gap-x-20 gap-y-12 lg:gap-y-10">
+                                <div class="font-raleway WhyAmity_item__pvzfz WhyAmity_centerdItem__WF7S_"><img
+                                        src="https://beta-fe.amityonline.com/_sb/Group_02692f2007.svg"
+                                        alt="Amity Online" class="WhyAmity_img__pMXAt w-[70px]" loading="lazy"
+                                        width="3.25rem" title="Amity Online">
+                                    <h3 class="WhyAmity_title__ZsmJX">Diverse learning
+                                        mediums
+                                    </h3>
+                                    <p class="text-sec WhyAmity_subtitle__OsNdG">E-books, printed &amp; audiobooks, and
+                                        videos to cater to your preferences &amp; unique learning style.</p>
+                                </div>
+                                <div class="font-raleway WhyAmity_item__pvzfz WhyAmity_centerdItem__WF7S_"><img
+                                        src="https://beta-fe.amityonline.com/_sb/Group_48099322_b464c4b479.svg"
+                                        alt="Amity Online" class="WhyAmity_img__pMXAt w-[70px]" loading="lazy"
+                                        width="3.25rem" title="Amity Online">
+                                    <h3 class="WhyAmity_title__ZsmJX">Doorstep Delivery Of Books
+                                    </h3>
+                                    <p class="text-sec WhyAmity_subtitle__OsNdG">India’s only online university to
+                                        provide physical books to read at your doorstep.</p>
+                                </div>
+                                <div class="font-raleway WhyAmity_item__pvzfz WhyAmity_centerdItem__WF7S_"><img
+                                        src="https://beta-fe.amityonline.com/_sb/Group_48098442_e6b6ca1518.svg"
+                                        alt="Amity Online" class="WhyAmity_img__pMXAt w-[70px]" loading="lazy"
+                                        width="3.25rem" title="Amity Online">
+                                    <h3 class="WhyAmity_title__ZsmJX">AI-Professor AMI
+                                    </h3>
+                                    <p class="text-sec WhyAmity_subtitle__OsNdG">Powered by Chat-GPT 4 and open
+                                        AI-Driven technology for online learning.</p>
+                                </div>
+                                <div class="font-raleway WhyAmity_item__pvzfz WhyAmity_centerdItem__WF7S_"><img
+                                        src="https://beta-fe.amityonline.com/_sb/Group_48100070_8e7326dc55.svg"
+                                        alt="Amity Online" class="WhyAmity_img__pMXAt w-[70px]" loading="lazy"
+                                        width="3.25rem" title="Amity Online">
+                                    <h3 class="WhyAmity_title__ZsmJX">Career Services
+                                    </h3>
+                                    <p class="text-sec WhyAmity_subtitle__OsNdG">Be job-ready with resume-building
+                                        workshops, internships &amp; industry mentorship.</p>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="leadership" class="undefined">
+            <div class="container">
+                <div class="SectionCard_root__vJRVT SectionCard_card__76a8h">
+                    <div class="flex justify-between ">
+                        <h2 class="SectionCard_title__DSA2A">Discover our leadership team and their
+                            philosophy
+                        </h2><a href="/amity/Home/leadership" target="_self"
+                            class="button_root__RRK9v SectionCard_ctaBtn__nhddo button_b__2Obj5 button_o__u2jyu"><span
+                                class="uppercase font-raleway">Read more</span><img src="https://beta-fe.amityonline.com/_a/icons/left-arrow-white.svg"
+                                alt="button-icon" loading="lazy" fetchpriority="low" class="hidden"><img
+                                src="https://beta-fe.amityonline.com/_a/icons/left-arrow.svg" alt="button-icon" loading="lazy" fetchpriority="low"
+                                class=""></a>
+                    </div>
+                    <div class="SectionCard_hr__sFh5X"></div>
+                    <div class="pt-7 lg:pt-7">
+                        <h2>
+                            <div
+                                class="swiper swiper-initialized swiper-horizontal Carousel__blueBullet Carousel__hAuto swiper-backface-hidden">
+                                <div class="swiper-wrapper"
+                                    style="transition-duration: 0ms; transform: translate3d(-736.667px, 0px, 0px); transition-delay: 0ms;">
+                                    <div class="swiper-slide" style="width: 318.333px; margin-right: 50px;">
+                                        <div class="styles_root__iwwFH"><img
+                                                src="https://beta-fe.amityonline.com/_sb/leadership_img_1_acca6f0840.png"
+                                                alt="Leader Image" title="Leader Image" class="styles_img__I0xd_">
+                                            <div class="styles_textContainer__S1kQJ">
+                                                <h6 class="styles_name__A8DHs">Dr. Ashok K.
+                                                    Chauhan</h6>
+                                                <p class="styles_desg__QJVG9">Founder President,
+                                                    Ritnand Balved Education Foundation</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-prev"
+                                        style="width: 318.333px; margin-right: 50px;">
+                                        <div class="styles_root__iwwFH"><img
+                                                src="https://beta-fe.amityonline.com/_sb/amity_3c8b020f3a.png"
+                                                alt="Leader Image" title="Leader Image" class="styles_img__I0xd_">
+                                            <div class="styles_textContainer__S1kQJ">
+                                                <h6 class="styles_name__A8DHs">Dr. Atul Chauhan
+                                                </h6>
+                                                <p class="styles_desg__QJVG9">Chancellor, Amity
+                                                    University
+                                                    President, Ritnand Balved Education
+                                                    Foundation
+                                                    CEO, AKC Group of Companies</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-active"
+                                        style="width: 318.333px; margin-right: 50px;">
+                                        <div class="styles_root__iwwFH"><img
+                                                src="https://beta-fe.amityonline.com/_sb/aseem_chauhan_8807df3e44.png"
+                                                alt="Leader Image" title="Leader Image" class="styles_img__I0xd_">
+                                            <div class="styles_textContainer__S1kQJ">
+                                                <h6 class="styles_name__A8DHs">Dr. Aseem Chauhan
+                                                </h6>
+                                                <p class="styles_desg__QJVG9">Chancellor, Amity
+                                                    University
+                                                    Additional President, Ritnand Balved
+                                                    Education Foundation
+                                                    CEO, Amity Capital Ventures</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide swiper-slide-next"
+                                        style="width: 318.333px; margin-right: 50px;">
+                                        <div class="styles_root__iwwFH"><img
+                                                src="https://beta-fe.amityonline.com/_sb/ajit_chauhan_1_cc15e85f1a.png"
+                                                alt="Leader Image" title="Leader Image" class="styles_img__I0xd_">
+                                            <div class="styles_textContainer__S1kQJ">
+                                                <h6 class="styles_name__A8DHs">Mr. Ajit Chauhan
+                                                </h6>
+                                                <p class="styles_desg__QJVG9">Chairman, Amity
+                                                    Online, Amity Skills &amp; Vocational
+                                                    Training, Deputy President Ritnand Balved
+                                                    Education Foundation</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide" style="width: 318.333px; margin-right: 50px;">
+                                        <div class="styles_root__iwwFH"><img
+                                                src="https://beta-fe.amityonline.com/_sb/b_shukla_fded8e8ff4.png"
+                                                alt="Leader Image" title="Leader Image" class="styles_img__I0xd_">
+                                            <div class="styles_textContainer__S1kQJ">
+                                                <h6 class="styles_name__A8DHs">Dr. B. Shukla
+                                                </h6>
+                                                <p class="styles_desg__QJVG9">Vice Chancellor,
+                                                    Amity University Uttar Pradesh
+                                                    M.Tech. (IIT Kharagpur), Ph.D. Queen's
+                                                    University, U.K.
+                                                    Council member of AIMA
+
+                                                </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div
+                                    class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                                    <span class="swiper-pagination-bullet"></span><span
+                                        class="swiper-pagination-bullet"></span><span
+                                        class="swiper-pagination-bullet swiper-pagination-bullet-active"></span>
+                                </div>
+                            </div>
+                        </h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="lg:my-[2.29rem] lg:p-[1.75rem]">
+            <div class="container">
+                <div class="bg-blu BannerCard_root__ejUd8">
+                    <div class="BannerCard_content__gyu4c">
+                        <h2 class="BannerCard_title__b8sHf font-baskervville font-normal capitalize text-white">Start
+                            your learning journey with advice from our counselor
+                        </h2>
+                        <div><button class="ClientSideButton_btnContainer__kilP_"><span>APPLY NOW</span><svg width="16"
+                                    height="16" viewBox="0 0 19 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <g>
+                                        <g>
+                                            <g>
+                                                <path d="M1 7.91907L18 7.91907" stroke="#1A325D" stroke-width="1.5"
+                                                    stroke-linecap="round"></path>
+                                                <path d="M11.271 1.27179L17.8596 7.86042" stroke="#1A325D"
+                                                    stroke-width="1.5" stroke-linecap="round"></path>
+                                                <path d="M11.271 14.4493L17.8596 7.86065" stroke="#1A325D"
+                                                    stroke-width="1.5" stroke-linecap="round"></path>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </svg></button></div>
+                    </div>
+                    <div class="BannerCard_bannerImageWrapper__Ju7aa">
+                        <div style="height:100%;display:flex"><img class="BannerCard_image__Bt4tu"
+                                src="https://beta-fe.amityonline.com/_sb/brooke_cagle_t_LG_2hcp_ITZE_unsplash_1_0b6e294a7e.webp"
+                                alt="Amity Online" title="Amity Online"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer start  -->
+    <div id="footer-container"></div>
+    <!-- footer end -->
+
+    <div class="sticky-apply">
+        <div class="sticky-apply-btn">APPLY NOW</div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script src="CommonJS/index.js"></script>
+    <script src="CommonJS/footer.js"></script>
+    <script src="CommonJS/modals.js"></script>
+    <!-- <script src="CommonJS/menumobile.js"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.2.3/js/bootstrap.min.js"
+        integrity="sha512-1/RvZTcCDEUjY/CypiMz+iqqtaoQfAITmNSJY17Myp4Ms5mdxPS5UV7iOfdZoxcGhzFbOm6sntTKJppjvuhg4g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script src="js/constant.js"></script>
+    <script src="js/applyNowForm.js"></script>
+    <!-- Link to Swiper CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- Link to Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./CommonJS/aboutus.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', async function () {
+            // Load components in order
+            // await includeComponent('../components/header.html', 'header-container');
+            await includeComponent('../components/brochureModal.html', 'modal-container');
+            await includeComponent('../components/loginModal.html', 'login-modal');
+            await includeComponent('../components/applyModal.html', 'apply-modal-container');
+            await includeComponent('../components/programsModal.html', 'programs-modal-container');
+            await includeComponent('../components/mobileMenu.html', 'mobile-menu-container');
+
+            // Additional initializations that depend on header
+            initializeProgramsModal();
+            // initializeMobileMenu();
+
+            const applyNowFormScript = document.createElement("script");
+            applyNowFormScript.src = "js/applyNowForm.js";
+            applyNowFormScript.async = true;
+            document.body.appendChild(applyNowFormScript);
+
+            const commonJsIndexScript = document.createElement("script");
+            commonJsIndexScript.src = "CommonJS/index.js";
+            commonJsIndexScript.async = true;
+            document.body.appendChild(commonJsIndexScript);
+
+            const commonJsFooterScript = document.createElement("script");
+            commonJsFooterScript.src = "CommonJS/footer.js";
+            commonJsFooterScript.async = true;
+            document.body.appendChild(commonJsFooterScript);
+
+            const commonJsModalScript = document.createElement("script");
+            commonJsModalScript.src = "CommonJS/modals.js";
+            commonJsModalScript.async = true;
+            document.body.appendChild(commonJsModalScript);
+
+            const commonJsProgramScript = document.createElement("script");
+            commonJsProgramScript.src = "CommonJS/program.js";
+            commonJsProgramScript.async = true;
+            document.body.appendChild(commonJsProgramScript);
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+
+            includeFooterComponent('../components/footer.html', 'footer-container');
+            // includeHeaderComponent('../components/header.html', 'header-container');
+        });
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+</body>
+
+</html>
