@@ -37,6 +37,20 @@
     overflow-x: hidden;
 }
     </style>
+    <style>
+        .my-button { /* Common styles */
+            width: auto;
+            display: inline-block;
+        }
+
+        @media (max-width: 767px) {
+            .my-button {
+                width: 100%;
+                display: block;
+                text-align: center;
+            }
+        }
+    </style>
 
     <!-- <link rel="stylesheet" href="/_next_about/static/css/399fcd9c5106740d.css" data-precedence="next"> -->
     <!-- <link rel="stylesheet" href="/_next_about/static/css/75752b21ec5eb1b5.css" data-precedence="next"> -->
@@ -145,7 +159,7 @@
                     src="https://beta-fe.amityonline.com/_sb/pexels_pixabay_2564901_ezgif_com_png_to_webp_converter_1494abbb1f.webp"
                     alt="banner-image" class="style_banner__ztKjG">
                 <h1>
-                    <div class="style_para__95Oux">We dedicate ourselves to student empowerment through
+                    <div class="style_para__95Oux">We dedicate<br> ourselves to <br> student <br> empowerment through
                         innovative online education.
                     </div>
                 </h1>
@@ -174,7 +188,7 @@
                 <div class="SectionCard_root__vJRVT SectionCard_card__76a8h">
                     <div class="styles_root__INLbL">
                         <div class="styles_textContainer__K_xce">
-                            <div class="styles_title__eKCNz">About Amity University Online
+                            <div class="styles_title__eKCNz">About Amity University
                             </div>
                             <div class="styles_desc__Kkmt_">Amity University, established by the State
                                 Legislature and recognized by the UGC, stands as India's leading private
@@ -233,8 +247,11 @@
         <div class="SectionCard_root__vJRVT SectionCard_card__76a8h">
             <div class="heading-block">
                 <h2>The values we uphold</h2>
-                <p>Amity Online remains consistently <br>
-                    ahead with industry-first advantages.</p>
+                    <p class="block sm:block"> <!-- desktop -->
+                        Amity Online remains consistently <br> ahead with industry-first advantages.
+                    </p>
+                    <p class="hidden sm:hidden"> <!-- mobile -->
+                        Amity Online remains consistently ahead with industry-first advantages.</p>
             </div>
             <div class="SectionCard_hr__sFh5X"></div>
             <div class="pt-7 lg:pt-7">
@@ -348,9 +365,8 @@
             <div class="container">
                 <div class="bg-blu BannerCard_root__ejUd8">
                     <div class="BannerCard_content__gyu4c">
-                        <h2 class="BannerCard_title__b8sHf font-baskervville font-normal capitalize text-white">Each one
-                            of our students will be success story,_
-                            This is our dream and commitment
+                        <h2 class="BannerCard_title__b8sHf font-baskervville font-normal capitalize text-white">
+                            Each one of our students will be success story. This is our dream and commitment
                         </h2>
                     </div>
                     <div class="BannerCard_bannerImageWrapper__Ju7aa">
@@ -366,7 +382,7 @@
                 <div class="SectionCard_root__vJRVT">
                     <div class="heading-block">
                         <h2>Amity online Advantages</h2>
-                        <p>Our distinct online methods empower students to <br>
+                        <p>Our distinct online methods empower students to 
                             learn through innovative approaches.</p>
                     </div>
                     <div class="SectionCard_hr__sFh5X"></div>
@@ -422,13 +438,15 @@
                     <div class="heading-block">
                         <h2 class="SectionCard_title__DSA2A">Discover our leadership team and their
                             philosophy
-                        </h2><a href="/amity/Home/leadership" target="_self"
-                            class="button_root__RRK9v SectionCard_ctaBtn__nhddo button_b__2Obj5 button_o__u2jyu"><span
+                        </h2>
+                        <a href="/amity/Home/leadership" target="_self"
+                            class="my-button button_root__RRK9v SectionCard_ctaBtn__nhddo button_b__2Obj5 button_o__u2jyu"><span
                                 class="uppercase font-raleway">Read more</span><img
                                 src="https://beta-fe.amityonline.com/_a/icons/left-arrow-white.svg" alt="button-icon"
                                 loading="lazy" fetchpriority="low" class="hidden"><img
                                 src="https://beta-fe.amityonline.com/_a/icons/left-arrow.svg" alt="button-icon"
-                                loading="lazy" fetchpriority="low" class=""></a>
+                                loading="lazy" fetchpriority="low" class="">
+                            </a>
                     </div>
                     <div class="SectionCard_hr__sFh5X"></div>
                     <div class="pt-7 lg:pt-7">
